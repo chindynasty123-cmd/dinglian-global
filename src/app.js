@@ -10,15 +10,12 @@ const data = {
     nav: ['首頁','關於鼎鏈','產業','解決方案','品質','製造基地','聯絡我們'], routes: ['home','about','industries','solutions','quality','base','contact'],
     wordmark: 'DINGLIAN', positioning: 'Global Precision Manufacturing Partner', heroTitle: '從精密加工到全球製造整合',
     heroSub: '串聯全球需求，整合製造資源，為航太、半導體、機器人與工業設備產業提供可靠的精密製造解決方案。',
-    storyTitle: '二十年的製造底蘊，成就全新的全球視野', storyKicker: 'OUR STORY',
-    timeline: [
-      ['2005','JINTAT INDUSTRIAL FOUNDED','Precision manufacturing begins.'],
-      ['2010','BICYCLE INDUSTRY','Supporting precision bicycle components.'],
-      ['2015','MACHINE TOOL INDUSTRY','Expanding into industrial manufacturing.'],
-      ['2020','INDUSTRIAL AUTOMATION','Supporting advanced automation systems.'],
-      ['2023','SEMICONDUCTOR EQUIPMENT','Entering high-precision equipment manufacturing.'],
-      ['2025','AEROSPACE & ROBOTICS','Expanding into future industries.'],
-      ['2026','DINGLIAN TECHNOLOGY','A new global manufacturing vision.'],
+    storyTitle: '二十年的製造底蘊，成就全新的全球視野', storyKicker: '品牌故事',
+    storySubtitle: '從精密加工起步，一路累積自行車、工具機、自動化、半導體、航太與機器人產業經驗，最終在 2026 年創立鼎鏈科技，邁向全球製造整合的新階段。',
+    storyStages: [
+      { marker: '2005', title: '瑨達工業', body: '20+ 年精密製造基礎' },
+      { marker: '產業經驗累積', title: '跨產業製造能力', tags: ['自行車零件','工具機零件','工業自動化','半導體設備','航太零件','機器人零件'] },
+      { marker: '2026', title: '鼎鏈科技', body: '全球製造整合品牌' },
     ],
     trustTitle: 'Why Dinglian', trust: [['20+','Years Manufacturing Experience'],['24/7','Production Support'],['One-Stop','Manufacturing Integration']],
     industryTitle: '服務全球高階產業的精密製造整合', industryIntro: '鼎鏈科技以品牌、專案管理與全球供應鏈整合為核心，將成熟製造底蘊轉化為面向未來產業的可靠合作能力。',
@@ -38,14 +35,11 @@ const data = {
     wordmark: 'DINGLIAN', positioning: 'Global Precision Manufacturing Partner', heroTitle: 'From Precision Machining to Global Manufacturing Integration',
     heroSub: 'Connecting global demand with integrated manufacturing resources for reliable precision manufacturing solutions across aerospace, semiconductor, robotics, and industrial equipment markets.',
     storyTitle: 'Twenty Years of Manufacturing Foundation, A New Global Vision', storyKicker: 'OUR STORY',
-    timeline: [
-      ['2005','JINTAT INDUSTRIAL FOUNDED','Precision manufacturing begins.'],
-      ['2010','BICYCLE INDUSTRY','Supporting precision bicycle components.'],
-      ['2015','MACHINE TOOL INDUSTRY','Expanding into industrial manufacturing.'],
-      ['2020','INDUSTRIAL AUTOMATION','Supporting advanced automation systems.'],
-      ['2023','SEMICONDUCTOR EQUIPMENT','Entering high-precision equipment manufacturing.'],
-      ['2025','AEROSPACE & ROBOTICS','Expanding into future industries.'],
-      ['2026','DINGLIAN TECHNOLOGY','A new global manufacturing vision.'],
+    storySubtitle: 'Starting from precision machining, Jintat accumulated experience across bicycle components, machine tools, automation, semiconductor equipment, aerospace, and robotics before Dinglian Technology was founded in 2026 as a global manufacturing integration brand.',
+    storyStages: [
+      { marker: '2005', title: 'Jintat Industrial', body: '20+ years of precision manufacturing foundation' },
+      { marker: 'Industry Experience', title: 'Cross-industry manufacturing capability', tags: ['Bicycle Components','Machine Tool Parts','Industrial Automation','Semiconductor Equipment','Aerospace Parts','Robotics Parts'] },
+      { marker: '2026', title: 'Dinglian Technology', body: 'Global Manufacturing Integration Brand' },
     ],
     trustTitle: 'Why Dinglian', trust: [['20+','Years Manufacturing Experience'],['24/7','Production Support'],['One-Stop','Manufacturing Integration']],
     industryTitle: 'Precision Manufacturing Integration for Advanced Global Industries', industryIntro: 'Dinglian Technology focuses on brand, project management, and global supply-chain integration—transforming a proven manufacturing foundation into future-ready partnership capacity.',
@@ -70,7 +64,7 @@ function path() { const parts = currentPath().split('/').filter(Boolean); if (!p
 
 function header(t) { return `<header class="site-header"><a class="brand" href="${href('home')}"><img src="${asset('/dinglian-logo.png')}" alt="Dinglian Technology logo"><span>${t.positioning}</span></a><nav>${t.nav.map((n,i)=>`<a href="${href(t.routes[i])}">${n}</a>`).join('')}<a class="quote" href="${href('contact')}">${t.quote}</a><button id="lang">${t.langLabel} | ${t.otherLang}</button></nav></header>`; }
 function hero(t) { return `<section class="hero"><div class="grid-glow"></div><div class="hero-inner"><img class="hero-logo" src="${asset('/dinglian-logo.png')}" alt="Dinglian Technology logo"><div class="hero-wordmark">${t.wordmark}</div><p class="hero-positioning">${t.positioning}</p><h1>${t.heroTitle}</h1><p class="hero-sub">${t.heroSub}</p><div class="actions"><a class="primary" href="${href('contact')}">${t.quote}</a><a href="${href('industries')}">${t.explore}</a></div></div></section>`; }
-function story(t) { return `<section class="section story"><p class="eyebrow">${t.storyKicker}</p><h2>${t.storyTitle}</h2><div class="journey">${t.timeline.map(([year,title,body],i)=>`<article class="journey-card" style="--i:${i}"><span>${year}</span><h3>${title}</h3><p>${body}</p></article>`).join('')}</div></section>`; }
+function story(t) { return `<section class="section story"><div class="story-heading"><p class="eyebrow">${t.storyKicker}</p><h2>${t.storyTitle}</h2><p>${t.storySubtitle}</p></div><div class="story-flow">${t.storyStages.map((stage,i)=>`<article class="story-stage" style="--i:${i}"><span>${stage.marker}</span><h3>${stage.title}</h3>${stage.body ? `<p>${stage.body}</p>` : ''}${stage.tags ? `<div class="story-tags">${stage.tags.map(tag=>`<b>${tag}</b>`).join('')}</div>` : ''}</article>`).join('<div class="story-arrow">↓</div>')}</div></section>`; }
 function trust(t) { return `<section class="section trust"><p class="eyebrow">GLOBAL TRUST</p><h2>${t.trustTitle}</h2><div class="trust-grid">${t.trust.map(([value,label])=>`<div class="trust-stat"><strong>${value}</strong><span>${label}</span></div>`).join('')}</div></section>`; }
 function industries(t, compact=false) { return `<section class="section"><p class="eyebrow">INDUSTRIES</p><h2>${t.industryTitle}</h2><p class="lead">${t.industryIntro}</p><div class="cards">${Object.keys(t.industryNames).map(k=>`<a class="card" href="${withBase(`/industries/${k}`)}?lang=${lang}">${icon(k)}<h3>${t.industryNames[k]}</h3><p>${t.industryDesc[k]}</p><b>→</b></a>`).join('')}</div>${compact?`<a class="text-link" href="${href('industries')}">${t.explore} →</a>`:''}</section>`; }
 function iconPage(title, intro, items, compact=false) { return `<section class="${compact?'section compact':'section page-hero'}"><p class="eyebrow">SYSTEM</p><h1>${title}</h1><p class="lead">${intro}</p><div class="icon-grid">${items.map((item)=>`<div class="icon-item">${icon()}<span>${item}</span></div>`).join('')}</div></section>`; }
