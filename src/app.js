@@ -1,3 +1,4 @@
+// Dinglian Website V3 brand experience.
 const BASE = '/dinglian-global';
 const icons = { aerospace: '✦', semiconductor: '◈', robotics: '◎', automation: '⌁', medical: '✚', default: '⬡' };
 const pages = { home: '/', about: '/about', industries: '/industries', solutions: '/solutions', quality: '/quality', base: '/manufacturing-base', contact: '/contact' };
