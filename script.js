@@ -42,7 +42,7 @@ const translations = {
     "base.name": "瑨達工業",
     "base.subtitle": "20年以上精密製造經驗",
     "base.statement": "二十年的製造底蘊，<br>成就鼎鏈邁向全球的基石。",
-    "base.button": "前往瑨達官網 →",
+    "base.button": "前往瑨達基地 →",
     "base.panel": "二十年的製造底蘊，成就鼎鏈邁向全球的基石。",
     "base.panelKicker": "製造基礎",
     "base.since": "創立於 2005",
@@ -120,7 +120,7 @@ const translations = {
     "base.subtitle": "More than 20 years of precision manufacturing experience",
     "base.statement":
       "Twenty years of manufacturing foundation,<br>the cornerstone for Dinglian’s global vision.",
-    "base.button": "Visit Jintat Industrial →",
+    "base.button": "Visit Jintat Foundation →",
     "base.panel":
       "Twenty years of manufacturing foundation, the cornerstone behind Dinglian's global vision.",
     "base.panelKicker": "MANUFACTURING FOUNDATION",
