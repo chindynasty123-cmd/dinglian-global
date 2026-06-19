@@ -1189,3 +1189,11 @@ textarea {
     margin-top: 8px;
   }
 }
+
+/* Critical hero logo fix: enlarge only the logo image, keep orbit scale unchanged */
+.hero-emblem {
+  margin: clamp(36px, 6vh, 84px) auto clamp(-8px, 0.4vh, 6px);
+}
+.hero-emblem .hero-logo {
+  width: 118%;
+}
