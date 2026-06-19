@@ -1208,3 +1208,38 @@ textarea {
 .hero-emblem {
   margin-bottom: clamp(-56px, -4vh, -32px);
 }
+
+/* Jintat Foundation logo presentation refinement */
+.base-logo-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(215, 173, 75, 0.68);
+  background:
+    radial-gradient(
+      circle at 50% 46%,
+      rgba(78, 140, 255, 0.24),
+      transparent 42%
+    ),
+    linear-gradient(145deg, rgba(4, 7, 14, 0.98), rgba(16, 12, 5, 0.92));
+}
+.base-logo-panel::before {
+  content: "";
+  position: absolute;
+  inset: 18%;
+  border-radius: 50%;
+  background: rgba(78, 140, 255, 0.16);
+  filter: blur(32px);
+  pointer-events: none;
+}
+.base-logo-panel img {
+  position: relative;
+  z-index: 1;
+  width: min(360px, 76%);
+  max-height: 230px;
+  object-fit: contain;
+  background: transparent;
+  border: 0;
+  mix-blend-mode: normal;
+  filter: drop-shadow(0 0 30px rgba(78, 140, 255, 0.3))
+    drop-shadow(0 0 18px rgba(215, 173, 75, 0.18));
+}
