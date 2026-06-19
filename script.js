@@ -5,6 +5,7 @@ const translations = {
     "nav.industries": "服務產業",
     "nav.solutions": "整合方案",
     "nav.quality": "品質管理",
+    "nav.jintat": "瑨達基地",
     "nav.contact": "聯絡我們",
     "nav.quote": "取得報價",
     "brand.name": "鼎鏈科技",
@@ -41,7 +42,7 @@ const translations = {
     "base.name": "瑨達工業",
     "base.subtitle": "20年以上精密製造經驗",
     "base.statement": "二十年的製造底蘊，<br>成就鼎鏈邁向全球的基石。",
-    "base.button": "前往瑨達基地 →",
+    "base.button": "前往瑨達官網 →",
     "base.panel": "二十年的製造底蘊，成就鼎鏈邁向全球的基石。",
     "base.panelKicker": "製造基礎",
     "base.since": "創立於 2005",
@@ -77,6 +78,7 @@ const translations = {
     "nav.industries": "INDUSTRIES",
     "nav.solutions": "SOLUTIONS",
     "nav.quality": "QUALITY",
+    "nav.jintat": "JINTAT FOUNDATION",
     "nav.contact": "CONTACT",
     "nav.quote": "GET A QUOTE",
     "brand.name": "DINGLIAN",
@@ -118,7 +120,7 @@ const translations = {
     "base.subtitle": "More than 20 years of precision manufacturing experience",
     "base.statement":
       "Twenty years of manufacturing foundation,<br>the cornerstone for Dinglian’s global vision.",
-    "base.button": "Explore Jintat Foundation →",
+    "base.button": "Visit Jintat Industrial →",
     "base.panel":
       "Twenty years of manufacturing foundation, the cornerstone behind Dinglian's global vision.",
     "base.panelKicker": "MANUFACTURING FOUNDATION",
