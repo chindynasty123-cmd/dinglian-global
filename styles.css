@@ -1197,3 +1197,14 @@ textarea {
 .hero-emblem .hero-logo {
   width: 118%;
 }
+
+/* Critical V8 fix: force the actual logo image to desktop focal-point height only */
+.hero-emblem .hero-logo {
+  width: auto;
+  height: clamp(280px, 32vh, 350px);
+  max-width: none;
+  transform: translateY(36px);
+}
+.hero-emblem {
+  margin-bottom: clamp(-56px, -4vh, -32px);
+}
