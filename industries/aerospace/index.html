@@ -30,63 +30,188 @@
       .aero-hero {
         min-height: 100vh;
         display: grid;
-        grid-template-columns: 0.92fr 1.08fr;
-        gap: clamp(28px, 5vw, 78px);
-        align-items: center;
-        padding: 130px clamp(22px, 6vw, 92px) 76px;
+        place-items: center;
+        padding: 132px clamp(22px, 6vw, 92px) 82px;
         background:
           radial-gradient(
-            circle at 72% 44%,
-            rgba(212, 175, 55, 0.18),
-            transparent 30%
+            circle at 50% 38%,
+            rgba(200, 169, 106, 0.2),
+            transparent 28%
           ),
-          linear-gradient(135deg, #020202 0%, #0b0b0d 48%, #15120a 100%);
+          radial-gradient(
+            circle at 18% 18%,
+            rgba(200, 169, 106, 0.08),
+            transparent 24%
+          ),
+          linear-gradient(135deg, #020202 0%, #090909 48%, #151109 100%);
         position: relative;
         overflow: hidden;
+        text-align: center;
       }
       .aero-hero::before {
         content: "";
         position: absolute;
         inset: 0;
         background-image:
-          linear-gradient(rgba(215, 173, 75, 0.07) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(215, 173, 75, 0.07) 1px, transparent 1px);
-        background-size: 72px 72px;
-        mask-image: linear-gradient(to bottom, black, transparent 88%);
+          linear-gradient(rgba(200, 169, 106, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(200, 169, 106, 0.06) 1px, transparent 1px);
+        background-size: 74px 74px;
+        mask-image: radial-gradient(
+          circle at center,
+          black 0%,
+          transparent 76%
+        );
       }
-      .aero-copy,
-      .aero-visual {
+      .aero-hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at center,
+          transparent 0 34%,
+          rgba(0, 0, 0, 0.62) 74%
+        );
+        pointer-events: none;
+      }
+      .hero-particles span {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 999px;
+        background: #c8a96a;
+        box-shadow: 0 0 18px rgba(200, 169, 106, 0.72);
+        opacity: 0.6;
+        animation: particleDrift 9s ease-in-out infinite alternate;
+      }
+      .hero-particles span:nth-child(1) {
+        top: 21%;
+        left: 18%;
+        animation-delay: -1s;
+      }
+      .hero-particles span:nth-child(2) {
+        top: 30%;
+        left: 74%;
+        animation-delay: -3s;
+      }
+      .hero-particles span:nth-child(3) {
+        top: 64%;
+        left: 22%;
+        animation-delay: -5s;
+      }
+      .hero-particles span:nth-child(4) {
+        top: 72%;
+        left: 80%;
+        animation-delay: -2s;
+      }
+      .hero-particles span:nth-child(5) {
+        top: 45%;
+        left: 12%;
+        animation-delay: -4s;
+      }
+      .hero-particles span:nth-child(6) {
+        top: 18%;
+        left: 54%;
+        animation-delay: -6s;
+      }
+      .hero-logo-showcase {
         position: relative;
-        z-index: 1;
+        z-index: 2;
+        display: grid;
+        place-items: center;
+        gap: 24px;
+        width: min(860px, 100%);
       }
-      .aero-copy h1 {
-        margin: 0 0 16px;
-        font-size: 72px;
-        line-height: 0.92;
-        background: linear-gradient(90deg, #fff, var(--gold2), #8b8f96);
-        -webkit-background-clip: text;
-        color: transparent;
+      .logo-orbit {
+        position: relative;
+        width: min(520px, 72vw);
+        aspect-ratio: 1;
+        display: grid;
+        place-items: center;
       }
-      .aero-copy .lead {
-        max-width: 760px;
-        margin: 0;
-        color: #fff7df;
-        font-size: clamp(1.7rem, 3.2vw, 3.8rem);
-        line-height: 1.05;
+      .logo-orbit::before,
+      .logo-orbit::after,
+      .orbit-ring {
+        content: "";
+        position: absolute;
+        inset: 8%;
+        border: 1px solid rgba(200, 169, 106, 0.28);
+        border-radius: 50%;
+        box-shadow: 0 0 42px rgba(200, 169, 106, 0.12);
+        animation: orbitSpin 24s linear infinite;
+      }
+      .logo-orbit::after {
+        inset: 17% 2%;
+        transform: rotateX(64deg);
+        animation-duration: 32s;
+        animation-direction: reverse;
+      }
+      .orbit-ring {
+        inset: 2% 20%;
+        transform: rotateY(68deg);
+        animation-duration: 38s;
+      }
+      .hero-logo-card {
+        position: relative;
+        z-index: 2;
+        width: min(390px, 58vw);
+        padding: clamp(24px, 4vw, 42px);
+        border: 1px solid rgba(200, 169, 106, 0.34);
+        border-radius: 24px;
+        background: radial-gradient(
+          circle at center,
+          rgba(200, 169, 106, 0.12),
+          rgba(8, 8, 8, 0.82) 62%
+        );
+        box-shadow:
+          inset 0 0 60px rgba(200, 169, 106, 0.08),
+          0 0 90px rgba(200, 169, 106, 0.14),
+          0 34px 90px rgba(0, 0, 0, 0.62);
+      }
+      .hero-logo-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+        filter: drop-shadow(0 0 24px rgba(200, 169, 106, 0.22));
+        animation: logoFloat 5s ease-in-out infinite alternate;
+      }
+      .hero-subtitle {
+        color: #f7ead0;
+        font-size: clamp(1.35rem, 2.7vw, 2.65rem);
         font-weight: 850;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin: 0;
       }
-      .aero-badges {
+      .hero-tags {
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 12px;
-        margin-top: 28px;
       }
-      .aero-badges span {
-        border: 1px solid rgba(215, 173, 75, 0.38);
-        color: var(--gold2);
-        padding: 10px 14px;
-        background: rgba(0, 0, 0, 0.35);
-        font-weight: 850;
+      .hero-tags span {
+        border: 1px solid rgba(200, 169, 106, 0.42);
+        color: #c8a96a;
+        padding: 10px 16px;
+        background: rgba(0, 0, 0, 0.42);
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      @keyframes orbitSpin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes logoFloat {
+        to {
+          transform: translateY(-10px);
+        }
+      }
+      @keyframes particleDrift {
+        to {
+          transform: translate3d(28px, -24px, 0);
+          opacity: 1;
+        }
       }
       .component-shell {
         background: radial-gradient(
@@ -208,6 +333,65 @@
         color: #f6edd7;
         font-size: 1.12rem;
       }
+      .portfolio-showcase {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: clamp(22px, 4vw, 46px);
+        align-items: stretch;
+        border: 1px solid rgba(200, 169, 106, 0.24);
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.06),
+          rgba(200, 169, 106, 0.035)
+        );
+        padding: clamp(18px, 3vw, 34px);
+        box-shadow: 0 34px 90px rgba(0, 0, 0, 0.42);
+      }
+      .carousel-stage {
+        position: relative;
+      }
+      .carousel-stage .image-wrap {
+        min-height: 560px;
+      }
+      .carousel-stage img {
+        opacity: 1;
+        transition:
+          opacity 0.45s ease,
+          transform 0.45s ease;
+      }
+      .carousel-stage img.is-fading {
+        opacity: 0;
+        transform: scale(0.985);
+      }
+      .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        border: 1px solid rgba(200, 169, 106, 0.46);
+        color: #c8a96a;
+        background: rgba(0, 0, 0, 0.72);
+        cursor: pointer;
+      }
+      .carousel-arrow.prev {
+        left: 18px;
+      }
+      .carousel-arrow.next {
+        right: 18px;
+      }
+      .portfolio-info {
+        display: grid;
+        align-content: center;
+        gap: 16px;
+      }
+      .slide-counter {
+        color: #c8a96a;
+        font-weight: 800;
+        letter-spacing: 0.24em;
+      }
       .gallery-grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -294,8 +478,7 @@
         margin-bottom: 28px;
       }
       @media (max-width: 1120px) {
-        .aero-hero,
-        .featured {
+        .portfolio-showcase {
           grid-template-columns: 1fr;
         }
         .gallery-grid {
@@ -318,7 +501,8 @@
           grid-template-columns: 1fr;
         }
         .image-wrap,
-        .featured .image-wrap {
+        .featured .image-wrap,
+        .carousel-stage .image-wrap {
           min-height: 280px;
           padding: 22px;
         }
@@ -387,63 +571,70 @@
 
     <main>
       <section class="aero-hero">
-        <div class="aero-copy">
-          <p class="eyebrow" data-i18n="hero.kicker">DINGLIAN TECHNOLOGY</p>
-          <h1 data-i18n="hero.title">Aerospace Components</h1>
-          <p class="lead" data-i18n="hero.lead">
-            Precision CNC Components for Critical Aerospace Applications
-          </p>
-          <div class="aero-badges" id="heroBadges"></div>
+        <div class="hero-particles" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span
+          ><span></span>
         </div>
-        <div class="aero-visual">
-          <div class="component-shell">
-            <div class="image-wrap">
+        <div class="hero-logo-showcase">
+          <div class="logo-orbit" aria-hidden="true">
+            <span class="orbit-ring"></span>
+            <div class="hero-logo-card">
               <img
-                src="../../images/aerospace/aerospace-03-lightweight-ring.png"
-                alt="Lightweight Aerospace Ring"
+                src="../../dinglian-logo.png"
+                alt="DINGLIAN TECHNOLOGY logo"
               />
             </div>
           </div>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Global Manufacturing Integration Partner
+          </p>
+          <div class="hero-tags" id="heroTags"></div>
+          <a
+            class="btn btn-primary"
+            href="../../index.html#contact"
+            data-i18n="hero.cta"
+            >Get A Quote</a
+          >
         </div>
       </section>
 
       <section class="aero-section">
         <div class="aero-heading">
-          <p class="eyebrow" data-i18n="featured.kicker">FEATURED PROJECT</p>
-          <h2 data-i18n="featured.title">Featured Aerospace Project</h2>
+          <p class="eyebrow" data-i18n="portfolio.kicker">
+            AEROSPACE PORTFOLIO
+          </p>
+          <h2 data-i18n="portfolio.title">Aerospace Portfolio</h2>
+          <p class="section-subtitle" data-i18n="portfolio.subtitle">
+            Precision CNC Machined Aerospace Components
+          </p>
         </div>
-        <article class="featured">
-          <div class="component-shell">
+        <article class="portfolio-showcase">
+          <div class="carousel-stage">
             <div class="image-wrap">
               <img
-                src="../../images/aerospace/aerospace-03-lightweight-ring.png"
-                alt="Lightweight Aerospace Ring"
+                id="carouselImage"
+                src="../../images/aerospace/aerospace-01-precision-component.png"
+                alt="Aerospace component"
               />
             </div>
+            <button
+              class="carousel-arrow prev"
+              type="button"
+              aria-label="Previous aerospace slide"
+            >
+              ‹
+            </button>
+            <button
+              class="carousel-arrow next"
+              type="button"
+              aria-label="Next aerospace slide"
+            >
+              ›
+            </button>
           </div>
-          <div class="tech-panel">
-            <div class="tech-row">
-              <strong data-i18n="featured.materialLabel">Material:</strong
-              ><span data-i18n="featured.material">Aluminum Alloy</span>
-            </div>
-            <div class="tech-row">
-              <strong data-i18n="featured.processLabel">Process:</strong
-              ><span data-i18n="featured.process"
-                >Multi-Axis CNC Machining</span
-              >
-            </div>
-            <div class="tech-row">
-              <strong data-i18n="featured.inspectionLabel">Inspection:</strong
-              ><span data-i18n="featured.inspection"
-                >Mitutoyo CMM Inspection</span
-              >
-            </div>
-            <div class="tech-row">
-              <strong data-i18n="featured.applicationLabel">Application:</strong
-              ><span data-i18n="featured.application"
-                >Aerospace Structural Component</span
-              >
-            </div>
+          <div class="portfolio-info">
+            <div class="slide-counter" id="slideCounter">01 / 05</div>
+            <div class="tech-panel" id="slideDetails"></div>
           </div>
         </article>
       </section>
@@ -502,20 +693,15 @@
           "nav.jintat": "JINTAT FOUNDATION",
           "nav.contact": "CONTACT",
           "nav.quote": "GET A QUOTE",
-          "hero.kicker": "DINGLIAN TECHNOLOGY",
-          "hero.title": "Aerospace Components",
-          "hero.lead":
-            "Precision CNC Components for Critical Aerospace Applications",
-          "featured.kicker": "FEATURED PROJECT",
-          "featured.title": "Featured Aerospace Project",
-          "featured.materialLabel": "Material:",
-          "featured.material": "Aluminum Alloy",
-          "featured.processLabel": "Process:",
-          "featured.process": "Multi-Axis CNC Machining",
-          "featured.inspectionLabel": "Inspection:",
-          "featured.inspection": "Mitutoyo CMM Inspection",
-          "featured.applicationLabel": "Application:",
-          "featured.application": "Aerospace Structural Component",
+          "hero.subtitle": "Global Manufacturing Integration Partner",
+          "hero.cta": "Get A Quote",
+          "portfolio.kicker": "AEROSPACE PORTFOLIO",
+          "portfolio.title": "Aerospace Portfolio",
+          "portfolio.subtitle": "Precision CNC Machined Aerospace Components",
+          "slide.materialLabel": "Material:",
+          "slide.processLabel": "Process:",
+          "slide.inspectionLabel": "Inspection:",
+          "slide.applicationLabel": "Application:",
           "gallery.kicker": "SAMPLE PROJECTS",
           "gallery.title": "Aerospace Sample Projects",
           "cap.kicker": "CAPABILITY",
@@ -539,19 +725,15 @@
           "nav.jintat": "瑨達基地",
           "nav.contact": "聯絡我們",
           "nav.quote": "取得報價",
-          "hero.kicker": "鼎鏈科技",
-          "hero.title": "航太零件",
-          "hero.lead": "高可靠度航太應用的精密 CNC 加工解決方案",
-          "featured.kicker": "精選案例",
-          "featured.title": "精選案例",
-          "featured.materialLabel": "材料：",
-          "featured.material": "鋁合金",
-          "featured.processLabel": "製程：",
-          "featured.process": "多軸 CNC 加工",
-          "featured.inspectionLabel": "檢驗：",
-          "featured.inspection": "Mitutoyo 三次元量測",
-          "featured.applicationLabel": "應用：",
-          "featured.application": "航太結構件",
+          "hero.subtitle": "全球製造整合夥伴",
+          "hero.cta": "取得報價",
+          "portfolio.kicker": "航太作品集",
+          "portfolio.title": "航太作品集",
+          "portfolio.subtitle": "精密 CNC 加工航太零件",
+          "slide.materialLabel": "材料：",
+          "slide.processLabel": "製程：",
+          "slide.inspectionLabel": "檢驗：",
+          "slide.applicationLabel": "應用：",
           "gallery.kicker": "加工案例",
           "gallery.title": "航太加工案例",
           "cap.kicker": "製造能力",
@@ -567,11 +749,46 @@
       };
       const data = {
         en: {
-          badges: [
-            "±0.01 mm Tolerance",
-            "ISO 9001",
-            "Mitutoyo CMM",
-            "24/7 Production",
+          heroTags: ["Aerospace", "Robotics", "Semiconductor"],
+          slides: [
+            {
+              image:
+                "../../images/aerospace/aerospace-01-precision-component.png",
+              material: "Aluminum Alloy",
+              process: "Precision CNC Machining",
+              inspection: "Mitutoyo CMM",
+              application: "Aerospace Precision Component",
+            },
+            {
+              image: "../../images/aerospace/aerospace-02-structural-ring.png",
+              material: "Aluminum Alloy",
+              process: "CNC Machining",
+              inspection: "Mitutoyo CMM",
+              application: "Structural Ring Assembly",
+            },
+            {
+              image: "../../images/aerospace/aerospace-03-lightweight-ring.png",
+              material: "Aluminum Alloy",
+              process: "Multi-Axis CNC Machining",
+              inspection: "Mitutoyo CMM",
+              application: "Lightweight Aerospace Ring",
+            },
+            {
+              image:
+                "../../images/aerospace/aerospace-04-machined-structure.png",
+              material: "Aluminum Alloy",
+              process: "Multi-Axis CNC Machining",
+              inspection: "Mitutoyo CMM",
+              application: "Aerospace Machined Structure",
+            },
+            {
+              image:
+                "../../images/aerospace/aerospace-05-anodized-component.png",
+              material: "Aluminum Alloy",
+              process: "Precision CNC Machining",
+              inspection: "Mitutoyo CMM",
+              application: "Anodized Aerospace Component",
+            },
           ],
           gallery: [
             [
@@ -621,11 +838,46 @@
           ],
         },
         zh: {
-          badges: [
-            "±0.01 mm 精度",
-            "ISO 9001",
-            "Mitutoyo 三次元量測",
-            "24小時生產",
+          heroTags: ["航太", "機器人", "半導體"],
+          slides: [
+            {
+              image:
+                "../../images/aerospace/aerospace-01-precision-component.png",
+              material: "鋁合金",
+              process: "精密 CNC 加工",
+              inspection: "Mitutoyo 三次元量測",
+              application: "航太精密零件",
+            },
+            {
+              image: "../../images/aerospace/aerospace-02-structural-ring.png",
+              material: "鋁合金",
+              process: "CNC 加工",
+              inspection: "Mitutoyo 三次元量測",
+              application: "結構環件組件",
+            },
+            {
+              image: "../../images/aerospace/aerospace-03-lightweight-ring.png",
+              material: "鋁合金",
+              process: "多軸 CNC 加工",
+              inspection: "Mitutoyo 三次元量測",
+              application: "輕量化航太環件",
+            },
+            {
+              image:
+                "../../images/aerospace/aerospace-04-machined-structure.png",
+              material: "鋁合金",
+              process: "多軸 CNC 加工",
+              inspection: "Mitutoyo 三次元量測",
+              application: "航太加工結構件",
+            },
+            {
+              image:
+                "../../images/aerospace/aerospace-05-anodized-component.png",
+              material: "鋁合金",
+              process: "精密 CNC 加工",
+              inspection: "Mitutoyo 三次元量測",
+              application: "陽極處理航太零件",
+            },
           ],
           gallery: [
             [
@@ -675,7 +927,37 @@
           ],
         },
       };
+      let currentSlide = 0;
+      let currentLang = localStorage.getItem("dinglianLang") || "en";
+      function renderCarousel(page, dict) {
+        const slide = page.slides[currentSlide];
+        carouselImage.classList.add("is-fading");
+        window.setTimeout(() => {
+          carouselImage.src = slide.image;
+          carouselImage.alt = slide.application;
+          carouselImage.classList.remove("is-fading");
+        }, 180);
+        slideCounter.textContent = `${String(currentSlide + 1).padStart(2, "0")} / ${String(page.slides.length).padStart(2, "0")}`;
+        slideDetails.innerHTML = [
+          [dict["slide.materialLabel"], slide.material],
+          [dict["slide.processLabel"], slide.process],
+          [dict["slide.inspectionLabel"], slide.inspection],
+          [dict["slide.applicationLabel"], slide.application],
+        ]
+          .map(
+            ([label, value]) =>
+              `<div class="tech-row"><strong>${label}</strong><span>${value}</span></div>`,
+          )
+          .join("");
+      }
+      function showSlide(direction) {
+        const page = data[currentLang];
+        currentSlide =
+          (currentSlide + direction + page.slides.length) % page.slides.length;
+        renderCarousel(page, translations[currentLang]);
+      }
       function setLang(lang) {
+        currentLang = lang;
         const dict = translations[lang];
         const page = data[lang];
         document.documentElement.lang = lang === "zh" ? "zh-Hant" : "en";
@@ -689,9 +971,10 @@
           .forEach((button) =>
             button.classList.toggle("active", button.dataset.lang === lang),
           );
-        heroBadges.innerHTML = page.badges
+        heroTags.innerHTML = page.heroTags
           .map((item) => `<span>${item}</span>`)
           .join("");
+        renderCarousel(page, dict);
         galleryGrid.innerHTML = page.gallery
           .map(
             ([title, src]) =>
@@ -729,7 +1012,14 @@
           const open = navPanel.classList.toggle("open");
           event.currentTarget.setAttribute("aria-expanded", open);
         });
-      setLang(localStorage.getItem("dinglianLang") || "en");
+      document
+        .querySelector(".carousel-arrow.prev")
+        .addEventListener("click", () => showSlide(-1));
+      document
+        .querySelector(".carousel-arrow.next")
+        .addEventListener("click", () => showSlide(1));
+      window.setInterval(() => showSlide(1), 4000);
+      setLang(currentLang);
     </script>
   </body>
 </html>
