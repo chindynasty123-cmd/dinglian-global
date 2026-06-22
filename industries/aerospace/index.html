@@ -28,7 +28,7 @@
         border-top: 1px solid rgba(255, 255, 255, 0.07);
       }
       .aero-hero {
-        min-height: 88vh;
+        min-height: 100vh;
         display: grid;
         grid-template-columns: 0.92fr 1.08fr;
         gap: clamp(28px, 5vw, 78px);
@@ -61,7 +61,7 @@
       }
       .aero-copy h1 {
         margin: 0 0 16px;
-        font-size: clamp(3rem, 7vw, 7.4rem);
+        font-size: 72px;
         line-height: 0.92;
         background: linear-gradient(90deg, #fff, var(--gold2), #8b8f96);
         -webkit-background-clip: text;
@@ -101,8 +101,10 @@
         padding: 30px;
       }
       .image-wrap {
-        background: #080808;
-        padding: 30px;
+        background: #111111;
+        padding: 24px;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -111,11 +113,11 @@
       }
       .image-wrap img {
         width: 100%;
-        height: 100%;
-        max-height: 560px;
+        height: auto;
         object-fit: contain;
-        mix-blend-mode: multiply;
-        filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.18));
+        opacity: 1;
+        mix-blend-mode: normal;
+        filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.15));
         transition: all 0.3s ease;
       }
       .component-shell:hover img,
@@ -126,9 +128,17 @@
         max-width: 920px;
         margin-bottom: 30px;
       }
-      .aero-heading h2 {
+      .aero-page .eyebrow {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+      }
+      .aero-heading h2,
+      .quality-copy h2,
+      .cta h2 {
         margin: 0;
-        font-size: clamp(2.1rem, 4.2vw, 4.6rem);
+        font-size: 48px;
         line-height: 1.05;
       }
       .featured {
@@ -282,6 +292,14 @@
         }
         .aero-hero {
           padding-top: 116px;
+        }
+        .aero-copy h1 {
+          font-size: 42px;
+        }
+        .aero-heading h2,
+        .quality-copy h2,
+        .cta h2 {
+          font-size: 34px;
         }
       }
     </style>
