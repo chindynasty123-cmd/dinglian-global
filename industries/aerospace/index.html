@@ -6,7 +6,7 @@
     <title>Aerospace Components | DINGLIAN TECHNOLOGY</title>
     <meta
       name="description"
-      content="Aerospace case-study showcase for precision CNC components, quality documentation, and high-reliability manufacturing applications."
+      content="Premium aerospace CNC machining case-study page for DINGLIAN TECHNOLOGY."
     />
     <link rel="icon" type="image/png" href="../../dinglian-logo.png" />
     <link rel="apple-touch-icon" href="../../dinglian-logo.png" />
@@ -15,47 +15,36 @@
       body {
         background: #030303;
       }
-      .case-header {
-        position: sticky;
-        top: 0;
-        z-index: 40;
-        background: rgba(0, 0, 0, 0.94);
-        border-bottom: 1px solid rgba(215, 173, 75, 0.2);
+      .aero-page .site-header {
+        background: rgba(0, 0, 0, 0.96);
+        border-bottom: 1px solid rgba(215, 173, 75, 0.22);
         backdrop-filter: blur(18px);
       }
-      .case-nav {
+      .aero-page .nav-panel {
         display: flex;
-        gap: 22px;
-        align-items: center;
-        font-size: 0.78rem;
-        font-weight: 800;
-        letter-spacing: 0.12em;
       }
-      .case-nav a:hover {
-        color: var(--gold);
-      }
-      .case-section {
+      .aero-section {
         padding: 82px clamp(22px, 6vw, 92px);
         border-top: 1px solid rgba(255, 255, 255, 0.07);
       }
-      .case-hero {
-        min-height: 82vh;
+      .aero-hero {
+        min-height: 88vh;
         display: grid;
-        grid-template-columns: 0.86fr 1.14fr;
-        gap: clamp(28px, 5vw, 76px);
+        grid-template-columns: 0.92fr 1.08fr;
+        gap: clamp(28px, 5vw, 78px);
         align-items: center;
-        padding: 128px clamp(22px, 6vw, 92px) 70px;
+        padding: 130px clamp(22px, 6vw, 92px) 76px;
         background:
           radial-gradient(
-            circle at 70% 45%,
-            rgba(215, 173, 75, 0.2),
+            circle at 72% 44%,
+            rgba(212, 175, 55, 0.18),
             transparent 30%
           ),
           linear-gradient(135deg, #020202 0%, #0b0b0d 48%, #15120a 100%);
         position: relative;
         overflow: hidden;
       }
-      .case-hero::before {
+      .aero-hero::before {
         content: "";
         position: absolute;
         inset: 0;
@@ -65,68 +54,86 @@
         background-size: 72px 72px;
         mask-image: linear-gradient(to bottom, black, transparent 88%);
       }
-      .case-copy,
-      .case-visual {
+      .aero-copy,
+      .aero-visual {
         position: relative;
         z-index: 1;
       }
-      .case-copy h1 {
-        margin: 12px 0;
-        font-size: clamp(3.2rem, 7vw, 7rem);
-        line-height: 0.9;
+      .aero-copy h1 {
+        margin: 0 0 16px;
+        font-size: clamp(3rem, 7vw, 7.4rem);
+        line-height: 0.92;
         background: linear-gradient(90deg, #fff, var(--gold2), #8b8f96);
         -webkit-background-clip: text;
         color: transparent;
       }
-      .case-copy .lead {
+      .aero-copy .lead {
+        max-width: 760px;
         margin: 0;
         color: #fff7df;
-        font-size: clamp(1.55rem, 3vw, 3.1rem);
-        line-height: 1.08;
-        font-weight: 800;
+        font-size: clamp(1.7rem, 3.2vw, 3.8rem);
+        line-height: 1.05;
+        font-weight: 850;
       }
-      .case-badges {
+      .aero-badges {
         display: flex;
-        gap: 12px;
         flex-wrap: wrap;
+        gap: 12px;
         margin-top: 28px;
       }
-      .case-badges span {
+      .aero-badges span {
         border: 1px solid rgba(215, 173, 75, 0.38);
         color: var(--gold2);
         padding: 10px 14px;
-        background: rgba(0, 0, 0, 0.3);
-        font-weight: 800;
+        background: rgba(0, 0, 0, 0.35);
+        font-weight: 850;
       }
-      .component-frame {
-        border: 1px solid rgba(215, 173, 75, 0.34);
-        background: linear-gradient(
-          145deg,
-          rgba(255, 255, 255, 0.06),
-          rgba(215, 173, 75, 0.035)
+      .component-shell {
+        background: radial-gradient(
+          circle at center,
+          rgba(212, 175, 55, 0.12) 0%,
+          rgba(10, 10, 10, 1) 70%
         );
-        box-shadow: 0 30px 90px rgba(0, 0, 0, 0.46);
-        padding: clamp(14px, 2vw, 26px);
+        border: 1px solid rgba(215, 173, 75, 0.34);
+        box-shadow:
+          0 30px 90px rgba(0, 0, 0, 0.5),
+          0 0 70px rgba(212, 175, 55, 0.08);
+        padding: 30px;
       }
-      .component-frame img {
+      .image-wrap {
+        background: #080808;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 360px;
+        overflow: hidden;
+      }
+      .image-wrap img {
         width: 100%;
-        height: clamp(360px, 58vh, 640px);
+        height: 100%;
+        max-height: 560px;
         object-fit: contain;
-        display: block;
-        background: #060606;
+        mix-blend-mode: multiply;
+        filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.18));
+        transition: all 0.3s ease;
       }
-      .case-heading {
+      .component-shell:hover img,
+      .project-card:hover img {
+        transform: scale(1.03);
+      }
+      .aero-heading {
         max-width: 920px;
-        margin-bottom: 34px;
+        margin-bottom: 30px;
       }
-      .case-heading h2 {
+      .aero-heading h2 {
         margin: 0;
-        font-size: clamp(2rem, 4vw, 4.2rem);
+        font-size: clamp(2.1rem, 4.2vw, 4.6rem);
         line-height: 1.05;
       }
-      .featured-case {
+      .featured {
         display: grid;
-        grid-template-columns: 1.08fr 0.92fr;
+        grid-template-columns: 1.1fr 0.9fr;
         gap: 24px;
         border: 1px solid rgba(215, 173, 75, 0.22);
         background: linear-gradient(
@@ -134,42 +141,43 @@
           rgba(255, 255, 255, 0.07),
           rgba(255, 255, 255, 0.025)
         );
-        padding: clamp(16px, 2.5vw, 30px);
+        padding: clamp(16px, 2.4vw, 30px);
       }
-      .featured-case img {
-        width: 100%;
-        height: 480px;
-        object-fit: contain;
-        background: #070707;
+      .featured .image-wrap {
+        min-height: 430px;
       }
-      .detail-panel {
+      .tech-panel {
         display: grid;
         align-content: center;
         gap: 14px;
       }
-      .detail-row {
+      .tech-row {
         border-top: 1px solid rgba(215, 173, 75, 0.2);
         padding-top: 14px;
       }
-      .detail-row strong {
+      .tech-row strong {
         display: block;
         color: var(--gold);
         letter-spacing: 0.12em;
         text-transform: uppercase;
         font-size: 0.78rem;
       }
-      .detail-row span {
+      .tech-row span {
         color: #f6edd7;
         font-size: 1.12rem;
       }
-      .project-grid {
+      .gallery-grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         gap: 18px;
       }
       .project-card {
         border: 1px solid rgba(215, 173, 75, 0.2);
-        background: linear-gradient(180deg, #111, #070707);
+        background: radial-gradient(
+          circle at center,
+          rgba(212, 175, 55, 0.12) 0%,
+          rgba(10, 10, 10, 1) 70%
+        );
         transition:
           transform 0.28s ease,
           border-color 0.28s ease,
@@ -181,33 +189,31 @@
         border-color: rgba(215, 173, 75, 0.72);
         box-shadow: 0 24px 76px rgba(0, 0, 0, 0.4);
       }
-      .project-card img {
-        width: 100%;
-        height: 250px;
-        object-fit: contain;
-        display: block;
-        background: #080808;
-        padding: 10px;
+      .project-card .image-wrap {
+        min-height: 300px;
+        padding: 30px;
       }
       .project-card h3 {
-        min-height: 82px;
         margin: 0;
+        min-height: 78px;
         padding: 18px;
         color: #fff7df;
-        font-size: 1rem;
+        font-size: 1.05rem;
+      }
+      .capability-grid,
+      .quality-grid,
+      .why-grid {
+        display: grid;
+        gap: 16px;
       }
       .capability-grid,
       .quality-grid {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
       }
       .why-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
+        grid-template-columns: repeat(3, 1fr);
       }
-      .case-card {
+      .info-card {
         border: 1px solid rgba(215, 173, 75, 0.22);
         background: linear-gradient(
           145deg,
@@ -218,17 +224,21 @@
         min-height: 128px;
         box-shadow: 0 22px 70px rgba(0, 0, 0, 0.28);
       }
-      .case-card .icon {
+      .info-card .icon {
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(215, 173, 75, 0.36);
+        display: grid;
+        place-items: center;
         color: var(--gold);
-        font-size: 1.7rem;
-        margin-bottom: 16px;
+        margin-bottom: 18px;
       }
-      .case-card h3 {
+      .info-card h3 {
         margin: 0;
         color: #f6edd7;
-        font-size: 1.05rem;
+        font-size: 1.08rem;
       }
-      .case-cta {
+      .cta {
         text-align: center;
         background:
           radial-gradient(
@@ -238,15 +248,17 @@
           ),
           #050505;
       }
-      .case-cta h2 {
+      .cta h2 {
         margin-bottom: 28px;
       }
       @media (max-width: 1120px) {
-        .case-hero,
-        .featured-case {
+        .aero-hero,
+        .featured {
           grid-template-columns: 1fr;
         }
-        .project-grid,
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
         .capability-grid,
         .quality-grid,
         .why-grid {
@@ -254,213 +266,420 @@
         }
       }
       @media (max-width: 680px) {
-        .case-nav {
+        .aero-page .nav-panel {
           display: none;
         }
-        .project-grid,
+        .gallery-grid,
         .capability-grid,
         .quality-grid,
         .why-grid {
           grid-template-columns: 1fr;
         }
-        .component-frame img,
-        .featured-case img {
-          height: 300px;
+        .image-wrap,
+        .featured .image-wrap {
+          min-height: 260px;
+          padding: 18px;
+        }
+        .aero-hero {
+          padding-top: 116px;
         }
       }
     </style>
   </head>
-  <body>
-    <header class="case-header">
-      <nav class="navbar" aria-label="Aerospace case navigation">
+  <body class="aero-page">
+    <header class="site-header scrolled" id="siteHeader">
+      <nav class="navbar" aria-label="Primary navigation">
         <a
           class="brand"
           href="../../index.html#home"
           aria-label="Dinglian Technology home"
         >
           <img src="../../dinglian-logo.png" alt="DINGLIAN TECHNOLOGY logo" />
-          <span><strong>DINGLIAN</strong><small>TECHNOLOGY</small></span>
+          <span
+            ><strong data-i18n="brand.name">DINGLIAN</strong
+            ><small data-i18n="brand.subname">TECHNOLOGY</small></span
+          >
         </a>
-        <div class="case-nav">
-          <a href="../../index.html#industries">INDUSTRIES</a
-          ><a href="../../index.html#quality">QUALITY</a
-          ><a href="../../index.html#contact">CONTACT</a
-          ><a class="quote-link" href="../../index.html#contact">GET A QUOTE</a>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <div class="nav-panel" id="navPanel">
+          <a href="../../index.html#home" data-i18n="nav.home">HOME</a>
+          <a href="../../index.html#story" data-i18n="nav.story">OUR STORY</a>
+          <a href="../../index.html#industries" data-i18n="nav.industries"
+            >INDUSTRIES</a
+          >
+          <a href="../../index.html#solutions" data-i18n="nav.solutions"
+            >SOLUTIONS</a
+          >
+          <a href="../../index.html#quality" data-i18n="nav.quality">QUALITY</a>
+          <a href="../../index.html#jintat-foundation" data-i18n="nav.jintat"
+            >JINTAT FOUNDATION</a
+          >
+          <a href="../../index.html#contact" data-i18n="nav.contact">CONTACT</a>
+          <a
+            class="quote-link"
+            href="../../index.html#contact"
+            data-i18n="nav.quote"
+            >GET A QUOTE</a
+          >
+          <div class="language-switcher" aria-label="Language switcher">
+            <button class="lang" data-lang="zh">繁體中文</button><span>|</span
+            ><button class="lang active" data-lang="en">English</button>
+          </div>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="case-hero">
-        <div class="case-copy">
-          <p class="eyebrow">AEROSPACE CASE STUDY</p>
-          <h1>Aerospace Components</h1>
-          <p class="lead">
-            Precision CNC components for critical applications.
+      <section class="aero-hero">
+        <div class="aero-copy">
+          <p class="eyebrow" data-i18n="hero.kicker">DINGLIAN TECHNOLOGY</p>
+          <h1 data-i18n="hero.title">Aerospace Components</h1>
+          <p class="lead" data-i18n="hero.lead">
+            Precision CNC Components for Critical Aerospace Applications
           </p>
-          <div class="case-badges">
-            <span>±0.01mm Tolerance</span><span>CMM Inspection</span
-            ><span>24/7 Production</span>
-          </div>
+          <div class="aero-badges" id="heroBadges"></div>
         </div>
-        <div class="case-visual">
-          <div class="component-frame">
-            <img
-              src="../../images/aerospace/aerospace-03-lightweight-ring.jpg"
-              alt="Lightweight Aerospace Ring"
-            />
+        <div class="aero-visual">
+          <div class="component-shell">
+            <div class="image-wrap">
+              <img
+                src="../../images/aerospace/aerospace-03-lightweight-ring.jpg"
+                alt="Lightweight Aerospace Ring"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="case-section">
-        <div class="case-heading">
-          <p class="eyebrow">FEATURED PROJECT</p>
-          <h2>Lightweight Aerospace Ring</h2>
+      <section class="aero-section">
+        <div class="aero-heading">
+          <p class="eyebrow" data-i18n="featured.kicker">FEATURED PROJECT</p>
+          <h2 data-i18n="featured.title">Featured Aerospace Project</h2>
         </div>
-        <article class="featured-case">
-          <img
-            src="../../images/aerospace/aerospace-03-lightweight-ring.jpg"
-            alt="Lightweight Aerospace Ring"
-          />
-          <div class="detail-panel">
-            <div class="detail-row">
-              <strong>Material</strong><span>Aluminum Alloy</span>
+        <article class="featured">
+          <div class="component-shell">
+            <div class="image-wrap">
+              <img
+                src="../../images/aerospace/aerospace-03-lightweight-ring.jpg"
+                alt="Lightweight Aerospace Ring"
+              />
             </div>
-            <div class="detail-row">
-              <strong>Process</strong><span>CNC Machining</span>
+          </div>
+          <div class="tech-panel">
+            <div class="tech-row">
+              <strong data-i18n="featured.materialLabel">Material:</strong
+              ><span data-i18n="featured.material">Aluminum Alloy</span>
             </div>
-            <div class="detail-row">
-              <strong>Inspection</strong><span>CMM Inspection</span>
+            <div class="tech-row">
+              <strong data-i18n="featured.processLabel">Process:</strong
+              ><span data-i18n="featured.process"
+                >Multi-Axis CNC Machining</span
+              >
             </div>
-            <div class="detail-row">
-              <strong>Application</strong
-              ><span>Aerospace Structural Component</span>
+            <div class="tech-row">
+              <strong data-i18n="featured.inspectionLabel">Inspection:</strong
+              ><span data-i18n="featured.inspection"
+                >Mitutoyo CMM Inspection</span
+              >
+            </div>
+            <div class="tech-row">
+              <strong data-i18n="featured.applicationLabel">Application:</strong
+              ><span data-i18n="featured.application"
+                >Aerospace Structural Component</span
+              >
             </div>
           </div>
         </article>
       </section>
 
-      <section class="case-section">
-        <div class="case-heading">
-          <p class="eyebrow">SAMPLE PROJECTS</p>
-          <h2>Aerospace Sample Projects</h2>
+      <section class="aero-section">
+        <div class="aero-heading">
+          <p class="eyebrow" data-i18n="gallery.kicker">SAMPLE PROJECTS</p>
+          <h2 data-i18n="gallery.title">Aerospace Sample Projects</h2>
         </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <img
-              src="../../images/aerospace/aerospace-01-precision-component.jpg"
-              alt="Precision Flange Component"
-            />
-            <h3>01 Precision Flange Component</h3>
-          </article>
-          <article class="project-card">
-            <img
-              src="../../images/aerospace/aerospace-02-structural-ring.jpg"
-              alt="Structural Ring Assembly"
-            />
-            <h3>02 Structural Ring Assembly</h3>
-          </article>
-          <article class="project-card">
-            <img
-              src="../../images/aerospace/aerospace-03-lightweight-ring.jpg"
-              alt="Lightweight Aerospace Ring"
-            />
-            <h3>03 Lightweight Aerospace Ring</h3>
-          </article>
-          <article class="project-card">
-            <img
-              src="../../images/aerospace/aerospace-04-machined-structure.jpg"
-              alt="Multi-Axis Machined Structure"
-            />
-            <h3>04 Multi-Axis Machined Structure</h3>
-          </article>
-          <article class="project-card">
-            <img
-              src="../../images/aerospace/aerospace-05-anodized-component.jpg"
-              alt="Anodized Precision Component"
-            />
-            <h3>05 Anodized Precision Component</h3>
-          </article>
-        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
       </section>
 
-      <section class="case-section">
-        <div class="case-heading">
-          <p class="eyebrow">CAPABILITY</p>
-          <h2>Aerospace Manufacturing Capability</h2>
+      <section class="aero-section">
+        <div class="aero-heading">
+          <p class="eyebrow" data-i18n="cap.kicker">CAPABILITY</p>
+          <h2 data-i18n="cap.title">Aerospace Manufacturing Capability</h2>
         </div>
-        <div class="capability-grid">
-          <article class="case-card">
-            <div class="icon">✦</div>
-            <h3>Complex Geometry</h3>
-          </article>
-          <article class="case-card">
-            <div class="icon">✦</div>
-            <h3>Multi-Axis Machining</h3>
-          </article>
-          <article class="case-card">
-            <div class="icon">✦</div>
-            <h3>Tight Tolerance</h3>
-          </article>
-          <article class="case-card">
-            <div class="icon">✦</div>
-            <h3>Surface Treatment</h3>
-          </article>
-          <article class="case-card">
-            <div class="icon">✦</div>
-            <h3>Material Traceability</h3>
-          </article>
-          <article class="case-card">
-            <div class="icon">✦</div>
-            <h3>Inspection Documentation</h3>
-          </article>
-        </div>
+        <div class="capability-grid" id="capabilityGrid"></div>
       </section>
-
-      <section class="case-section quality">
+      <section class="aero-section quality">
         <div class="quality-copy">
-          <p class="eyebrow">QUALITY ASSURANCE</p>
-          <h2>Quality Assurance</h2>
+          <p class="eyebrow" data-i18n="quality.kicker">QUALITY</p>
+          <h2 data-i18n="quality.title">Quality Assurance</h2>
         </div>
-        <div class="quality-grid">
-          <article class="case-card"><h3>ISO 9001</h3></article>
-          <article class="case-card"><h3>Mitutoyo CMM Inspection</h3></article>
-          <article class="case-card">
-            <h3>KEYENCE Measurement System</h3>
-          </article>
-          <article class="case-card"><h3>Material Certification</h3></article>
-          <article class="case-card"><h3>Inspection Reports</h3></article>
-          <article class="case-card"><h3>Traceability Management</h3></article>
-        </div>
+        <div class="quality-grid" id="qualityGrid"></div>
       </section>
-
-      <section class="case-section">
-        <div class="case-heading">
-          <p class="eyebrow">WHY DINGLIAN</p>
-          <h2>Why Dinglian</h2>
+      <section class="aero-section">
+        <div class="aero-heading">
+          <p class="eyebrow" data-i18n="why.kicker">WHY DINGLIAN</p>
+          <h2 data-i18n="why.title">Why Dinglian</h2>
         </div>
-        <div class="why-grid">
-          <article class="case-card">
-            <h3>20+ Years Manufacturing Foundation</h3>
-          </article>
-          <article class="case-card"><h3>24/7 Production Support</h3></article>
-          <article class="case-card">
-            <h3>One-Stop Manufacturing Integration</h3>
-          </article>
-          <article class="case-card">
-            <h3>Prototype &amp; Low-Volume Expertise</h3>
-          </article>
-        </div>
+        <div class="why-grid" id="whyGrid"></div>
       </section>
-
-      <section class="case-section case-cta">
-        <p class="eyebrow">CONTACT</p>
-        <h2>Start Your Aerospace Project</h2>
-        <a class="btn btn-primary" href="../../index.html#contact"
+      <section class="aero-section cta">
+        <p class="eyebrow" data-i18n="cta.kicker">CONTACT</p>
+        <h2 data-i18n="cta.title">Start Your Aerospace Project</h2>
+        <a
+          class="btn btn-primary"
+          href="../../index.html#contact"
+          data-i18n="cta.button"
           >Get A Quote</a
         >
       </section>
     </main>
+
+    <script>
+      const translations = {
+        en: {
+          "brand.name": "DINGLIAN",
+          "brand.subname": "TECHNOLOGY",
+          "nav.home": "HOME",
+          "nav.story": "OUR STORY",
+          "nav.industries": "INDUSTRIES",
+          "nav.solutions": "SOLUTIONS",
+          "nav.quality": "QUALITY",
+          "nav.jintat": "JINTAT FOUNDATION",
+          "nav.contact": "CONTACT",
+          "nav.quote": "GET A QUOTE",
+          "hero.kicker": "DINGLIAN TECHNOLOGY",
+          "hero.title": "Aerospace Components",
+          "hero.lead":
+            "Precision CNC Components for Critical Aerospace Applications",
+          "featured.kicker": "FEATURED PROJECT",
+          "featured.title": "Featured Aerospace Project",
+          "featured.materialLabel": "Material:",
+          "featured.material": "Aluminum Alloy",
+          "featured.processLabel": "Process:",
+          "featured.process": "Multi-Axis CNC Machining",
+          "featured.inspectionLabel": "Inspection:",
+          "featured.inspection": "Mitutoyo CMM Inspection",
+          "featured.applicationLabel": "Application:",
+          "featured.application": "Aerospace Structural Component",
+          "gallery.kicker": "SAMPLE PROJECTS",
+          "gallery.title": "Aerospace Sample Projects",
+          "cap.kicker": "CAPABILITY",
+          "cap.title": "Aerospace Manufacturing Capability",
+          "quality.kicker": "QUALITY",
+          "quality.title": "Quality Assurance",
+          "why.kicker": "WHY DINGLIAN",
+          "why.title": "Why Dinglian",
+          "cta.kicker": "CONTACT",
+          "cta.title": "Start Your Aerospace Project",
+          "cta.button": "Get A Quote",
+        },
+        zh: {
+          "brand.name": "鼎鏈科技",
+          "brand.subname": "全球製造整合",
+          "nav.home": "首頁",
+          "nav.story": "品牌故事",
+          "nav.industries": "服務產業",
+          "nav.solutions": "整合方案",
+          "nav.quality": "品質管理",
+          "nav.jintat": "瑨達基地",
+          "nav.contact": "聯絡我們",
+          "nav.quote": "取得報價",
+          "hero.kicker": "鼎鏈科技",
+          "hero.title": "航太零件",
+          "hero.lead": "高可靠度航太應用的精密 CNC 加工解決方案",
+          "featured.kicker": "精選案例",
+          "featured.title": "精選案例",
+          "featured.materialLabel": "材料：",
+          "featured.material": "鋁合金",
+          "featured.processLabel": "製程：",
+          "featured.process": "多軸 CNC 加工",
+          "featured.inspectionLabel": "檢驗：",
+          "featured.inspection": "Mitutoyo 三次元量測",
+          "featured.applicationLabel": "應用：",
+          "featured.application": "航太結構件",
+          "gallery.kicker": "加工案例",
+          "gallery.title": "航太加工案例",
+          "cap.kicker": "製造能力",
+          "cap.title": "航太製造能力",
+          "quality.kicker": "品質保證",
+          "quality.title": "品質保證",
+          "why.kicker": "鼎鏈優勢",
+          "why.title": "為什麼選擇鼎鏈",
+          "cta.kicker": "聯絡我們",
+          "cta.title": "啟動您的航太專案",
+          "cta.button": "立即詢價",
+        },
+      };
+      const data = {
+        en: {
+          badges: [
+            "±0.01 mm Tolerance",
+            "ISO 9001",
+            "Mitutoyo CMM",
+            "24/7 Production",
+          ],
+          gallery: [
+            [
+              "01 Precision Flange Component",
+              "../../images/aerospace/aerospace-01-precision-component.jpg",
+            ],
+            [
+              "02 Structural Ring Assembly",
+              "../../images/aerospace/aerospace-02-structural-ring.jpg",
+            ],
+            [
+              "03 Lightweight Aerospace Ring",
+              "../../images/aerospace/aerospace-03-lightweight-ring.jpg",
+            ],
+            [
+              "04 Multi-Axis Machined Structure",
+              "../../images/aerospace/aerospace-04-machined-structure.jpg",
+            ],
+            [
+              "05 Anodized Precision Component",
+              "../../images/aerospace/aerospace-05-anodized-component.jpg",
+            ],
+          ],
+          capabilities: [
+            "CNC Turning",
+            "CNC Milling",
+            "Turn-Mill Machining",
+            "Precision Grinding",
+            "Surface Treatment Integration",
+            "Inspection Documentation",
+          ],
+          quality: [
+            "ISO 9001",
+            "Mitutoyo CMM Inspection",
+            "KEYENCE Measurement System",
+            "Material Certification",
+            "Inspection Reports",
+            "Traceability Management",
+          ],
+          why: [
+            "20+ Years Manufacturing Foundation",
+            "24/7 Production Support",
+            "One-Stop Manufacturing Integration",
+            "Prototype & Low Volume Expertise",
+            "Rapid Engineering Response",
+            "International Supply Chain Experience",
+          ],
+        },
+        zh: {
+          badges: [
+            "±0.01 mm 精度",
+            "ISO 9001",
+            "Mitutoyo 三次元量測",
+            "24小時生產",
+          ],
+          gallery: [
+            [
+              "01 精密法蘭零件",
+              "../../images/aerospace/aerospace-01-precision-component.jpg",
+            ],
+            [
+              "02 結構環件組件",
+              "../../images/aerospace/aerospace-02-structural-ring.jpg",
+            ],
+            [
+              "03 輕量化航太環件",
+              "../../images/aerospace/aerospace-03-lightweight-ring.jpg",
+            ],
+            [
+              "04 多軸加工結構件",
+              "../../images/aerospace/aerospace-04-machined-structure.jpg",
+            ],
+            [
+              "05 陽極處理精密零件",
+              "../../images/aerospace/aerospace-05-anodized-component.jpg",
+            ],
+          ],
+          capabilities: [
+            "CNC 車削",
+            "CNC 銑削",
+            "車銑複合加工",
+            "精密研磨",
+            "表面處理整合",
+            "檢驗文件管理",
+          ],
+          quality: [
+            "ISO 9001",
+            "Mitutoyo 三次元量測",
+            "KEYENCE 影像量測系統",
+            "材料證明",
+            "檢驗報告",
+            "追溯管理",
+          ],
+          why: [
+            "20年以上製造基礎",
+            "24小時生產支援",
+            "一站式製造整合",
+            "原型與低量產經驗",
+            "快速工程回應",
+            "國際供應鏈經驗",
+          ],
+        },
+      };
+      function setLang(lang) {
+        const dict = translations[lang];
+        const page = data[lang];
+        document.documentElement.lang = lang === "zh" ? "zh-Hant" : "en";
+        document
+          .querySelectorAll("[data-i18n]")
+          .forEach(
+            (el) => (el.innerHTML = dict[el.dataset.i18n] || el.innerHTML),
+          );
+        document
+          .querySelectorAll(".lang")
+          .forEach((button) =>
+            button.classList.toggle("active", button.dataset.lang === lang),
+          );
+        heroBadges.innerHTML = page.badges
+          .map((item) => `<span>${item}</span>`)
+          .join("");
+        galleryGrid.innerHTML = page.gallery
+          .map(
+            ([title, src]) =>
+              `<article class="project-card"><div class="image-wrap"><img src="${src}" alt="${title}" /></div><h3>${title}</h3></article>`,
+          )
+          .join("");
+        capabilityGrid.innerHTML = page.capabilities
+          .map(
+            (item) =>
+              `<article class="info-card"><div class="icon">✦</div><h3>${item}</h3></article>`,
+          )
+          .join("");
+        qualityGrid.innerHTML = page.quality
+          .map(
+            (item) =>
+              `<article class="info-card"><div class="icon">◆</div><h3>${item}</h3></article>`,
+          )
+          .join("");
+        whyGrid.innerHTML = page.why
+          .map(
+            (item) =>
+              `<article class="info-card"><div class="icon">●</div><h3>${item}</h3></article>`,
+          )
+          .join("");
+        localStorage.setItem("dinglianLang", lang);
+      }
+      document
+        .querySelectorAll(".lang")
+        .forEach((button) =>
+          button.addEventListener("click", () => setLang(button.dataset.lang)),
+        );
+      document
+        .querySelector(".nav-toggle")
+        .addEventListener("click", (event) => {
+          const open = navPanel.classList.toggle("open");
+          event.currentTarget.setAttribute("aria-expanded", open);
+        });
+      setLang(localStorage.getItem("dinglianLang") || "en");
+    </script>
   </body>
 </html>
