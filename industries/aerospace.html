@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aerospace Components | DINGLIAN TECHNOLOGY</title>
+    <meta
+      name="description"
+      content="Precision CNC machining solutions for aerospace and high-reliability applications by DINGLIAN TECHNOLOGY."
+    />
+    <link rel="icon" type="image/png" href="../dinglian-logo.png" />
+    <link rel="apple-touch-icon" href="../dinglian-logo.png" />
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .industry-page-header {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        background: rgba(0, 0, 0, 0.92);
+        border-bottom: 1px solid rgba(215, 173, 75, 0.22);
+        backdrop-filter: blur(18px);
+      }
+      .industry-hero {
+        min-height: 74vh;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        padding: 150px clamp(22px, 6vw, 92px) 90px;
+        background:
+          radial-gradient(
+            circle at 50% 40%,
+            rgba(215, 173, 75, 0.2),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at 50% 52%,
+            rgba(78, 140, 255, 0.1),
+            transparent 36%
+          ),
+          linear-gradient(135deg, #020202 0%, #0b0b0d 48%, #15120a 100%);
+        position: relative;
+        overflow: hidden;
+      }
+      .industry-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(215, 173, 75, 0.07) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(215, 173, 75, 0.07) 1px, transparent 1px);
+        background-size: 72px 72px;
+        mask-image: linear-gradient(to bottom, black, transparent 88%);
+      }
+      .industry-hero-inner {
+        position: relative;
+        max-width: 1020px;
+      }
+      .industry-hero-logo {
+        width: min(260px, 42vw);
+        filter: drop-shadow(0 0 34px rgba(215, 173, 75, 0.35));
+        margin-bottom: 28px;
+      }
+      .industry-hero h1 {
+        margin: 0;
+        font-size: clamp(3rem, 7vw, 7.4rem);
+        line-height: 0.95;
+        background: linear-gradient(90deg, #fff, var(--gold2), #8b8f96);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      .industry-hero p {
+        max-width: 780px;
+        margin: 24px auto 0;
+        color: var(--muted);
+        font-size: clamp(1.1rem, 2vw, 1.45rem);
+      }
+      .industry-gallery {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 18px;
+      }
+      .aerospace-card {
+        border: 1px solid rgba(215, 173, 75, 0.22);
+        background: linear-gradient(180deg, #111, #070707);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+        overflow: hidden;
+      }
+      .aerospace-card img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        display: block;
+        background: #090909;
+      }
+      .aerospace-card h3 {
+        margin: 0;
+        padding: 20px;
+        min-height: 96px;
+        color: #fff7df;
+        font-size: 1rem;
+        letter-spacing: 0.04em;
+      }
+      .industry-feature-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .industry-feature-grid span {
+        border: 1px solid rgba(215, 173, 75, 0.22);
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.06),
+          rgba(215, 173, 75, 0.035)
+        );
+        padding: 18px 20px;
+        color: #f6edd7;
+        min-height: 68px;
+        display: flex;
+        align-items: center;
+      }
+      .industry-cta {
+        text-align: center;
+        background:
+          radial-gradient(
+            circle at 50% 50%,
+            rgba(215, 173, 75, 0.16),
+            transparent 34%
+          ),
+          #050505;
+      }
+      .industry-cta h2 {
+        margin-bottom: 28px;
+      }
+      @media (max-width: 1050px) {
+        .industry-gallery,
+        .industry-feature-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 640px) {
+        .industry-gallery,
+        .industry-feature-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="industry-page-header">
+      <nav class="navbar" aria-label="Aerospace page navigation">
+        <a
+          class="brand"
+          href="../index.html#home"
+          aria-label="Dinglian Technology home"
+        >
+          <img src="../dinglian-logo.png" alt="DINGLIAN TECHNOLOGY logo" />
+          <span><strong>DINGLIAN</strong><small>TECHNOLOGY</small></span>
+        </a>
+        <div class="nav-panel open">
+          <a href="../index.html#industries">INDUSTRIES</a>
+          <a href="../index.html#solutions">SOLUTIONS</a>
+          <a href="../index.html#quality">QUALITY</a>
+          <a class="quote-link" href="../index.html#contact">GET A QUOTE</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="industry-hero">
+        <div class="industry-hero-inner reveal visible">
+          <img
+            class="industry-hero-logo"
+            src="../dinglian-logo.png"
+            alt="DINGLIAN TECHNOLOGY logo"
+          />
+          <p class="eyebrow">INDUSTRIES / AEROSPACE</p>
+          <h1>Aerospace Components</h1>
+          <p>
+            Precision CNC machining solutions for aerospace and high-reliability
+            applications.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading reveal visible">
+          <p class="eyebrow">AEROSPACE GALLERY</p>
+          <h2>Precision Components for High-Reliability Programs</h2>
+        </div>
+        <div class="industry-gallery">
+          <article class="aerospace-card">
+            <img
+              src="../images/aerospace/aerospace-01-precision-component.jpg"
+              alt="Precision Flange Component"
+            />
+            <h3>01 Precision Flange Component</h3>
+          </article>
+          <article class="aerospace-card">
+            <img
+              src="../images/aerospace/aerospace-02-structural-ring.jpg"
+              alt="Structural Ring Assembly"
+            />
+            <h3>02 Structural Ring Assembly</h3>
+          </article>
+          <article class="aerospace-card">
+            <img
+              src="../images/aerospace/aerospace-03-lightweight-ring.jpg"
+              alt="Lightweight Aerospace Ring"
+            />
+            <h3>03 Lightweight Aerospace Ring</h3>
+          </article>
+          <article class="aerospace-card">
+            <img
+              src="../images/aerospace/aerospace-04-machined-structure.jpg"
+              alt="Multi-Axis Machined Structure"
+            />
+            <h3>04 Multi-Axis Machined Structure</h3>
+          </article>
+          <article class="aerospace-card">
+            <img
+              src="../images/aerospace/aerospace-05-anodized-component.jpg"
+              alt="Anodized Precision Component"
+            />
+            <h3>05 Anodized Precision Component</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading reveal visible">
+          <p class="eyebrow">CAPABILITIES</p>
+          <h2>Aerospace Manufacturing Capabilities</h2>
+        </div>
+        <div class="industry-feature-grid">
+          <span>CNC Turning</span><span>CNC Milling</span
+          ><span>Multi-Axis Machining</span><span>Tight Tolerance Parts</span
+          ><span>Surface Treatment</span
+          ><span>Inspection &amp; Documentation</span>
+        </div>
+      </section>
+
+      <section class="section quality">
+        <div class="quality-copy reveal visible">
+          <p class="eyebrow">QUALITY</p>
+          <h2>Quality Systems for High-Reliability Components</h2>
+          <p>
+            Documentation, measurement discipline and traceability support
+            demanding aerospace applications.
+          </p>
+        </div>
+        <div class="quality-list reveal visible">
+          <div class="quality-item">ISO 9001</div>
+          <div class="quality-item">CMM Inspection</div>
+          <div class="quality-item">KEYENCE Measurement</div>
+          <div class="quality-item">Material Traceability</div>
+        </div>
+      </section>
+
+      <section class="section industry-cta">
+        <p class="eyebrow">CONTACT</p>
+        <h2>Start Your Aerospace Project</h2>
+        <a class="btn btn-primary" href="../index.html#contact">Get A Quote</a>
+      </section>
+    </main>
+  </body>
+</html>
