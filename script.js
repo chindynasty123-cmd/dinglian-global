@@ -266,7 +266,7 @@ function render(lang) {
     .map((i, index) => {
       const card = `<div class="icon">${i[0]}</div><h3>${i[1]}</h3><p class="muted">${i[2]}</p>`;
       return index === 0
-        ? `<a class="industry-card reveal" href="/industries/aerospace.html">${card}</a>`
+        ? `<a class="industry-card reveal" href="industries/aerospace/">${card}</a>`
         : `<article class="industry-card reveal">${card}</article>`;
     })
     .join("");
