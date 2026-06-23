@@ -23,6 +23,9 @@
       .aero-page .nav-panel {
         display: flex;
       }
+      .mobile-close {
+        display: none;
+      }
       .aero-section {
         padding: 82px clamp(22px, 6vw, 92px);
         border-top: 1px solid rgba(255, 255, 255, 0.07);
@@ -154,18 +157,11 @@
         position: relative;
         z-index: 2;
         width: min(390px, 58vw);
-        padding: clamp(24px, 4vw, 42px);
-        border: 1px solid rgba(200, 169, 106, 0.34);
-        border-radius: 24px;
-        background: radial-gradient(
-          circle at center,
-          rgba(200, 169, 106, 0.12),
-          rgba(8, 8, 8, 0.82) 62%
-        );
-        box-shadow:
-          inset 0 0 60px rgba(200, 169, 106, 0.08),
-          0 0 90px rgba(200, 169, 106, 0.14),
-          0 34px 90px rgba(0, 0, 0, 0.62);
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
       }
       .hero-logo-card img {
         width: 100%;
@@ -477,6 +473,74 @@
       .cta h2 {
         margin-bottom: 28px;
       }
+      @media (max-width: 1050px) {
+        .aero-page .nav-toggle {
+          display: grid;
+          place-items: center;
+          width: 44px;
+          height: 44px;
+          border: 1px solid rgba(200, 169, 106, 0.62);
+          color: #c8a96a;
+          background: rgba(0, 0, 0, 0.42);
+          font-size: 1.35rem;
+          cursor: pointer;
+          position: relative;
+          z-index: 1001;
+        }
+        .aero-page .nav-panel {
+          position: fixed;
+          inset: 0;
+          z-index: 1000;
+          display: none;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 22px;
+          min-height: 100vh;
+          padding: 92px 28px 44px;
+          background:
+            radial-gradient(
+              circle at 50% 18%,
+              rgba(200, 169, 106, 0.14),
+              transparent 28%
+            ),
+            rgba(0, 0, 0, 0.97);
+          border: 0;
+          text-align: center;
+          font-size: 0.95rem;
+          letter-spacing: 0.18em;
+        }
+        .aero-page .nav-panel.open {
+          display: flex;
+        }
+        .aero-page .nav-panel a {
+          width: min(320px, 88vw);
+          padding: 13px 18px;
+          border-bottom: 1px solid rgba(200, 169, 106, 0.18);
+        }
+        .aero-page .nav-panel .quote-link {
+          border: 1px solid rgba(200, 169, 106, 0.72);
+          margin-top: 8px;
+        }
+        .aero-page .language-switcher {
+          margin-top: 10px;
+          font-size: 0.95rem;
+        }
+        .mobile-close {
+          position: absolute;
+          top: 24px;
+          right: 24px;
+          display: grid;
+          place-items: center;
+          width: 44px;
+          height: 44px;
+          border: 1px solid rgba(200, 169, 106, 0.62);
+          color: #c8a96a;
+          background: rgba(0, 0, 0, 0.58);
+          font-size: 1.9rem;
+          cursor: pointer;
+        }
+      }
       @media (max-width: 1120px) {
         .portfolio-showcase {
           grid-template-columns: 1fr;
@@ -491,9 +555,6 @@
         }
       }
       @media (max-width: 680px) {
-        .aero-page .nav-panel {
-          display: none;
-        }
         .gallery-grid,
         .capability-grid,
         .quality-grid,
@@ -542,6 +603,13 @@
           ☰
         </button>
         <div class="nav-panel" id="navPanel">
+          <button
+            class="mobile-close"
+            type="button"
+            aria-label="Close navigation"
+          >
+            ×
+          </button>
           <a href="../../index.html#home" data-i18n="nav.home">HOME</a>
           <a href="../../index.html#story" data-i18n="nav.story">OUR STORY</a>
           <a href="../../index.html#industries" data-i18n="nav.industries"
@@ -754,7 +822,7 @@
             {
               image:
                 "../../images/aerospace/aerospace-01-precision-component.png",
-              material: "Aluminum Alloy",
+              material: "SUS316 Stainless Steel",
               process: "Precision CNC Machining",
               inspection: "Mitutoyo CMM",
               application: "Aerospace Precision Component",
@@ -776,7 +844,7 @@
             {
               image:
                 "../../images/aerospace/aerospace-04-machined-structure.png",
-              material: "Aluminum Alloy",
+              material: "SUS316 Stainless Steel",
               process: "Multi-Axis CNC Machining",
               inspection: "Mitutoyo CMM",
               application: "Aerospace Machined Structure",
@@ -843,7 +911,7 @@
             {
               image:
                 "../../images/aerospace/aerospace-01-precision-component.png",
-              material: "鋁合金",
+              material: "SUS316 Stainless Steel",
               process: "精密 CNC 加工",
               inspection: "Mitutoyo 三次元量測",
               application: "航太精密零件",
@@ -865,7 +933,7 @@
             {
               image:
                 "../../images/aerospace/aerospace-04-machined-structure.png",
-              material: "鋁合金",
+              material: "SUS316 Stainless Steel",
               process: "多軸 CNC 加工",
               inspection: "Mitutoyo 三次元量測",
               application: "航太加工結構件",
@@ -1006,12 +1074,21 @@
         .forEach((button) =>
           button.addEventListener("click", () => setLang(button.dataset.lang)),
         );
+      const navToggle = document.querySelector(".nav-toggle");
+      const closeMenu = () => {
+        navPanel.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+      };
+      navToggle.addEventListener("click", () => {
+        const open = navPanel.classList.toggle("open");
+        navToggle.setAttribute("aria-expanded", open);
+      });
       document
-        .querySelector(".nav-toggle")
-        .addEventListener("click", (event) => {
-          const open = navPanel.classList.toggle("open");
-          event.currentTarget.setAttribute("aria-expanded", open);
-        });
+        .querySelector(".mobile-close")
+        .addEventListener("click", closeMenu);
+      navPanel
+        .querySelectorAll("a")
+        .forEach((link) => link.addEventListener("click", closeMenu));
       document
         .querySelector(".carousel-arrow.prev")
         .addEventListener("click", () => showSlide(-1));
