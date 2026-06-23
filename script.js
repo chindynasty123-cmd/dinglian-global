@@ -174,7 +174,7 @@ const localizedData = {
       ["✈", "航太", "航太零件"],
       ["◫", "半導體", "半導體設備零件"],
       ["⚙", "機器人", "機器人零件"],
-      ["▣", "工業自動化", "自動化設備零件"],
+      ["▣", "自動化設備", "自動化設備零件"],
       ["＋", "醫療設備", "醫療設備零件"],
     ],
     solutions: [
@@ -223,7 +223,7 @@ const localizedData = {
       ["✈", "Aerospace", "Aerospace Components"],
       ["◫", "Semiconductor", "Semiconductor Equipment Parts"],
       ["⚙", "Robotics", "Robotics Parts"],
-      ["▣", "Industrial Automation", "Automation Components"],
+      ["▣", "Automation Equipment", "Automation Components"],
       ["＋", "Medical Equipment", "Medical Components"],
     ],
     solutions: [
@@ -266,6 +266,7 @@ function render(lang) {
     0: "industries/aerospace/",
     1: "industries/semiconductor/",
     2: "industries/robotics/",
+    3: "industries/automation/",
   };
   industriesGrid.innerHTML = data.industries
     .map((i, index) => {
