@@ -265,6 +265,7 @@ function render(lang) {
   const industryLinks = {
     0: "industries/aerospace/",
     1: "industries/semiconductor/",
+    2: "industries/robotics/",
   };
   industriesGrid.innerHTML = data.industries
     .map((i, index) => {
