@@ -2,7 +2,7 @@ const translations = {
   zh: {
     "nav.home": "首頁",
     "nav.story": "品牌故事",
-    "nav.industries": "服務產業",
+    "nav.industries": "案例展示",
     "nav.solutions": "整合方案",
     "nav.quality": "品質管理",
     "nav.jintat": "瑨達基地",
@@ -26,14 +26,16 @@ const translations = {
     "story.card3Title": "鼎鏈科技",
     "label.story": "品牌故事",
     "label.trust": "信任基礎",
-    "label.industries": "服務產業",
+    "label.industries": "案例展示",
     "label.solutions": "整合方案",
     "label.quality": "品質管理",
     "label.contact": "聯絡我們",
     "trust.title": "值得信賴的製造基礎",
     "trust.subtitle":
       "建立於二十年以上精密製造經驗，並由成熟產能與品質系統支援。",
-    "industries.title": "服務先進產業的國際製造需求",
+    "industries.title": "探索鼎鏈科技於先進產業的實際製造案例",
+    "industries.copy":
+      "點擊下方產業分類，查看實際零件案例、加工能力與製造經驗。",
     "solutions.title": "一站式製造整合方案",
     "quality.title": "品質不是檢驗出來的，<br>而是融入每一道製程之中。",
     "quality.copy":
@@ -75,7 +77,7 @@ const translations = {
   en: {
     "nav.home": "HOME",
     "nav.story": "OUR STORY",
-    "nav.industries": "INDUSTRIES",
+    "nav.industries": "CASE STUDIES",
     "nav.solutions": "SOLUTIONS",
     "nav.quality": "QUALITY",
     "nav.jintat": "JINTAT FOUNDATION",
@@ -102,14 +104,17 @@ const translations = {
     "story.card3Title": "Dinglian Technology",
     "label.story": "OUR STORY",
     "label.trust": "TRUST",
-    "label.industries": "INDUSTRIES",
+    "label.industries": "CASE STUDIES",
     "label.solutions": "SOLUTIONS",
     "label.quality": "QUALITY",
     "label.contact": "CONTACT",
     "trust.title": "Trusted Manufacturing Foundation",
     "trust.subtitle":
       "Built on more than twenty years of precision manufacturing experience, supported by proven production capability and quality systems.",
-    "industries.title": "International Trust Across Advanced Industries",
+    "industries.title":
+      "Explore Real Manufacturing Projects Across Advanced Industries",
+    "industries.copy":
+      "Click an industry below to discover component examples, manufacturing capabilities, and project experience.",
     "solutions.title": "One-Stop Manufacturing Solutions",
     "quality.title":
       "Quality is not inspected into a product.<br>It is built into every process.",
@@ -171,11 +176,41 @@ const localizedData = {
       ["24/7", "生產支援"],
     ],
     industries: [
-      ["✈", "航太", "航太零件"],
-      ["◫", "半導體", "半導體設備零件"],
-      ["⚙", "機器人", "機器人零件"],
-      ["▣", "自動化設備", "自動化設備零件"],
-      ["＋", "醫療", "醫療零件"],
+      {
+        icon: "✈",
+        title: "航太",
+        english: "Aerospace",
+        desc: "航太零件案例",
+        cta: "View Case Study →",
+      },
+      {
+        icon: "▣",
+        title: "半導體",
+        english: "Semiconductor",
+        desc: "半導體設備零件案例",
+        cta: "View Case Study →",
+      },
+      {
+        icon: "⚙",
+        title: "機器人",
+        english: "Robotics",
+        desc: "機器人零件案例",
+        cta: "View Case Study →",
+      },
+      {
+        icon: "◧",
+        title: "自動化設備",
+        english: "Automation",
+        desc: "自動化設備零件案例",
+        cta: "View Case Study →",
+      },
+      {
+        icon: "✚",
+        title: "醫療",
+        english: "Medical",
+        desc: "醫療零件案例",
+        cta: "View Case Study →",
+      },
     ],
     solutions: [
       "CNC車削",
@@ -220,11 +255,41 @@ const localizedData = {
       ["24/7", "Production Support"],
     ],
     industries: [
-      ["✈", "Aerospace", "Aerospace Components"],
-      ["◫", "Semiconductor", "Semiconductor Equipment Parts"],
-      ["⚙", "Robotics", "Robotics Parts"],
-      ["▣", "Automation Equipment", "Automation Components"],
-      ["＋", "Medical", "Medical Components"],
+      {
+        icon: "✈",
+        title: "Aerospace",
+        english: "Aerospace",
+        desc: "Aerospace component case studies",
+        cta: "View Case Study →",
+      },
+      {
+        icon: "▣",
+        title: "Semiconductor",
+        english: "Semiconductor",
+        desc: "Semiconductor equipment component case studies",
+        cta: "View Case Study →",
+      },
+      {
+        icon: "⚙",
+        title: "Robotics",
+        english: "Robotics",
+        desc: "Robotics component case studies",
+        cta: "View Case Study →",
+      },
+      {
+        icon: "◧",
+        title: "Automation Equipment",
+        english: "Automation",
+        desc: "Automation equipment component case studies",
+        cta: "View Case Study →",
+      },
+      {
+        icon: "✚",
+        title: "Medical",
+        english: "Medical",
+        desc: "Medical component case studies",
+        cta: "View Case Study →",
+      },
     ],
     solutions: [
       "CNC Turning",
@@ -270,11 +335,11 @@ function render(lang) {
     4: "industries/medical/",
   };
   industriesGrid.innerHTML = data.industries
-    .map((i, index) => {
-      const card = `<div class="icon">${i[0]}</div><h3>${i[1]}</h3><p class="muted">${i[2]}</p>`;
+    .map((industry, index) => {
+      const card = `<div class="case-thumb"><span>${industry.icon}</span></div><div class="case-body"><span class="case-en">${industry.english}</span><h3>${industry.title}</h3><p class="muted">${industry.desc}</p></div><span class="case-cta">${industry.cta}</span>`;
       return industryLinks[index]
-        ? `<a class="industry-card reveal" href="${industryLinks[index]}">${card}</a>`
-        : `<article class="industry-card reveal">${card}</article>`;
+        ? `<a class="industry-card case-card reveal" href="${industryLinks[index]}" aria-label="${industry.cta.replace(" →", "")}: ${industry.english}">${card}</a>`
+        : `<article class="industry-card case-card reveal">${card}</article>`;
     })
     .join("");
   solutionGrid.innerHTML = data.solutions

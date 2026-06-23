@@ -1366,3 +1366,103 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
+
+/* Case study entry cards */
+#industries .section-heading {
+  max-width: 980px;
+}
+#industries .section-subtitle {
+  margin-top: 18px;
+}
+.industries-grid {
+  align-items: stretch;
+}
+.case-card {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    background 0.28s ease;
+}
+.case-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(215, 173, 75, 0.78);
+  background:
+    radial-gradient(
+      circle at 70% 18%,
+      rgba(215, 173, 75, 0.18),
+      transparent 34%
+    ),
+    linear-gradient(180deg, #151108, #070707);
+  box-shadow:
+    0 28px 88px rgba(0, 0, 0, 0.42),
+    0 0 28px rgba(215, 173, 75, 0.12);
+}
+.case-thumb {
+  min-height: 112px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(215, 173, 75, 0.18);
+  background: radial-gradient(
+    circle at center,
+    rgba(215, 173, 75, 0.12),
+    rgba(5, 5, 5, 0.92) 68%
+  );
+}
+.case-thumb span {
+  color: var(--gold2);
+  font-size: 2.35rem;
+  filter: drop-shadow(0 0 18px rgba(215, 173, 75, 0.2));
+}
+.case-body {
+  display: grid;
+  gap: 8px;
+}
+.case-en {
+  color: var(--gold2);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.case-card h3 {
+  margin: 0;
+  color: #fff7df;
+  font-size: clamp(1.2rem, 1.5vw, 1.55rem);
+}
+.case-card .muted {
+  margin: 0;
+  line-height: 1.55;
+}
+.case-cta {
+  margin-top: auto;
+  color: var(--gold2);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  transition: transform 0.25s ease;
+}
+.case-card:hover .case-cta {
+  transform: translateX(8px);
+}
+@media (max-width: 640px) {
+  .industries-grid {
+    display: flex;
+    grid-template-columns: none;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 6px 2px 18px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .industries-grid .case-card {
+    flex: 0 0 82%;
+    min-height: 300px;
+    scroll-snap-align: start;
+  }
+}
