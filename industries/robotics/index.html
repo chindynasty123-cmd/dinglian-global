@@ -184,7 +184,7 @@
         flex-wrap: wrap;
         gap: 12px;
       }
-      .hero-tags span {
+      .hero-tags a {
         border: 1px solid rgba(200, 169, 106, 0.42);
         color: #c8a96a;
         padding: 10px 16px;
@@ -192,6 +192,24 @@
         font-weight: 800;
         letter-spacing: 0.12em;
         text-transform: uppercase;
+        cursor: pointer;
+        transition:
+          border-color 0.25s ease,
+          box-shadow 0.25s ease,
+          background 0.25s ease,
+          color 0.25s ease,
+          transform 0.25s ease;
+      }
+      .hero-tags a:hover {
+        border-color: rgba(200, 169, 106, 0.92);
+        box-shadow: 0 0 24px rgba(200, 169, 106, 0.26);
+        transform: translateY(-2px);
+      }
+      .hero-tags a.active {
+        background: #c8a96a;
+        border-color: #c8a96a;
+        color: #080808;
+        box-shadow: 0 0 26px rgba(200, 169, 106, 0.28);
       }
       @keyframes orbitSpin {
         to {
@@ -588,9 +606,11 @@
         .hero-tags {
           gap: 8px;
         }
-        .hero-tags span {
-          padding: 8px 10px;
+        .hero-tags a {
+          min-width: calc(50% - 6px);
+          padding: 10px 10px;
           font-size: 0.72rem;
+          text-align: center;
         }
         .image-wrap,
         .featured .image-wrap,
@@ -838,7 +858,18 @@
       };
       const data = {
         en: {
-          heroTags: ["Robotics", "Semiconductor", "Aerospace"],
+          industryNav: [
+            { label: "AEROSPACE", href: "../aerospace/", slug: "aerospace" },
+            {
+              label: "SEMICONDUCTOR",
+              href: "../semiconductor/",
+              slug: "semiconductor",
+            },
+            { label: "ROBOTICS", href: "../robotics/", slug: "robotics" },
+            { label: "AUTOMATION", href: "../automation/", slug: "automation" },
+            { label: "MEDICAL", href: "../medical/", slug: "medical" },
+          ],
+          activeIndustry: "robotics",
           slides: [
             {
               title: "Gear Reducer Lock Ring",
@@ -916,7 +947,18 @@
           ],
         },
         zh: {
-          heroTags: ["機器人", "半導體", "航太"],
+          industryNav: [
+            { label: "航太", href: "../aerospace/", slug: "aerospace" },
+            {
+              label: "半導體",
+              href: "../semiconductor/",
+              slug: "semiconductor",
+            },
+            { label: "機器人", href: "../robotics/", slug: "robotics" },
+            { label: "自動化", href: "../automation/", slug: "automation" },
+            { label: "醫療", href: "../medical/", slug: "medical" },
+          ],
+          activeIndustry: "robotics",
           slides: [
             {
               title: "減速機鎖固環",
@@ -1039,8 +1081,11 @@
           .forEach((button) =>
             button.classList.toggle("active", button.dataset.lang === lang),
           );
-        heroTags.innerHTML = page.heroTags
-          .map((item) => `<span>${item}</span>`)
+        heroTags.innerHTML = page.industryNav
+          .map(
+            (item) =>
+              `<a href="${item.href}" class="${item.slug === page.activeIndustry ? "active" : ""}" ${item.slug === page.activeIndustry ? 'aria-current="page"' : ""}>${item.label}</a>`,
+          )
           .join("");
         renderCarousel(page, dict);
         galleryGrid.innerHTML = page.gallery
