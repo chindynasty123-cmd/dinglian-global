@@ -175,7 +175,7 @@ const localizedData = {
       ["◫", "半導體", "半導體設備零件"],
       ["⚙", "機器人", "機器人零件"],
       ["▣", "自動化設備", "自動化設備零件"],
-      ["＋", "醫療設備", "醫療設備零件"],
+      ["＋", "醫療", "醫療零件"],
     ],
     solutions: [
       "CNC車削",
@@ -224,7 +224,7 @@ const localizedData = {
       ["◫", "Semiconductor", "Semiconductor Equipment Parts"],
       ["⚙", "Robotics", "Robotics Parts"],
       ["▣", "Automation Equipment", "Automation Components"],
-      ["＋", "Medical Equipment", "Medical Components"],
+      ["＋", "Medical", "Medical Components"],
     ],
     solutions: [
       "CNC Turning",
@@ -267,6 +267,7 @@ function render(lang) {
     1: "industries/semiconductor/",
     2: "industries/robotics/",
     3: "industries/automation/",
+    4: "industries/medical/",
   };
   industriesGrid.innerHTML = data.industries
     .map((i, index) => {
