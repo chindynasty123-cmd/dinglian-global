@@ -116,7 +116,7 @@ const translations = {
       "Explore Real Manufacturing Projects Across Advanced Industries",
     "industries.copy":
       "Click an industry below to discover component examples, manufacturing capabilities, and project experience.",
-    "solutions.title": "Manufacturing Integration Workflow",
+    "solutions.title": "Manufacturing Integration Process",
     "quality.title":
       "Quality is not inspected into a product.<br>It is built into every process.",
     "quality.copy":
@@ -214,15 +214,15 @@ const localizedData = {
       },
     ],
     solutions: [
-      { title: "Requirement Review", subtitle: "需求評估" },
-      { title: "Supplier Matching", subtitle: "供應鏈匹配" },
-      { title: "Manufacturing Planning", subtitle: "製程規劃" },
-      { title: "Production Management", subtitle: "生產管理" },
-      { title: "Quality Assurance", subtitle: "品質驗證" },
-      { title: "Surface Treatment Integration", subtitle: "表面處理整合" },
-      { title: "Assembly Support", subtitle: "組裝服務" },
-      { title: "Documentation & Reports", subtitle: "文件與報告" },
-      { title: "Project Delivery", subtitle: "專案交付" },
+      "需求評估",
+      "供應鏈匹配",
+      "製程規劃",
+      "生產管理",
+      "品質驗證",
+      "表面處理整合",
+      "組裝服務",
+      "文件與報告",
+      "專案交付",
     ],
     quality: [
       "ISO 9001",
@@ -288,15 +288,15 @@ const localizedData = {
       },
     ],
     solutions: [
-      { title: "Requirement Review", subtitle: "需求評估" },
-      { title: "Supplier Matching", subtitle: "供應鏈匹配" },
-      { title: "Manufacturing Planning", subtitle: "製程規劃" },
-      { title: "Production Management", subtitle: "生產管理" },
-      { title: "Quality Assurance", subtitle: "品質驗證" },
-      { title: "Surface Treatment Integration", subtitle: "表面處理整合" },
-      { title: "Assembly Support", subtitle: "組裝服務" },
-      { title: "Documentation & Reports", subtitle: "文件與報告" },
-      { title: "Project Delivery", subtitle: "專案交付" },
+      "Requirement Review",
+      "Supplier Matching",
+      "Manufacturing Planning",
+      "Production Management",
+      "Quality Assurance",
+      "Surface Treatment Integration",
+      "Assembly Support",
+      "Documentation & Reports",
+      "Project Delivery",
     ],
     quality: [
       "ISO 9001",
@@ -336,7 +336,7 @@ function render(lang) {
   solutionGrid.innerHTML = data.solutions
     .map(
       (s, i) =>
-        `<article class="solution-card reveal"><div class="icon">${String(i + 1).padStart(2, "0")}</div><h3>${s.title}</h3><p class="muted">${s.subtitle}</p></article>`,
+        `<article class="solution-card reveal"><div class="icon">${String(i + 1).padStart(2, "0")}</div><h3>${s}</h3></article>`,
     )
     .join("");
   qualityList.innerHTML = data.quality
