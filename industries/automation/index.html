@@ -1,0 +1,1092 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Automation Equipment Components | DINGLIAN TECHNOLOGY</title>
+    <meta
+      name="description"
+      content="Premium automation equipment component portfolio page for DINGLIAN TECHNOLOGY."
+    />
+    <link rel="icon" type="image/png" href="../../dinglian-logo.png" />
+    <link rel="apple-touch-icon" href="../../dinglian-logo.png" />
+    <link rel="stylesheet" href="../../styles.css" />
+    <style>
+      body {
+        background: #030303;
+      }
+      .aero-page .site-header {
+        background: rgba(0, 0, 0, 0.96);
+        border-bottom: 1px solid rgba(215, 173, 75, 0.22);
+        backdrop-filter: blur(18px);
+      }
+      .aero-page .nav-panel {
+        display: flex;
+      }
+      .mobile-close {
+        display: none;
+      }
+      .aero-section {
+        padding: 64px clamp(22px, 5vw, 78px);
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+      }
+      .aero-hero {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 132px clamp(22px, 6vw, 92px) 82px;
+        background:
+          radial-gradient(
+            circle at 50% 38%,
+            rgba(200, 169, 106, 0.2),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at 18% 18%,
+            rgba(200, 169, 106, 0.08),
+            transparent 24%
+          ),
+          linear-gradient(135deg, #020202 0%, #090909 48%, #151109 100%);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+      .aero-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(200, 169, 106, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(200, 169, 106, 0.06) 1px, transparent 1px);
+        background-size: 74px 74px;
+        mask-image: radial-gradient(
+          circle at center,
+          black 0%,
+          transparent 76%
+        );
+      }
+      .aero-hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at center,
+          transparent 0 34%,
+          rgba(0, 0, 0, 0.62) 74%
+        );
+        pointer-events: none;
+      }
+      .hero-particles span {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 999px;
+        background: #c8a96a;
+        box-shadow: 0 0 18px rgba(200, 169, 106, 0.72);
+        opacity: 0.6;
+        animation: particleDrift 9s ease-in-out infinite alternate;
+      }
+      .hero-particles span:nth-child(1) {
+        top: 21%;
+        left: 18%;
+        animation-delay: -1s;
+      }
+      .hero-particles span:nth-child(2) {
+        top: 30%;
+        left: 74%;
+        animation-delay: -3s;
+      }
+      .hero-particles span:nth-child(3) {
+        top: 64%;
+        left: 22%;
+        animation-delay: -5s;
+      }
+      .hero-particles span:nth-child(4) {
+        top: 72%;
+        left: 80%;
+        animation-delay: -2s;
+      }
+      .hero-particles span:nth-child(5) {
+        top: 45%;
+        left: 12%;
+        animation-delay: -4s;
+      }
+      .hero-particles span:nth-child(6) {
+        top: 18%;
+        left: 54%;
+        animation-delay: -6s;
+      }
+      .hero-logo-showcase {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        place-items: center;
+        gap: 24px;
+        width: min(860px, 100%);
+      }
+      .logo-orbit {
+        position: relative;
+        width: min(520px, 72vw);
+        aspect-ratio: 1;
+        display: grid;
+        place-items: center;
+      }
+      .logo-orbit::before,
+      .logo-orbit::after,
+      .orbit-ring {
+        content: "";
+        position: absolute;
+        inset: 8%;
+        border: 1px solid rgba(200, 169, 106, 0.28);
+        border-radius: 50%;
+        box-shadow: 0 0 42px rgba(200, 169, 106, 0.12);
+        animation: orbitSpin 24s linear infinite;
+      }
+      .logo-orbit::after {
+        inset: 17% 2%;
+        transform: rotateX(64deg);
+        animation-duration: 32s;
+        animation-direction: reverse;
+      }
+      .orbit-ring {
+        inset: 2% 20%;
+        transform: rotateY(68deg);
+        animation-duration: 38s;
+      }
+      .hero-logo-card {
+        position: relative;
+        z-index: 2;
+        width: min(390px, 58vw);
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+      .hero-logo-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+        filter: drop-shadow(0 0 24px rgba(200, 169, 106, 0.22));
+        animation: logoFloat 5s ease-in-out infinite alternate;
+      }
+      .hero-subtitle {
+        color: #f7ead0;
+        font-size: clamp(1.35rem, 2.7vw, 2.65rem);
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .hero-tags {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .hero-tags span {
+        border: 1px solid rgba(200, 169, 106, 0.42);
+        color: #c8a96a;
+        padding: 10px 16px;
+        background: rgba(0, 0, 0, 0.42);
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      @keyframes orbitSpin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes logoFloat {
+        to {
+          transform: translateY(-10px);
+        }
+      }
+      @keyframes particleDrift {
+        to {
+          transform: translate3d(28px, -24px, 0);
+          opacity: 1;
+        }
+      }
+      .component-shell {
+        background: radial-gradient(
+          circle at center,
+          rgba(212, 175, 55, 0.12) 0%,
+          rgba(10, 10, 10, 1) 70%
+        );
+        border: 1px solid rgba(215, 173, 75, 0.34);
+        box-shadow:
+          0 30px 90px rgba(0, 0, 0, 0.5),
+          0 0 70px rgba(212, 175, 55, 0.08);
+        padding: 30px;
+      }
+      .aero-page .image-wrap {
+        background: radial-gradient(
+          circle at center,
+          rgba(212, 175, 55, 0.16) 0%,
+          rgba(18, 18, 18, 1) 45%,
+          rgba(5, 5, 5, 1) 100%
+        );
+        padding: 28px;
+        border: 1px solid rgba(212, 175, 55, 0.28);
+        border-radius: 14px;
+        box-shadow:
+          inset 0 0 60px rgba(212, 175, 55, 0.08),
+          0 30px 80px rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 360px;
+        overflow: hidden;
+        position: relative;
+      }
+      .aero-page .image-wrap::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 11%;
+        width: 68%;
+        height: 14%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        background: radial-gradient(
+          ellipse at center,
+          rgba(0, 0, 0, 0.7) 0%,
+          rgba(212, 175, 55, 0.16) 46%,
+          transparent 72%
+        );
+        filter: blur(12px);
+        pointer-events: none;
+        z-index: 0;
+      }
+      .aero-page .image-wrap img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        opacity: 1 !important;
+        filter: drop-shadow(0 24px 35px rgba(0, 0, 0, 0.55))
+          drop-shadow(0 0 20px rgba(212, 175, 55, 0.16)) !important;
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s ease;
+      }
+      .component-shell:hover img,
+      .project-card:hover img {
+        transform: scale(1.04);
+      }
+      .aero-heading {
+        max-width: 920px;
+        margin-bottom: 24px;
+      }
+      .aero-page .eyebrow {
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+      }
+      .aero-heading h2,
+      .quality-copy h2,
+      .cta h2 {
+        margin: 0;
+        font-size: 48px;
+        line-height: 1.05;
+        font-weight: 850;
+        letter-spacing: -0.03em;
+      }
+      .featured {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 24px;
+        border: 1px solid rgba(215, 173, 75, 0.22);
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.07),
+          rgba(255, 255, 255, 0.025)
+        );
+        padding: clamp(16px, 2.4vw, 30px);
+      }
+      .featured .image-wrap {
+        min-height: 540px;
+      }
+      .tech-panel {
+        display: grid;
+        align-content: center;
+        gap: 14px;
+      }
+      .tech-row {
+        border-top: 1px solid rgba(215, 173, 75, 0.2);
+        padding-top: 14px;
+      }
+      .tech-row strong {
+        display: block;
+        color: var(--gold);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+      }
+      .tech-row span {
+        color: #f6edd7;
+        font-size: 1.12rem;
+      }
+      .portfolio-showcase {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: clamp(18px, 3vw, 34px);
+        align-items: stretch;
+        border: 1px solid rgba(200, 169, 106, 0.24);
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.06),
+          rgba(200, 169, 106, 0.035)
+        );
+        padding: clamp(16px, 2.5vw, 28px);
+        box-shadow: 0 34px 90px rgba(0, 0, 0, 0.42);
+      }
+      .carousel-stage {
+        position: relative;
+      }
+      .carousel-stage .image-wrap {
+        min-height: 590px;
+      }
+      .carousel-stage img {
+        width: 115%;
+        max-width: 115%;
+        opacity: 1;
+        transition:
+          opacity 0.45s ease,
+          transform 0.45s ease;
+      }
+      .carousel-stage img.is-fading {
+        opacity: 0;
+        transform: scale(0.985);
+      }
+      .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        border: 1px solid rgba(200, 169, 106, 0.46);
+        color: #c8a96a;
+        background: rgba(0, 0, 0, 0.72);
+        cursor: pointer;
+      }
+      .carousel-arrow.prev {
+        left: 18px;
+      }
+      .carousel-arrow.next {
+        right: 18px;
+      }
+      .portfolio-info {
+        display: grid;
+        align-content: center;
+        gap: 16px;
+      }
+      .slide-counter {
+        color: #c8a96a;
+        font-weight: 800;
+        letter-spacing: 0.24em;
+      }
+      .slide-title {
+        margin: 0;
+        color: #fff7df;
+        font-size: clamp(1.8rem, 3vw, 3rem);
+        line-height: 1.05;
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 14px;
+      }
+      .project-card {
+        border: 1px solid rgba(215, 173, 75, 0.2);
+        background: radial-gradient(
+          circle at center,
+          rgba(212, 175, 55, 0.12) 0%,
+          rgba(10, 10, 10, 1) 70%
+        );
+        transition:
+          transform 0.28s ease,
+          border-color 0.28s ease,
+          box-shadow 0.28s ease;
+        overflow: hidden;
+      }
+      .project-card:hover {
+        transform: translateY(-7px);
+        border-color: rgba(215, 173, 75, 0.72);
+        box-shadow: 0 24px 76px rgba(0, 0, 0, 0.4);
+      }
+      .project-card .image-wrap {
+        min-height: 300px;
+        padding: 24px;
+      }
+      .project-card h3 {
+        margin: 0;
+        min-height: 78px;
+        padding: 18px;
+        color: #fff7df;
+        font-size: 1.05rem;
+      }
+      .capability-grid,
+      .quality-grid,
+      .why-grid {
+        display: grid;
+        gap: 16px;
+      }
+      .capability-grid,
+      .quality-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .why-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .info-card {
+        border: 1px solid rgba(215, 173, 75, 0.22);
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.06),
+          rgba(215, 173, 75, 0.035)
+        );
+        padding: 20px;
+        min-height: 112px;
+        box-shadow: 0 22px 70px rgba(0, 0, 0, 0.28);
+      }
+      .info-card .icon {
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(215, 173, 75, 0.36);
+        display: grid;
+        place-items: center;
+        color: var(--gold);
+        margin-bottom: 18px;
+      }
+      .info-card h3 {
+        margin: 0;
+        color: #f6edd7;
+        font-size: 1.08rem;
+      }
+      .cta {
+        text-align: center;
+        background:
+          radial-gradient(
+            circle at 50% 48%,
+            rgba(215, 173, 75, 0.17),
+            transparent 34%
+          ),
+          #050505;
+      }
+      .cta h2 {
+        margin-bottom: 28px;
+      }
+      @media (max-width: 1050px) {
+        .aero-page .nav-toggle {
+          display: grid;
+          place-items: center;
+          width: 44px;
+          height: 44px;
+          border: 1px solid rgba(200, 169, 106, 0.62);
+          color: #c8a96a;
+          background: rgba(0, 0, 0, 0.42);
+          font-size: 1.35rem;
+          cursor: pointer;
+          position: relative;
+          z-index: 1001;
+        }
+        .aero-page .nav-panel {
+          position: fixed;
+          inset: 0;
+          z-index: 1000;
+          display: none;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 22px;
+          min-height: 100vh;
+          padding: 92px 28px 44px;
+          background:
+            radial-gradient(
+              circle at 50% 18%,
+              rgba(200, 169, 106, 0.14),
+              transparent 28%
+            ),
+            rgba(0, 0, 0, 0.97);
+          border: 0;
+          text-align: center;
+          font-size: 0.95rem;
+          letter-spacing: 0.18em;
+        }
+        .aero-page .nav-panel.open {
+          display: flex;
+        }
+        .aero-page .nav-panel a {
+          width: min(320px, 88vw);
+          padding: 13px 18px;
+          border-bottom: 1px solid rgba(200, 169, 106, 0.18);
+        }
+        .aero-page .nav-panel .quote-link {
+          border: 1px solid rgba(200, 169, 106, 0.72);
+          margin-top: 8px;
+        }
+        .aero-page .language-switcher {
+          margin-top: 10px;
+          font-size: 0.95rem;
+        }
+        .mobile-close {
+          position: absolute;
+          top: 24px;
+          right: 24px;
+          display: grid;
+          place-items: center;
+          width: 44px;
+          height: 44px;
+          border: 1px solid rgba(200, 169, 106, 0.62);
+          color: #c8a96a;
+          background: rgba(0, 0, 0, 0.58);
+          font-size: 1.9rem;
+          cursor: pointer;
+        }
+      }
+      @media (max-width: 1120px) {
+        .portfolio-showcase {
+          grid-template-columns: 1fr;
+        }
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .capability-grid,
+        .quality-grid,
+        .why-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 680px) {
+        .gallery-grid,
+        .capability-grid,
+        .quality-grid,
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+        .aero-section {
+          padding: 46px 20px;
+        }
+        .aero-heading {
+          margin-bottom: 18px;
+        }
+        .logo-orbit {
+          width: min(390px, 88vw);
+        }
+        .hero-logo-card {
+          width: min(280px, 64vw);
+        }
+        .hero-subtitle {
+          font-size: 1rem;
+          letter-spacing: 0.05em;
+        }
+        .hero-tags {
+          gap: 8px;
+        }
+        .hero-tags span {
+          padding: 8px 10px;
+          font-size: 0.72rem;
+        }
+        .image-wrap,
+        .featured .image-wrap,
+        .carousel-stage .image-wrap {
+          min-height: 260px;
+          padding: 18px;
+        }
+        .carousel-stage img {
+          width: 110%;
+          max-width: 110%;
+        }
+        .project-card .image-wrap {
+          min-height: 240px;
+        }
+        .aero-hero {
+          min-height: 70vh;
+          padding-top: 96px;
+          padding-bottom: 44px;
+        }
+        .aero-copy h1 {
+          font-size: 42px;
+        }
+        .aero-heading h2,
+        .quality-copy h2,
+        .cta h2 {
+          font-size: 34px;
+        }
+      }
+    </style>
+  </head>
+  <body class="aero-page">
+    <header class="site-header scrolled" id="siteHeader">
+      <nav class="navbar" aria-label="Primary navigation">
+        <a
+          class="brand"
+          href="../../index.html#home"
+          aria-label="Dinglian Technology home"
+        >
+          <img src="../../dinglian-logo.png" alt="DINGLIAN TECHNOLOGY logo" />
+          <span
+            ><strong data-i18n="brand.name">DINGLIAN</strong
+            ><small data-i18n="brand.subname">TECHNOLOGY</small></span
+          >
+        </a>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <div class="nav-panel" id="navPanel">
+          <button
+            class="mobile-close"
+            type="button"
+            aria-label="Close navigation"
+          >
+            ×
+          </button>
+          <a href="../../index.html#home" data-i18n="nav.home">HOME</a>
+          <a href="../../index.html#story" data-i18n="nav.story">OUR STORY</a>
+          <a href="../../index.html#industries" data-i18n="nav.industries"
+            >INDUSTRIES</a
+          >
+          <a href="../../index.html#solutions" data-i18n="nav.solutions"
+            >SOLUTIONS</a
+          >
+          <a href="../../index.html#quality" data-i18n="nav.quality">QUALITY</a>
+          <a href="../../index.html#jintat-foundation" data-i18n="nav.jintat"
+            >JINTAT FOUNDATION</a
+          >
+          <a href="../../index.html#contact" data-i18n="nav.contact">CONTACT</a>
+          <a
+            class="quote-link"
+            href="../../index.html#contact"
+            data-i18n="nav.quote"
+            >GET A QUOTE</a
+          >
+          <div class="language-switcher" aria-label="Language switcher">
+            <button class="lang" data-lang="zh">繁體中文</button><span>|</span
+            ><button class="lang active" data-lang="en">English</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="aero-hero">
+        <div class="hero-particles" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span
+          ><span></span>
+        </div>
+        <div class="hero-logo-showcase">
+          <div class="logo-orbit" aria-hidden="true">
+            <span class="orbit-ring"></span>
+            <div class="hero-logo-card">
+              <img
+                src="../../dinglian-logo.png"
+                alt="DINGLIAN TECHNOLOGY logo"
+              />
+            </div>
+          </div>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Global Manufacturing Integration Partner
+          </p>
+          <div class="hero-tags" id="heroTags"></div>
+          <a
+            class="btn btn-primary"
+            href="../../index.html#contact"
+            data-i18n="hero.cta"
+            >Get A Quote</a
+          >
+        </div>
+      </section>
+
+      <section class="aero-section">
+        <div class="aero-heading">
+          <p class="eyebrow" data-i18n="portfolio.kicker">
+            AUTOMATION EQUIPMENT
+          </p>
+          <h2 data-i18n="portfolio.title">Automation Equipment Components</h2>
+          <p class="section-subtitle" data-i18n="portfolio.subtitle">
+            Precision CNC Components for Industrial Automation and Motion
+            Control Systems
+          </p>
+        </div>
+        <article class="portfolio-showcase">
+          <div class="carousel-stage">
+            <div class="image-wrap">
+              <img
+                id="carouselImage"
+                src="../../images/automation/01-automation-linear-guide-housing.png"
+                alt="Automation equipment component"
+              />
+            </div>
+            <button
+              class="carousel-arrow prev"
+              type="button"
+              aria-label="Previous automation slide"
+            >
+              ‹
+            </button>
+            <button
+              class="carousel-arrow next"
+              type="button"
+              aria-label="Next automation slide"
+            >
+              ›
+            </button>
+          </div>
+          <div class="portfolio-info">
+            <div class="slide-counter" id="slideCounter">01 / 05</div>
+            <h3 class="slide-title" id="slideTitle">Linear Guide Housing</h3>
+            <div class="tech-panel" id="slideDetails"></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="aero-section">
+        <div class="aero-heading">
+          <p class="eyebrow" data-i18n="gallery.kicker">SAMPLE PROJECTS</p>
+          <h2 data-i18n="gallery.title">Automation Sample Projects</h2>
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </section>
+
+      <section class="aero-section">
+        <div class="aero-heading">
+          <p class="eyebrow" data-i18n="applications.kicker">APPLICATIONS</p>
+          <h2 data-i18n="applications.title">Automation Applications</h2>
+        </div>
+        <div class="capability-grid" id="applicationsGrid"></div>
+      </section>
+      <section class="aero-section cta">
+        <p class="eyebrow" data-i18n="cta.kicker">CONTACT</p>
+        <h2 data-i18n="cta.title">Start Your Automation Project</h2>
+        <a
+          class="btn btn-primary"
+          href="../../index.html#contact"
+          data-i18n="cta.button"
+          >Get A Quote</a
+        >
+      </section>
+    </main>
+
+    <script>
+      const translations = {
+        en: {
+          "brand.name": "DINGLIAN",
+          "brand.subname": "TECHNOLOGY",
+          "nav.home": "HOME",
+          "nav.story": "OUR STORY",
+          "nav.industries": "INDUSTRIES",
+          "nav.solutions": "SOLUTIONS",
+          "nav.quality": "QUALITY",
+          "nav.jintat": "JINTAT FOUNDATION",
+          "nav.contact": "CONTACT",
+          "nav.quote": "GET A QUOTE",
+          "hero.subtitle": "Global Manufacturing Integration Partner",
+          "hero.cta": "Get A Quote",
+          "portfolio.kicker": "AUTOMATION EQUIPMENT",
+          "portfolio.title": "Automation Equipment Components",
+          "portfolio.subtitle":
+            "Precision CNC Components for Industrial Automation and Motion Control Systems",
+          "slide.materialLabel": "Material:",
+          "slide.processLabel": "Process:",
+          "slide.inspectionLabel": "Inspection:",
+          "slide.applicationLabel": "Application:",
+          "gallery.kicker": "SAMPLE PROJECTS",
+          "gallery.title": "Automation Sample Projects",
+          "applications.kicker": "APPLICATIONS",
+          "applications.title": "Automation Applications",
+          "cta.kicker": "CONTACT",
+          "cta.title": "Start Your Automation Project",
+          "cta.button": "Get A Quote",
+        },
+        zh: {
+          "brand.name": "鼎鏈科技",
+          "brand.subname": "全球製造整合",
+          "nav.home": "首頁",
+          "nav.story": "品牌故事",
+          "nav.industries": "服務產業",
+          "nav.solutions": "整合方案",
+          "nav.quality": "品質管理",
+          "nav.jintat": "瑨達基地",
+          "nav.contact": "聯絡我們",
+          "nav.quote": "取得報價",
+          "hero.subtitle": "全球製造整合夥伴",
+          "hero.cta": "取得報價",
+          "portfolio.kicker": "自動化設備",
+          "portfolio.title": "自動化設備零件",
+          "portfolio.subtitle": "精密 CNC 加工自動化設備與運動控制系統零件",
+          "slide.materialLabel": "材料：",
+          "slide.processLabel": "製程：",
+          "slide.inspectionLabel": "檢驗：",
+          "slide.applicationLabel": "應用：",
+          "gallery.kicker": "加工案例",
+          "gallery.title": "自動化設備案例",
+          "applications.kicker": "應用領域",
+          "applications.title": "自動化設備應用",
+          "cta.kicker": "聯絡我們",
+          "cta.title": "開始您的自動化設備專案",
+          "cta.button": "立即詢價",
+        },
+      };
+      const data = {
+        en: {
+          heroTags: ["Automation", "Robotics", "Semiconductor"],
+          slides: [
+            {
+              title: "Linear Guide Housing",
+              image:
+                "../../images/automation/01-automation-linear-guide-housing.png",
+              material: "SUS304 Stainless Steel",
+              process: "Multi-Axis CNC Machining",
+              inspection: "Mitutoyo CMM Inspection",
+              application: "Automation Motion System",
+            },
+            {
+              title: "Drive Shaft",
+              image: "../../images/automation/02-automation-drive-shaft.png",
+              material: "SCM440 Alloy Steel",
+              process: "Precision CNC Turning",
+              inspection: "Mitutoyo CMM Inspection",
+              application: "Power Transmission System",
+            },
+            {
+              title: "Bronze Bearing Ring",
+              image:
+                "../../images/automation/03-automation-bronze-bearing-ring.png",
+              material: "Bronze",
+              process: "Precision CNC Turning",
+              inspection: "Mitutoyo CMM Inspection",
+              application: "Automation Bearing Assembly",
+            },
+            {
+              title: "Positioning Pin",
+              image:
+                "../../images/automation/04-automation-positioning-pin.png",
+              material: "SKD11 Tool Steel",
+              process: "Precision Grinding + CNC Machining",
+              inspection: "Mitutoyo CMM Inspection",
+              application: "Fixture Positioning System",
+            },
+            {
+              title: "Actuator Connector",
+              image:
+                "../../images/automation/05-automation-actuator-connector.png",
+              material: "SUS304 Stainless Steel",
+              process: "Precision CNC Machining",
+              inspection: "Mitutoyo CMM Inspection",
+              application: "Automation Actuator Assembly",
+            },
+          ],
+          gallery: [
+            [
+              "01 Linear Guide Housing",
+              "../../images/automation/01-automation-linear-guide-housing.png",
+            ],
+            [
+              "02 Drive Shaft",
+              "../../images/automation/02-automation-drive-shaft.png",
+            ],
+            [
+              "03 Bronze Bearing Ring",
+              "../../images/automation/03-automation-bronze-bearing-ring.png",
+            ],
+            [
+              "04 Positioning Pin",
+              "../../images/automation/04-automation-positioning-pin.png",
+            ],
+            [
+              "05 Actuator Connector",
+              "../../images/automation/05-automation-actuator-connector.png",
+            ],
+          ],
+          applications: [
+            "Industrial Automation",
+            "Linear Motion Systems",
+            "Assembly Equipment",
+            "Fixture & Tooling",
+            "Motion Control Systems",
+            "Smart Manufacturing Equipment",
+          ],
+        },
+        zh: {
+          heroTags: ["自動化", "機器人", "半導體"],
+          slides: [
+            {
+              title: "線性導軌座",
+              image:
+                "../../images/automation/01-automation-linear-guide-housing.png",
+              material: "SUS304 不鏽鋼",
+              process: "多軸 CNC 加工",
+              inspection: "Mitutoyo 三次元量測",
+              application: "自動化運動系統",
+            },
+            {
+              title: "傳動軸",
+              image: "../../images/automation/02-automation-drive-shaft.png",
+              material: "SCM440 合金鋼",
+              process: "精密 CNC 車削",
+              inspection: "Mitutoyo 三次元量測",
+              application: "動力傳動系統",
+            },
+            {
+              title: "銅合金軸承環",
+              image:
+                "../../images/automation/03-automation-bronze-bearing-ring.png",
+              material: "Bronze 銅合金",
+              process: "精密 CNC 車削",
+              inspection: "Mitutoyo 三次元量測",
+              application: "自動化軸承組件",
+            },
+            {
+              title: "定位銷",
+              image:
+                "../../images/automation/04-automation-positioning-pin.png",
+              material: "SKD11 工具鋼",
+              process: "精密研磨 + CNC 加工",
+              inspection: "Mitutoyo 三次元量測",
+              application: "治具定位系統",
+            },
+            {
+              title: "致動器連接件",
+              image:
+                "../../images/automation/05-automation-actuator-connector.png",
+              material: "SUS304 不鏽鋼",
+              process: "精密 CNC 加工",
+              inspection: "Mitutoyo 三次元量測",
+              application: "自動化致動器組件",
+            },
+          ],
+          gallery: [
+            [
+              "01 線性導軌座",
+              "../../images/automation/01-automation-linear-guide-housing.png",
+            ],
+            [
+              "02 傳動軸",
+              "../../images/automation/02-automation-drive-shaft.png",
+            ],
+            [
+              "03 銅合金軸承環",
+              "../../images/automation/03-automation-bronze-bearing-ring.png",
+            ],
+            [
+              "04 定位銷",
+              "../../images/automation/04-automation-positioning-pin.png",
+            ],
+            [
+              "05 致動器連接件",
+              "../../images/automation/05-automation-actuator-connector.png",
+            ],
+          ],
+          applications: [
+            "工業自動化",
+            "線性運動系統",
+            "組裝設備",
+            "治具與工裝",
+            "運動控制系統",
+            "智慧製造設備",
+          ],
+        },
+      };
+      let currentSlide = 0;
+      let currentLang = localStorage.getItem("dinglianLang") || "en";
+      function renderCarousel(page, dict) {
+        const slide = page.slides[currentSlide];
+        carouselImage.classList.add("is-fading");
+        window.setTimeout(() => {
+          carouselImage.src = slide.image;
+          carouselImage.alt = slide.title;
+          carouselImage.classList.remove("is-fading");
+        }, 180);
+        slideCounter.textContent = `${String(currentSlide + 1).padStart(2, "0")} / ${String(page.slides.length).padStart(2, "0")}`;
+        slideTitle.textContent = slide.title;
+        slideDetails.innerHTML = [
+          [dict["slide.materialLabel"], slide.material],
+          [dict["slide.processLabel"], slide.process],
+          [dict["slide.inspectionLabel"], slide.inspection],
+          [dict["slide.applicationLabel"], slide.application],
+        ]
+          .map(
+            ([label, value]) =>
+              `<div class="tech-row"><strong>${label}</strong><span>${value}</span></div>`,
+          )
+          .join("");
+      }
+      function showSlide(direction) {
+        const page = data[currentLang];
+        currentSlide =
+          (currentSlide + direction + page.slides.length) % page.slides.length;
+        renderCarousel(page, translations[currentLang]);
+      }
+      function setLang(lang) {
+        currentLang = lang;
+        const dict = translations[lang];
+        const page = data[lang];
+        document.documentElement.lang = lang === "zh" ? "zh-Hant" : "en";
+        document
+          .querySelectorAll("[data-i18n]")
+          .forEach(
+            (el) => (el.innerHTML = dict[el.dataset.i18n] || el.innerHTML),
+          );
+        document
+          .querySelectorAll(".lang")
+          .forEach((button) =>
+            button.classList.toggle("active", button.dataset.lang === lang),
+          );
+        heroTags.innerHTML = page.heroTags
+          .map((item) => `<span>${item}</span>`)
+          .join("");
+        renderCarousel(page, dict);
+        galleryGrid.innerHTML = page.gallery
+          .map(
+            ([title, src]) =>
+              `<article class="project-card"><div class="image-wrap"><img src="${src}" alt="${title}" /></div><h3>${title}</h3></article>`,
+          )
+          .join("");
+        applicationsGrid.innerHTML = page.applications
+          .map(
+            (item) =>
+              `<article class="info-card"><div class="icon">✦</div><h3>${item}</h3></article>`,
+          )
+          .join("");
+        localStorage.setItem("dinglianLang", lang);
+      }
+      document
+        .querySelectorAll(".lang")
+        .forEach((button) =>
+          button.addEventListener("click", () => setLang(button.dataset.lang)),
+        );
+      const navToggle = document.querySelector(".nav-toggle");
+      const closeMenu = () => {
+        navPanel.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+      };
+      navToggle.addEventListener("click", () => {
+        const open = navPanel.classList.toggle("open");
+        navToggle.setAttribute("aria-expanded", open);
+      });
+      document
+        .querySelector(".mobile-close")
+        .addEventListener("click", closeMenu);
+      navPanel
+        .querySelectorAll("a")
+        .forEach((link) => link.addEventListener("click", closeMenu));
+      document
+        .querySelector(".carousel-arrow.prev")
+        .addEventListener("click", () => showSlide(-1));
+      document
+        .querySelector(".carousel-arrow.next")
+        .addEventListener("click", () => showSlide(1));
+      window.setInterval(() => showSlide(1), 4000);
+      setLang(currentLang);
+    </script>
+  </body>
+</html>
