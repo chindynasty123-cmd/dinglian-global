@@ -27,7 +27,7 @@
         display: none;
       }
       .aero-section {
-        padding: 82px clamp(22px, 6vw, 92px);
+        padding: 64px clamp(22px, 5vw, 78px);
         border-top: 1px solid rgba(255, 255, 255, 0.07);
       }
       .aero-hero {
@@ -228,7 +228,7 @@
           rgba(18, 18, 18, 1) 45%,
           rgba(5, 5, 5, 1) 100%
         );
-        padding: 34px;
+        padding: 28px;
         border: 1px solid rgba(212, 175, 55, 0.28);
         border-radius: 14px;
         box-shadow:
@@ -237,7 +237,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 420px;
+        min-height: 360px;
         overflow: hidden;
         position: relative;
       }
@@ -277,7 +277,7 @@
       }
       .aero-heading {
         max-width: 920px;
-        margin-bottom: 30px;
+        margin-bottom: 24px;
       }
       .aero-page .eyebrow {
         font-size: 15px;
@@ -332,7 +332,7 @@
       .portfolio-showcase {
         display: grid;
         grid-template-columns: 1.1fr 0.9fr;
-        gap: clamp(22px, 4vw, 46px);
+        gap: clamp(18px, 3vw, 34px);
         align-items: stretch;
         border: 1px solid rgba(200, 169, 106, 0.24);
         background: linear-gradient(
@@ -340,16 +340,18 @@
           rgba(255, 255, 255, 0.06),
           rgba(200, 169, 106, 0.035)
         );
-        padding: clamp(18px, 3vw, 34px);
+        padding: clamp(16px, 2.5vw, 28px);
         box-shadow: 0 34px 90px rgba(0, 0, 0, 0.42);
       }
       .carousel-stage {
         position: relative;
       }
       .carousel-stage .image-wrap {
-        min-height: 560px;
+        min-height: 590px;
       }
       .carousel-stage img {
+        width: 115%;
+        max-width: 115%;
         opacity: 1;
         transition:
           opacity 0.45s ease,
@@ -397,7 +399,7 @@
       .gallery-grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        gap: 18px;
+        gap: 14px;
       }
       .project-card {
         border: 1px solid rgba(215, 173, 75, 0.2);
@@ -418,8 +420,8 @@
         box-shadow: 0 24px 76px rgba(0, 0, 0, 0.4);
       }
       .project-card .image-wrap {
-        min-height: 360px;
-        padding: 32px;
+        min-height: 300px;
+        padding: 24px;
       }
       .project-card h3 {
         margin: 0;
@@ -448,8 +450,8 @@
           rgba(255, 255, 255, 0.06),
           rgba(215, 173, 75, 0.035)
         );
-        padding: 24px;
-        min-height: 128px;
+        padding: 20px;
+        min-height: 112px;
         box-shadow: 0 22px 70px rgba(0, 0, 0, 0.28);
       }
       .info-card .icon {
@@ -567,14 +569,46 @@
         .why-grid {
           grid-template-columns: 1fr;
         }
+        .aero-section {
+          padding: 46px 20px;
+        }
+        .aero-heading {
+          margin-bottom: 18px;
+        }
+        .logo-orbit {
+          width: min(390px, 88vw);
+        }
+        .hero-logo-card {
+          width: min(280px, 64vw);
+        }
+        .hero-subtitle {
+          font-size: 1rem;
+          letter-spacing: 0.05em;
+        }
+        .hero-tags {
+          gap: 8px;
+        }
+        .hero-tags span {
+          padding: 8px 10px;
+          font-size: 0.72rem;
+        }
         .image-wrap,
         .featured .image-wrap,
         .carousel-stage .image-wrap {
-          min-height: 280px;
-          padding: 22px;
+          min-height: 260px;
+          padding: 18px;
+        }
+        .carousel-stage img {
+          width: 110%;
+          max-width: 110%;
+        }
+        .project-card .image-wrap {
+          min-height: 240px;
         }
         .aero-hero {
-          padding-top: 116px;
+          min-height: 70vh;
+          padding-top: 96px;
+          padding-bottom: 44px;
         }
         .aero-copy h1 {
           font-size: 42px;
