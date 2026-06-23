@@ -262,12 +262,15 @@ function render(lang) {
         `<article class="trust-card reveal"><strong>${t[0]}</strong><span>${t[1]}</span></article>`,
     )
     .join("");
-  const aerospaceHref = "industries/aerospace/";
+  const industryLinks = {
+    0: "industries/aerospace/",
+    1: "industries/semiconductor/",
+  };
   industriesGrid.innerHTML = data.industries
     .map((i, index) => {
       const card = `<div class="icon">${i[0]}</div><h3>${i[1]}</h3><p class="muted">${i[2]}</p>`;
-      return index === 0
-        ? `<a class="industry-card reveal" href="${aerospaceHref}">${card}</a>`
+      return industryLinks[index]
+        ? `<a class="industry-card reveal" href="${industryLinks[index]}">${card}</a>`
         : `<article class="industry-card reveal">${card}</article>`;
     })
     .join("");
