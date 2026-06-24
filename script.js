@@ -37,15 +37,17 @@ const translations = {
     "industries.copy":
       "點擊下方產業分類，查看實際零件案例、加工能力與製造經驗。",
     "solutions.title": "製造整合流程",
+    "solutions.copy":
+      "我們整合加工、製作、表面處理與製造資源，提供完整生產解決方案。",
     "quality.title": "品質不是檢驗出來的，<br>而是融入每一道製程之中。",
     "quality.copy":
       "從加工、量測到文件管理，我們將品質融入每一道製程，確保每一個零件都符合客戶要求。",
     "base.label": "核心製造基地",
     "base.name": "瑨達工業",
-    "base.subtitle": "鼎鏈科技核心製造夥伴",
+    "base.subtitle": "核心製造夥伴",
     "base.statement":
-      "20年以上精密加工經驗，<br>支援樣品開發、小量生產與量產交付。<br><br>提供穩定品質管理、<br>精密量測與生產支援能力。",
-    "base.button": "了解瑨達工業 →",
+      "20年以上精密加工經驗，支援樣品開發、小量生產與生產專案。",
+    "base.button": "前往瑨達官網 →",
     "base.panel": "鼎鏈科技核心製造夥伴，支援樣品開發、小量生產與量產交付。",
     "base.panelKicker": "核心製造基地",
     "base.since": "精密加工經驗",
@@ -117,16 +119,18 @@ const translations = {
     "industries.copy":
       "Click an industry below to discover component examples, manufacturing capabilities, and project experience.",
     "solutions.title": "Manufacturing Integration Process",
+    "solutions.copy":
+      "We integrate machining, fabrication, surface treatment and manufacturing resources to deliver complete production solutions.",
     "quality.title":
       "Quality is not inspected into a product.<br>It is built into every process.",
     "quality.copy":
       "From machining and inspection to documentation control, quality is integrated into every process to ensure every component meets customer requirements.",
     "base.label": "Core Manufacturing Base",
     "base.name": "Jintat Industrial Co., Ltd.",
-    "base.subtitle": "Core Manufacturing Partner of Dinglian Technology",
+    "base.subtitle": "Core Manufacturing Partner",
     "base.statement":
-      "Over 20 years of precision manufacturing experience,<br>supporting prototype development,<br>low-volume production and mass manufacturing.<br><br>Providing quality management,<br>precision inspection and production support.",
-    "base.button": "Explore Manufacturing Base →",
+      "Over 20 years of precision machining experience supporting prototype development, low-volume production and production programs.",
+    "base.button": "Visit Jintat Website",
     "base.panel":
       "Core manufacturing partner supporting prototype development, low-volume production and mass manufacturing.",
     "base.panelKicker": "Core Manufacturing Base",
@@ -180,37 +184,37 @@ const localizedData = {
       {
         icon: "✈",
         title: "航太",
-        english: "Aerospace",
+        english: "",
         desc: "航太零件案例",
-        cta: "View Case Study →",
+        cta: "查看案例 →",
       },
       {
         icon: "▣",
         title: "半導體",
-        english: "Semiconductor",
+        english: "",
         desc: "半導體設備零件案例",
-        cta: "View Case Study →",
+        cta: "查看案例 →",
       },
       {
         icon: "⚙",
         title: "機器人",
-        english: "Robotics",
+        english: "",
         desc: "機器人零件案例",
-        cta: "View Case Study →",
+        cta: "查看案例 →",
       },
       {
         icon: "◧",
         title: "自動化設備",
-        english: "Automation",
+        english: "",
         desc: "自動化設備零件案例",
-        cta: "View Case Study →",
+        cta: "查看案例 →",
       },
       {
         icon: "✚",
         title: "醫療",
-        english: "Medical",
+        english: "",
         desc: "醫療零件案例",
-        cta: "View Case Study →",
+        cta: "查看案例 →",
       },
     ],
     solutions: [
@@ -220,9 +224,6 @@ const localizedData = {
       "生產管理",
       "品質驗證",
       "表面處理整合",
-      "組裝服務",
-      "文件與報告",
-      "專案交付",
     ],
     quality: [
       "ISO 9001",
@@ -294,9 +295,6 @@ const localizedData = {
       "Production Management",
       "Quality Assurance",
       "Surface Treatment Integration",
-      "Assembly Support",
-      "Documentation & Reports",
-      "Project Delivery",
     ],
     quality: [
       "ISO 9001",
@@ -327,7 +325,8 @@ function render(lang) {
   };
   industriesGrid.innerHTML = data.industries
     .map((industry, index) => {
-      const card = `<div class="case-thumb"><span>${industry.icon}</span></div><div class="case-body"><span class="case-en">${industry.english}</span><h3>${industry.title}</h3><p class="muted">${industry.desc}</p></div><span class="case-cta">${industry.cta}</span>`;
+      const englishLabel = industry.english ? `<span class="case-en">${industry.english}</span>` : "";
+      const card = `<div class="case-thumb"><span>${industry.icon}</span></div><div class="case-body">${englishLabel}<h3>${industry.title}</h3><p class="muted">${industry.desc}</p></div><span class="case-cta">${industry.cta}</span>`;
       return industryLinks[index]
         ? `<a class="industry-card case-card reveal" href="${industryLinks[index]}" aria-label="${industry.cta.replace(" →", "")}: ${industry.english}">${card}</a>`
         : `<article class="industry-card case-card reveal">${card}</article>`;
