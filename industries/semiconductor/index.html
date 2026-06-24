@@ -789,10 +789,10 @@
 
       <section class="aero-section">
         <div class="aero-heading">
-          <p class="eyebrow" data-i18n="cap.kicker">CAPABILITY</p>
-          <h2 data-i18n="cap.title">Semiconductor Manufacturing Capability</h2>
+          <p class="eyebrow" data-i18n="applications.kicker">APPLICATIONS</p>
+          <h2 data-i18n="applications.title">Semiconductor Applications</h2>
         </div>
-        <div class="capability-grid" id="capabilityGrid"></div>
+        <div class="capability-grid" id="applicationsGrid"></div>
       </section>
       <section class="aero-section quality">
         <div class="quality-copy">
@@ -840,15 +840,15 @@
           "portfolio.subtitle":
             "Precision CNC Machined Components for Semiconductor Equipment Applications",
           "portfolio.disclaimer":
-            "The following examples demonstrate Dinglian Technology's manufacturing integration capabilities. Final applications may vary according to customer requirements.",
+            "The following examples demonstrate Dinglian Technology's manufacturing integration capabilities.<br>Final applications may vary according to customer requirements.",
           "slide.materialLabel": "Material:",
           "slide.processLabel": "Process:",
           "slide.inspectionLabel": "Inspection:",
           "slide.applicationLabel": "Application:",
           "gallery.kicker": "SAMPLE PROJECTS",
           "gallery.title": "Semiconductor Sample Projects",
-          "cap.kicker": "CAPABILITY",
-          "cap.title": "Semiconductor Manufacturing Capability",
+          "applications.kicker": "APPLICATIONS",
+          "applications.title": "Semiconductor Applications",
           "quality.kicker": "QUALITY",
           "quality.title": "Quality Assurance",
           "why.kicker": "WHY DINGLIAN",
@@ -871,18 +871,18 @@
           "hero.subtitle": "全球製造整合夥伴",
           "hero.cta": "取得報價",
           "portfolio.kicker": "半導體設備",
-          "portfolio.title": "半導體製造案例",
-          "portfolio.subtitle": "高精密 CNC 加工半導體製造案例",
+          "portfolio.title": "半導體設備製造案例",
+          "portfolio.subtitle": "高精密 CNC 加工半導體設備製造案例",
           "portfolio.disclaimer":
-            "以下案例展示鼎鏈科技之製造整合能力與加工經驗，實際用途依客戶專案需求而定。",
+            "以下案例展示鼎鏈科技之製造整合能力與加工經驗。<br>實際用途依客戶專案需求而定。",
           "slide.materialLabel": "材料：",
           "slide.processLabel": "製程：",
           "slide.inspectionLabel": "檢驗：",
           "slide.applicationLabel": "應用：",
           "gallery.kicker": "加工案例",
           "gallery.title": "半導體設備加工案例",
-          "cap.kicker": "製造能力",
-          "cap.title": "半導體設備加工能力",
+          "applications.kicker": "應用領域",
+          "applications.title": "半導體應用領域",
           "quality.kicker": "品質保證",
           "quality.title": "品質保證",
           "why.kicker": "鼎鏈優勢",
@@ -914,7 +914,7 @@
               material: "SUS304 Stainless Steel",
               process: "Precision CNC Machining",
               inspection: "Mitutoyo CMM Inspection",
-              application: "Semiconductor Equipment Fixture",
+              application: "Precision Equipment Fixture",
             },
             {
               title: "Mounting Bracket",
@@ -975,13 +975,13 @@
               "../../images/semiconductor/05-semiconductor-fluid-connector.png",
             ],
           ],
-          capabilities: [
-            "Precision CNC Machining",
-            "Multi-Axis Milling",
-            "High Tolerance Machining",
-            "Semiconductor Manufacturing Projects",
+          applications: [
+            "Precision Equipment Fixtures",
+            "Machined Equipment Components",
+            "Inspection Fixtures",
+            "Prototype Development",
             "Surface Treatment Integration",
-            "Inspection Documentation",
+            "Quality Documentation",
           ],
           quality: [
             "ISO 9001",
@@ -1021,7 +1021,7 @@
               material: "SUS304 不鏽鋼",
               process: "精密 CNC 加工",
               inspection: "Mitutoyo 三次元量測",
-              application: "半導體設備治具",
+              application: "精密設備治具",
             },
             {
               title: "精密安裝座",
@@ -1082,27 +1082,27 @@
               "../../images/semiconductor/05-semiconductor-fluid-connector.png",
             ],
           ],
-          capabilities: [
-            "精密 CNC 加工",
-            "多軸加工",
-            "高精度公差控制",
-            "半導體製造案例",
+          applications: [
+            "精密設備治具",
+            "設備加工件",
+            "檢測治具",
+            "樣品開發",
             "表面處理整合",
-            "檢驗文件提供",
+            "品質文件管理",
           ],
           quality: [
             "ISO 9001",
             "Mitutoyo 三次元量測",
-            "KEYENCE 影像量測系統",
+            "KEYENCE 影像量測",
             "檢驗報告",
             "材質證明",
             "追溯管理",
           ],
           why: [
-            "20年以上製造基礎",
+            "20年以上製造經驗",
             "24小時生產支援",
             "一站式製造整合",
-            "原型與低量產經驗",
+            "樣品打樣與小量生產",
             "快速工程回應",
             "國際供應鏈經驗",
           ],
@@ -1166,7 +1166,7 @@
               `<article class="project-card"><div class="image-wrap"><img src="${src}" alt="${title}" /></div><h3>${title}</h3></article>`,
           )
           .join("");
-        capabilityGrid.innerHTML = page.capabilities
+        applicationsGrid.innerHTML = page.applications
           .map(
             (item) =>
               `<article class="info-card"><div class="icon">✦</div><h3>${item}</h3></article>`,
