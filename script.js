@@ -11,9 +11,9 @@ const translations = {
     "brand.name": "鼎鏈科技",
     "brand.subname": "全球製造整合",
     "brand.position": "全球製造整合平台",
-    "hero.title": "一張圖面<br>多元製造解決方案",
+    "hero.title": "全球製造<br>整合平台",
     "hero.subtitle":
-      "整合全球製造資源，<br>從樣品開發到量產交付，<br>提供單一窗口的一站式製造整合服務。",
+      "<strong>一張圖面，多元製造解決方案。</strong><br>透過單一窗口，串聯全球值得信賴的製造資源。",
     "hero.quote": "立即詢價",
     "hero.explore": "了解產業應用",
     "hero.node.taiwan": "台灣",
@@ -95,9 +95,9 @@ const translations = {
     "brand.name": "DINGLIAN",
     "brand.subname": "TECHNOLOGY",
     "brand.position": "GLOBAL MANUFACTURING INTEGRATION PLATFORM",
-    "hero.title": "One Drawing.<br>Multiple Manufacturing Solutions.",
+    "hero.title": "GLOBAL MANUFACTURING<br>INTEGRATION PLATFORM",
     "hero.subtitle":
-      "Connecting trusted manufacturing resources across Taiwan, China, Vietnam, Europe and North America.<br><br>From prototype development to production programs, Dinglian delivers integrated manufacturing solutions through a single contact window.",
+      "<strong>One Drawing.<br>Multiple Manufacturing Solutions.</strong><br>Connecting trusted manufacturing resources worldwide through a single contact window.",
     "hero.quote": "GET A QUOTE",
     "hero.explore": "EXPLORE INDUSTRIES",
     "hero.node.taiwan": "Taiwan",

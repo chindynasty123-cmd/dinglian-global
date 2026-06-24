@@ -1779,3 +1779,153 @@ textarea {
     top: 55%;
   }
 }
+
+/* Homepage Hero V2: logo-centered global integration hub */
+.hero .hero-emblem {
+  width: min(980px, 78vw);
+  height: min(560px, 46vh);
+  margin: clamp(8px, 1.2vh, 18px) auto clamp(-18px, -1vh, -8px);
+}
+.hero-emblem .hero-logo {
+  width: clamp(620px, 62vw, 920px);
+  max-width: 92%;
+  transform: translateY(18px);
+  filter: drop-shadow(0 0 52px rgba(215, 173, 75, 0.48))
+    drop-shadow(0 0 32px rgba(255, 246, 216, 0.14));
+}
+.hero .hero-glow {
+  width: 72%;
+  height: 72%;
+  background:
+    radial-gradient(circle, rgba(215, 173, 75, 0.26), transparent 58%),
+    radial-gradient(circle, rgba(78, 140, 255, 0.12), transparent 68%);
+}
+.hero .orbit-ring-a {
+  width: 78%;
+  height: 54%;
+}
+.hero .orbit-ring-b {
+  width: 88%;
+  height: 64%;
+}
+.hero .orbit-ring-c {
+  width: 96%;
+  height: 72%;
+}
+.hero h1 {
+  max-width: 1120px;
+  font-size: clamp(3.2rem, 7.4vw, 7.6rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.hero-subtitle {
+  max-width: 760px;
+  font-size: clamp(1.05rem, 1.9vw, 1.45rem);
+}
+.hero-subtitle strong {
+  display: inline-block;
+  color: #fff7df;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  line-height: 1.08;
+  margin-bottom: 12px;
+  text-shadow: 0 0 28px rgba(215, 173, 75, 0.2);
+}
+.hero-world-map {
+  top: 41%;
+  height: min(640px, 62vh);
+  opacity: 0.42;
+}
+.global-node {
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  padding: 6px 9px 6px 22px;
+  opacity: 0.76;
+  backdrop-filter: blur(12px);
+}
+.global-node::before {
+  opacity: 0.48;
+  background: linear-gradient(90deg, rgba(215, 173, 75, 0.6), transparent 78%);
+}
+.node-taiwan {
+  left: 58%;
+  top: 38%;
+}
+.node-taiwan::before {
+  width: clamp(90px, 11vw, 170px);
+  transform: rotate(170deg);
+}
+.node-china {
+  left: 64%;
+  top: 30%;
+}
+.node-china::before {
+  width: clamp(120px, 15vw, 230px);
+  transform: rotate(163deg);
+}
+.node-vietnam {
+  left: 61%;
+  top: 57%;
+}
+.node-vietnam::before {
+  width: clamp(110px, 14vw, 210px);
+  transform: rotate(-154deg);
+}
+.node-europe {
+  left: 31%;
+  top: 31%;
+}
+.node-europe::before {
+  width: clamp(170px, 24vw, 360px);
+  transform: rotate(16deg);
+}
+.node-north-america {
+  left: 13%;
+  top: 47%;
+}
+.node-north-america::before {
+  width: clamp(280px, 35vw, 560px);
+  transform: rotate(-4deg);
+}
+@media (max-width: 780px) {
+  .hero .hero-emblem {
+    width: 96vw;
+    height: 38vh;
+    margin-top: 0;
+  }
+  .hero-emblem .hero-logo {
+    width: min(720px, 118vw);
+    max-width: 118vw;
+  }
+  .hero h1 {
+    font-size: clamp(2.25rem, 11vw, 4.4rem);
+    letter-spacing: 0.04em;
+  }
+  .hero-subtitle strong {
+    font-size: clamp(1.25rem, 6.2vw, 2rem);
+  }
+  .global-node {
+    font-size: 0.48rem;
+    letter-spacing: 0.08em;
+    opacity: 0.58;
+  }
+  .node-north-america {
+    left: 2%;
+    top: 45%;
+  }
+  .node-europe {
+    left: 18%;
+    top: 30%;
+  }
+  .node-china {
+    left: 70%;
+    top: 31%;
+  }
+  .node-taiwan {
+    left: 60%;
+    top: 43%;
+  }
+  .node-vietnam {
+    left: 58%;
+    top: 60%;
+  }
+}
