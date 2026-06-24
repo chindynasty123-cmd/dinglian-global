@@ -2658,3 +2658,166 @@ html[lang="en"] .hero h1 {
     top: 24%;
   }
 }
+
+/* Homepage Hero V7: final logo-dominant Taiwan quality platform */
+.hero .hero-content {
+  padding: 96px 0 62px;
+  transform: translateY(-1.4vh);
+}
+.hero .hero-emblem {
+  width: min(1280px, 94vw);
+  height: min(500px, 37vh);
+  margin-bottom: 4px;
+}
+.hero-emblem .hero-logo {
+  width: clamp(920px, 82vw, 1480px);
+  max-width: 112%;
+  max-height: min(480px, 36vh);
+}
+.hero h1 {
+  max-width: min(860px, 78vw);
+  font-size: clamp(2.35rem, 4.25vw, 4.95rem);
+  line-height: 1.02;
+  margin-bottom: 20px;
+}
+.hero-subtitle {
+  max-width: 760px;
+  margin-bottom: 20px;
+  font-size: clamp(0.98rem, 1.06vw, 1.16rem);
+  line-height: 1.72;
+}
+.hero-subtitle strong {
+  display: none;
+}
+.hero-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+  width: min(760px, 88vw);
+  margin: 0 auto 24px;
+}
+.hero-features span {
+  position: relative;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 12px 9px 26px;
+  border: 1px solid rgba(215, 173, 75, 0.22);
+  border-radius: 999px;
+  background: rgba(8, 8, 8, 0.46);
+  color: rgba(255, 244, 211, 0.86);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.hero-features span::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background: var(--gold);
+  box-shadow: 0 0 14px rgba(215, 173, 75, 0.8);
+}
+.hub-node {
+  top: 25%;
+  font-size: 0.72rem;
+  line-height: 1.1;
+  text-align: left;
+  z-index: 2;
+}
+.global-nodes::before,
+.global-nodes::after {
+  top: 25%;
+}
+.node-vietnam {
+  top: 43%;
+}
+.node-thailand {
+  top: 47%;
+}
+.node-malaysia {
+  top: 54%;
+}
+.node-singapore {
+  top: 58%;
+}
+.node-indonesia {
+  left: 43%;
+  top: 62%;
+  --route-length: 310px;
+  --route-angle: -72deg;
+}
+.node-korea {
+  top: 30%;
+}
+.node-japan {
+  top: 31%;
+}
+.node-europe,
+.node-north-america {
+  top: 17%;
+}
+@media (max-width: 900px) {
+  .hero .hero-content {
+    padding: 96px 0 50px;
+  }
+  .hero .hero-emblem {
+    width: 100vw;
+    height: min(300px, 31vh);
+  }
+  .hero-emblem .hero-logo {
+    width: min(920px, 132vw);
+    max-width: 132vw;
+    max-height: min(290px, 30vh);
+  }
+  .hero h1,
+  html[lang="en"] .hero h1 {
+    font-size: clamp(2rem, 8.2vw, 3.25rem);
+    max-width: 92vw;
+  }
+  .hero-subtitle {
+    font-size: 0.92rem;
+    line-height: 1.58;
+    margin-bottom: 16px;
+  }
+  .hero-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    margin-bottom: 18px;
+  }
+  .hero-features span {
+    min-height: 36px;
+    font-size: 0.62rem;
+    padding: 8px 8px 8px 22px;
+  }
+  .hub-node {
+    top: 22%;
+  }
+  .global-nodes::before,
+  .global-nodes::after {
+    top: 22%;
+  }
+}
+
+/* Hero supporting statement restores one-drawing value without overpowering logo */
+.hero-supporting {
+  margin: -4px auto 18px;
+  color: #fff7df;
+  font-size: clamp(1.22rem, 2vw, 2.15rem);
+  font-weight: 760;
+  line-height: 1.12;
+  text-align: center;
+  text-shadow: 0 0 24px rgba(215, 173, 75, 0.2);
+}
+@media (max-width: 900px) {
+  .hero-supporting {
+    font-size: clamp(1.05rem, 4.8vw, 1.5rem);
+    margin-bottom: 14px;
+  }
+}
