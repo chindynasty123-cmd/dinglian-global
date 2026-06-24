@@ -2984,3 +2984,70 @@ html[lang="en"] .hero h1 {
     inset: 6% 0;
   }
 }
+
+/* Homepage Hero V9 final layout: centered logo, reduced crossing lines, no badge/features */
+.hero .hero-content {
+  transform: none;
+  padding: 98px 0 64px;
+}
+.hero .hero-emblem {
+  width: min(720px, 72vw);
+  height: min(360px, 38vh);
+  margin: 0 auto 16px;
+}
+.hero-emblem .hero-logo {
+  width: clamp(560px, 44vw, 650px);
+  max-width: 100%;
+  max-height: min(340px, 37vh);
+  transform: none;
+}
+.hero .hero-glow {
+  width: 82%;
+  height: 82%;
+}
+.network-lines span {
+  opacity: 0.04;
+  transform: scaleX(0.5);
+}
+.network-lines i {
+  opacity: 0.28;
+}
+.hero-features,
+.hero-supporting,
+.hero-kicker {
+  display: none !important;
+}
+.hero h1 {
+  max-width: min(900px, 82vw);
+  font-size: clamp(2.15rem, 3.75vw, 4.35rem);
+  line-height: 1.04;
+  margin: 0 auto 18px;
+}
+.hero-subtitle {
+  max-width: 700px;
+  margin: 0 auto 26px;
+  font-size: clamp(1rem, 1.12vw, 1.18rem);
+  line-height: 1.68;
+}
+.logo-particles span {
+  animation-duration: 9.5s;
+}
+@media (max-width: 900px) {
+  .hero .hero-emblem {
+    width: 85vw;
+    height: min(300px, 35vh);
+  }
+  .hero-emblem .hero-logo {
+    width: 82vw;
+    max-width: 85vw;
+    max-height: min(290px, 34vh);
+  }
+  .hero h1,
+  html[lang="en"] .hero h1 {
+    font-size: clamp(1.95rem, 7.8vw, 3.2rem);
+    max-width: 92vw;
+  }
+  .hero-subtitle {
+    max-width: 88vw;
+  }
+}
