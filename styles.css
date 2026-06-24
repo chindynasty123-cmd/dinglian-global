@@ -1549,3 +1549,233 @@ textarea {
     max-height: 280px;
   }
 }
+
+/* Homepage hero repositioning: global manufacturing integration network */
+.hero-world-map,
+.global-nodes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+.hero-world-map {
+  width: min(1180px, 94vw);
+  height: min(560px, 58vh);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -48%);
+  opacity: 0.34;
+  filter: drop-shadow(0 0 42px rgba(215, 173, 75, 0.08));
+}
+.continent {
+  position: absolute;
+  display: block;
+  border: 1px solid rgba(215, 173, 75, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(215, 173, 75, 0.16),
+    rgba(215, 173, 75, 0.035)
+  );
+  box-shadow: inset 0 0 45px rgba(215, 173, 75, 0.05);
+  clip-path: polygon(
+    9% 27%,
+    29% 13%,
+    53% 21%,
+    72% 10%,
+    90% 31%,
+    77% 53%,
+    84% 76%,
+    58% 88%,
+    37% 73%,
+    16% 83%,
+    4% 61%
+  );
+}
+.continent-americas {
+  width: 25%;
+  height: 50%;
+  left: 5%;
+  top: 26%;
+  transform: rotate(-18deg);
+}
+.continent-europe {
+  width: 18%;
+  height: 26%;
+  left: 43%;
+  top: 23%;
+  transform: rotate(8deg);
+}
+.continent-asia {
+  width: 34%;
+  height: 44%;
+  right: 8%;
+  top: 25%;
+  transform: rotate(-4deg);
+}
+.continent-sea {
+  width: 17%;
+  height: 20%;
+  right: 24%;
+  bottom: 18%;
+  transform: rotate(14deg);
+  opacity: 0.75;
+}
+.global-nodes::before,
+.global-nodes::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 43%;
+  width: min(780px, 68vw);
+  height: min(300px, 34vh);
+  border: 1px solid rgba(215, 173, 75, 0.16);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  box-shadow: 0 0 42px rgba(215, 173, 75, 0.08);
+}
+.global-nodes::after {
+  width: min(900px, 76vw);
+  height: min(380px, 40vh);
+  transform: translate(-50%, -50%) rotate(13deg);
+  border-color: rgba(78, 140, 255, 0.14);
+}
+.global-node {
+  position: absolute;
+  color: #f7e6b2;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 8px 11px 8px 26px;
+  border: 1px solid rgba(215, 173, 75, 0.34);
+  border-radius: 999px;
+  background: rgba(4, 5, 7, 0.62);
+  box-shadow: 0 0 24px rgba(215, 173, 75, 0.12);
+  animation: globalNodePulse 4.8s ease-in-out infinite;
+}
+.global-node::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background: var(--gold);
+  box-shadow: 0 0 18px rgba(215, 173, 75, 0.85);
+}
+.global-node::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: clamp(130px, 18vw, 280px);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(215, 173, 75, 0.45), transparent);
+  transform-origin: left center;
+  opacity: 0.38;
+}
+.node-taiwan {
+  left: 58%;
+  top: 35%;
+}
+.node-taiwan::before {
+  transform: rotate(158deg);
+}
+.node-china {
+  left: 66%;
+  top: 27%;
+  animation-delay: 0.5s;
+}
+.node-china::before {
+  transform: rotate(166deg);
+}
+.node-vietnam {
+  left: 61%;
+  top: 52%;
+  animation-delay: 1s;
+}
+.node-vietnam::before {
+  transform: rotate(-158deg);
+}
+.node-europe {
+  left: 33%;
+  top: 31%;
+  animation-delay: 1.5s;
+}
+.node-europe::before {
+  transform: rotate(18deg);
+}
+.node-north-america {
+  left: 12%;
+  top: 43%;
+  animation-delay: 2s;
+}
+.node-north-america::before {
+  transform: rotate(1deg);
+  width: clamp(260px, 33vw, 520px);
+}
+.hero-centered {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  max-width: 980px;
+}
+.hero-subtitle {
+  max-width: 860px;
+}
+@keyframes globalNodePulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(215, 173, 75, 0.12);
+    border-color: rgba(215, 173, 75, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 34px rgba(215, 173, 75, 0.28);
+    border-color: rgba(215, 173, 75, 0.56);
+  }
+}
+@media (max-width: 780px) {
+  .hero-world-map {
+    width: 110vw;
+    height: 50vh;
+    opacity: 0.25;
+  }
+  .global-node {
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+    padding: 6px 8px 6px 20px;
+  }
+  .global-node::after {
+    left: 8px;
+    width: 5px;
+    height: 5px;
+  }
+  .global-node::before,
+  .global-nodes::before,
+  .global-nodes::after {
+    opacity: 0.28;
+  }
+  .node-north-america {
+    left: 4%;
+    top: 38%;
+  }
+  .node-europe {
+    left: 22%;
+    top: 28%;
+  }
+  .node-china {
+    left: 67%;
+    top: 27%;
+  }
+  .node-taiwan {
+    left: 59%;
+    top: 39%;
+  }
+  .node-vietnam {
+    left: 58%;
+    top: 55%;
+  }
+}
