@@ -1466,3 +1466,48 @@ textarea {
     scroll-snap-align: start;
   }
 }
+
+/* Jintat brand identity showcase: right panel is logo-only, not duplicate content */
+.foundation-logo-showcase {
+  min-height: 430px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(42px, 6vw, 72px);
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(43, 125, 255, 0.3) 0%,
+      rgba(43, 125, 255, 0.16) 26%,
+      rgba(215, 173, 75, 0.08) 48%,
+      rgba(4, 7, 14, 0.98) 78%
+    ),
+    linear-gradient(145deg, rgba(3, 6, 13, 0.98), rgba(15, 10, 3, 0.94));
+}
+.foundation-logo-showcase::before {
+  inset: 20%;
+  background: rgba(43, 125, 255, 0.24);
+  filter: blur(46px);
+}
+.foundation-logo-showcase::after {
+  inset: 22px;
+  border: 1px solid rgba(215, 173, 75, 0.2);
+}
+.foundation-logo-showcase img {
+  width: 65%;
+  max-width: 420px;
+  max-height: 260px;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 0 42px rgba(43, 125, 255, 0.42))
+    drop-shadow(0 0 20px rgba(215, 173, 75, 0.16));
+}
+@media (max-width: 640px) {
+  .foundation-logo-showcase {
+    min-height: 280px;
+    padding: 36px;
+  }
+  .foundation-logo-showcase img {
+    width: 78%;
+  }
+}

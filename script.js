@@ -52,7 +52,7 @@ const translations = {
     "base.est": "核心夥伴",
     "base.country": "台灣製造",
     "base.panelTitle": "瑨達工業",
-    "base.iso": "ISO 9001",
+    "base.iso": "ISO9001",
     "base.cmm": "Mitutoyo CMM",
     "base.keyence": "KEYENCE Inspection",
     "base.support": "24/7 Production",
@@ -134,7 +134,7 @@ const translations = {
     "base.est": "Core Partner",
     "base.country": "Taiwan Manufacturing",
     "base.panelTitle": "Jintat Industrial Co., Ltd.",
-    "base.iso": "ISO 9001",
+    "base.iso": "ISO9001",
     "base.cmm": "Mitutoyo CMM",
     "base.keyence": "KEYENCE Inspection",
     "base.support": "24/7 Production",
@@ -232,7 +232,7 @@ const localizedData = {
       "檢驗報告",
       "追溯管理",
     ],
-    base: ["ISO 9001", "Mitutoyo CMM", "KEYENCE Inspection", "24/7 Production"],
+    base: ["ISO9001", "Mitutoyo CMM", "KEYENCE Inspection", "24/7 Production"],
   },
   en: {
     storyTags: [
@@ -306,7 +306,7 @@ const localizedData = {
       "Inspection Reports",
       "Traceability Management",
     ],
-    base: ["ISO 9001", "Mitutoyo CMM", "KEYENCE Inspection", "24/7 Production"],
+    base: ["ISO9001", "Mitutoyo CMM", "KEYENCE Inspection", "24/7 Production"],
   },
 };
 function render(lang) {
