@@ -13,7 +13,8 @@ const translations = {
     "brand.position": "全球製造整合平台",
     "hero.title": "全球製造<br>整合平台",
     "hero.subtitle":
-      "<strong>一張圖面，多元製造解決方案。</strong><br>透過單一窗口，串聯全球值得信賴的製造資源。",
+      "<strong>一張圖面，多元製造解決方案</strong><span>整合全球製造資源，從樣品開發到量產交付，提供單一窗口的一站式製造整合服務。</span>",
+    "hero.regions": "台灣 • 中國 • 越南 • 歐洲 • 北美",
     "hero.quote": "立即詢價",
     "hero.explore": "了解產業應用",
     "hero.node.taiwan": "台灣",
@@ -97,7 +98,8 @@ const translations = {
     "brand.position": "GLOBAL MANUFACTURING INTEGRATION PLATFORM",
     "hero.title": "GLOBAL MANUFACTURING<br>INTEGRATION PLATFORM",
     "hero.subtitle":
-      "<strong>One Drawing.<br>Multiple Manufacturing Solutions.</strong><br>Connecting trusted manufacturing resources worldwide through a single contact window.",
+      "<strong>One Drawing. Multiple Manufacturing Solutions.</strong><span>Connecting trusted manufacturing resources worldwide through a single contact window.</span>",
+    "hero.regions": "Taiwan • China • Vietnam • Europe • North America",
     "hero.quote": "GET A QUOTE",
     "hero.explore": "EXPLORE INDUSTRIES",
     "hero.node.taiwan": "Taiwan",
