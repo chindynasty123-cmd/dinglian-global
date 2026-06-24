@@ -3051,3 +3051,110 @@ html[lang="en"] .hero h1 {
     max-width: 88vw;
   }
 }
+
+/* Homepage Hero V10 final refinement: logo-dominant, centered, clutter-free */
+.hero {
+  min-height: 100vh;
+}
+.hero .hero-content {
+  align-items: center;
+  justify-content: center;
+  padding: clamp(72px, 8vh, 104px) 0 clamp(56px, 7vh, 86px);
+  transform: translateY(-8vh);
+}
+.hero .hero-emblem {
+  width: min(780px, 54vw);
+  max-width: 780px;
+  height: min(430px, 42vh);
+  margin: 0 auto 80px;
+}
+.hero-emblem .hero-logo {
+  width: min(780px, 54vw);
+  max-width: 780px;
+  max-height: min(390px, 40vh);
+  object-fit: contain;
+  transform: none;
+  filter: drop-shadow(0 0 48px rgba(215, 173, 75, 0.56))
+    drop-shadow(0 0 92px rgba(215, 173, 75, 0.22))
+    drop-shadow(0 0 70px rgba(0, 0, 0, 0.88));
+}
+.hero .hero-glow {
+  width: 94%;
+  height: 94%;
+  opacity: 1;
+  background: radial-gradient(
+    circle,
+    rgba(215, 173, 75, 0.42),
+    rgba(215, 173, 75, 0.14) 42%,
+    transparent 72%
+  );
+}
+.hero .orbit-ring-a { inset: 12%; }
+.hero .orbit-ring-b { inset: 19%; }
+.hero .orbit-ring-c { inset: 28%; }
+.hero .orbit-ring-d { inset: 35%; }
+.hero .logo-particles {
+  inset: 10% 4%;
+}
+.hero .logo-particles span {
+  animation-name: particleDrift;
+  animation-duration: 10.5s;
+}
+.hero .network-lines span {
+  opacity: 0.02;
+  transform: scaleX(0.5);
+}
+.hero .network-lines i {
+  opacity: 0.14;
+}
+.hero h1 {
+  max-width: min(980px, 86vw);
+  font-size: clamp(52px, 5vw, 78px);
+  line-height: 1.05;
+  margin: 0 auto 40px;
+  font-weight: 700;
+}
+.hero-subtitle {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: clamp(1rem, 1.1vw, 1.18rem);
+  line-height: 1.72;
+}
+.hero-actions {
+  justify-content: center;
+}
+@media (max-width: 900px) {
+  .hero .hero-content {
+    padding: 76px 0 48px;
+    transform: translateY(-3vh);
+  }
+  .hero .hero-emblem {
+    width: 88vw;
+    max-width: 520px;
+    height: min(320px, 35vh);
+    margin: 0 auto 52px;
+  }
+  .hero-emblem .hero-logo {
+    width: 88vw;
+    max-width: 520px;
+    max-height: min(300px, 34vh);
+  }
+  .hero h1,
+  html[lang="en"] .hero h1 {
+    font-size: clamp(32px, 8vw, 46px);
+    line-height: 1.1;
+    max-width: 92vw;
+    margin-bottom: 28px;
+  }
+  .hero-subtitle {
+    max-width: 88vw;
+    margin-bottom: 30px;
+  }
+  .hero-actions {
+    width: min(100%, 360px);
+    margin: 0 auto;
+  }
+  .hero-actions .btn {
+    width: 100%;
+  }
+}
