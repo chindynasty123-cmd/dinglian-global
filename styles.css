@@ -2025,3 +2025,245 @@ textarea {
     letter-spacing: 0.14em;
   }
 }
+
+/* Homepage Hero V4: Taiwan-centered global manufacturing network */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero .hero-content {
+  width: min(1180px, 92vw);
+  margin: 0 auto;
+  padding: 132px 0 88px;
+  text-align: left;
+  align-items: flex-start;
+  transform: translateY(-1vh);
+}
+.hero .hero-emblem {
+  display: none;
+}
+.hero-kicker {
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.hero h1 {
+  max-width: min(720px, 52vw);
+  margin: 0 0 24px;
+  font-size: clamp(3.1rem, 5.8vw, 6.6rem);
+  line-height: 0.95;
+  font-weight: 760;
+  letter-spacing: -0.035em;
+  text-align: left;
+  text-transform: none;
+}
+html[lang="en"] .hero h1 {
+  max-width: min(780px, 56vw);
+}
+.hero-subtitle {
+  max-width: 620px;
+  margin: 0 0 30px;
+  color: rgba(245, 238, 222, 0.78);
+  font-size: clamp(1.05rem, 1.35vw, 1.35rem);
+  line-height: 1.72;
+  text-align: left;
+}
+.hero-actions {
+  justify-content: flex-start;
+}
+.hero-world-map {
+  left: auto;
+  right: -5vw;
+  top: 50%;
+  width: min(980px, 62vw);
+  height: min(680px, 70vh);
+  transform: translateY(-50%);
+  opacity: 0.48;
+  z-index: 1;
+}
+.hero-world-map::after {
+  content: "";
+  position: absolute;
+  inset: 18% 12% 14% 18%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(215, 173, 75, 0.11), transparent 62%);
+  filter: blur(20px);
+}
+.global-nodes {
+  inset: 0;
+  z-index: 2;
+}
+.global-nodes::before,
+.global-nodes::after {
+  left: 72%;
+  top: 48%;
+  width: min(620px, 44vw);
+  height: min(300px, 30vh);
+  opacity: 0.55;
+}
+.global-node {
+  width: auto;
+  height: auto;
+  min-width: 0;
+  padding: 5px 8px 5px 19px;
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  color: rgba(249, 230, 177, 0.72);
+  border-color: rgba(215, 173, 75, 0.2);
+  background: rgba(3, 4, 7, 0.52);
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+.global-node::after {
+  left: 8px;
+  width: 5px;
+  height: 5px;
+  transform: translateY(-50%);
+}
+.global-node::before {
+  width: var(--route-length, 160px);
+  transform: rotate(var(--route-angle, 0deg));
+  opacity: 0.44;
+}
+.hub-node {
+  left: 72%;
+  top: 48%;
+  padding: 10px 14px 10px 34px;
+  color: #fff4cc;
+  font-size: 0.82rem;
+  border-color: rgba(215, 173, 75, 0.72);
+  background: rgba(27, 18, 5, 0.82);
+  box-shadow:
+    0 0 34px rgba(215, 173, 75, 0.55),
+    0 0 90px rgba(215, 173, 75, 0.28);
+  opacity: 1;
+  z-index: 4;
+}
+.hub-node::after {
+  left: 15px;
+  width: 11px;
+  height: 11px;
+  background: #ffe19a;
+  box-shadow:
+    0 0 22px rgba(255, 225, 154, 0.95),
+    0 0 48px rgba(215, 173, 75, 0.58);
+}
+.hub-node::before {
+  display: none;
+}
+.node-china {
+  left: 68%;
+  top: 39%;
+  --route-length: 95px;
+  --route-angle: 44deg;
+}
+.node-vietnam {
+  left: 70%;
+  top: 57%;
+  --route-length: 90px;
+  --route-angle: -48deg;
+}
+.node-thailand {
+  left: 65%;
+  top: 61%;
+  --route-length: 140px;
+  --route-angle: -34deg;
+}
+.node-malaysia {
+  left: 73%;
+  top: 66%;
+  --route-length: 110px;
+  --route-angle: -82deg;
+}
+.node-singapore {
+  left: 78%;
+  top: 70%;
+  --route-length: 145px;
+  --route-angle: -112deg;
+}
+.node-indonesia {
+  left: 66%;
+  top: 73%;
+  --route-length: 195px;
+  --route-angle: -43deg;
+}
+.node-japan {
+  left: 82%;
+  top: 36%;
+  --route-length: 170px;
+  --route-angle: 146deg;
+}
+.node-korea {
+  left: 77%;
+  top: 31%;
+  --route-length: 150px;
+  --route-angle: 133deg;
+}
+.node-europe {
+  left: 56%;
+  top: 29%;
+  --route-length: 280px;
+  --route-angle: 38deg;
+}
+.node-north-america {
+  left: 24%;
+  top: 35%;
+  --route-length: 560px;
+  --route-angle: 14deg;
+}
+.node-south-america {
+  left: 34%;
+  top: 66%;
+  --route-length: 430px;
+  --route-angle: -24deg;
+}
+@media (max-width: 900px) {
+  .hero {
+    min-height: 100vh;
+  }
+  .hero .hero-content {
+    padding: 112px 0 64px;
+    text-align: left;
+  }
+  .hero h1,
+  html[lang="en"] .hero h1 {
+    max-width: 92vw;
+    font-size: clamp(2.55rem, 11vw, 4.5rem);
+  }
+  .hero-subtitle {
+    max-width: 88vw;
+    font-size: 1rem;
+  }
+  .hero-actions {
+    width: min(360px, 88vw);
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-world-map {
+    right: -38vw;
+    top: 45%;
+    width: 118vw;
+    height: 58vh;
+    opacity: 0.28;
+  }
+  .global-node:not(.hub-node) {
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+  }
+  .global-node:not(.hub-node)::after {
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    transform: translate(-50%, -50%);
+  }
+  .hub-node {
+    left: 68%;
+    top: 42%;
+    font-size: 0.62rem;
+    padding: 8px 11px 8px 28px;
+  }
+}
