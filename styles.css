@@ -3108,49 +3108,53 @@ html[lang="en"] .hero h1 {
   }
 }
 
-/* Homepage Hero logo scale refinement */
+/* Homepage Hero visual proportion refinement */
+.hero {
+  min-height: 100vh;
+  padding-top: 96px;
+  padding-bottom: 56px;
+}
+.hero .hero-content {
+  padding: 0;
+  transform: none;
+}
 .hero .hero-emblem {
-  width: min(900px, 55vw);
-  max-width: 900px;
-  height: min(500px, 45vh);
-  margin-bottom: 56px;
+  width: clamp(420px, 48vh, 620px);
+  max-width: min(86vw, 640px);
+  margin: clamp(0px, 1vh, 14px) auto clamp(-8px, -1vh, 0px);
 }
-@media (max-width: 1024px) and (min-width: 641px) {
-  .hero .hero-emblem {
-    width: min(765px, 72vw);
-    max-width: 765px;
-    height: min(420px, 40vh);
-    margin-bottom: 52px;
-  }
-}
-@media (max-width: 640px) {
-  .hero .hero-emblem {
-    width: 92vw;
-    max-width: 560px;
-    height: min(330px, 36vh);
-    margin-bottom: 46px;
-  }
-}
-
-
-/* Canonical homepage Hero logo sizing */
 .hero-emblem .hero-logo {
-  width: clamp(560px, 48vw, 760px);
-  max-width: 92vw;
+  width: clamp(430px, 34vw, 560px);
+  max-width: 82vw;
   height: auto;
-  transform: translateY(22px);
+  transform: translateY(8px);
   object-fit: contain;
+}
+.hero h1 {
+  font-size: clamp(3.2rem, 5.2vw, 6.2rem);
+  line-height: 0.96;
+  margin-top: 0;
 }
 @media (max-width: 1050px) {
   .hero-emblem .hero-logo {
-    width: min(560px, 88vw);
-    max-width: 88vw;
+    width: min(460px, 78vw);
   }
 }
 @media (max-width: 640px) {
+  .hero {
+    min-height: 100vh;
+    padding-top: 92px;
+  }
+  .hero .hero-emblem {
+    width: min(360px, 90vw);
+    margin-bottom: 0;
+  }
   .hero-emblem .hero-logo {
-    width: min(430px, 92vw);
-    max-width: 92vw;
-    transform: translateY(18px);
+    width: min(330px, 86vw);
+    transform: translateY(4px);
+  }
+  .hero h1 {
+    font-size: clamp(2.45rem, 12vw, 3.6rem);
+    line-height: 1;
   }
 }
