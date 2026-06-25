@@ -251,11 +251,6 @@ a {
 .section {
   position: relative;
 }
-.hero-logo {
-  width: min(360px, 54vw);
-  filter: drop-shadow(0 0 34px rgba(215, 173, 75, 0.28));
-  margin-bottom: 22px;
-}
 .eyebrow {
   color: var(--gold);
   letter-spacing: 0.28em;
@@ -715,9 +710,6 @@ textarea {
   .section {
     padding: 76px 20px;
   }
-  .hero-logo {
-    width: 240px;
-  }
   .network-core {
     width: 72vw;
   }
@@ -753,11 +745,6 @@ textarea {
   flex-direction: column;
   align-items: center;
   z-index: 3;
-}
-.hero-logo {
-  width: clamp(300px, 38vh, 460px);
-  max-width: 78vw;
-  margin-bottom: 18px;
 }
 .hero h1 {
   font-size: clamp(2.8rem, 6vw, 6.8rem);
@@ -867,9 +854,6 @@ textarea {
   .hero {
     display: flex;
   }
-  .hero-logo {
-    width: min(380px, 72vw);
-  }
 }
 
 /* V7 hero-only restoration: premium global orbit animation */
@@ -959,15 +943,6 @@ textarea {
   );
   filter: blur(18px);
   animation: logoAura 5.8s ease-in-out infinite;
-}
-.hero-emblem .hero-logo {
-  width: 61%;
-  max-width: none;
-  margin: 0;
-  position: relative;
-  z-index: 5;
-  filter: drop-shadow(0 0 34px rgba(215, 173, 75, 0.42))
-    drop-shadow(0 0 62px rgba(0, 0, 0, 0.8));
 }
 .orbit-ring {
   position: absolute;
@@ -1194,17 +1169,6 @@ textarea {
 .hero-emblem {
   margin: clamp(36px, 6vh, 84px) auto clamp(-8px, 0.4vh, 6px);
 }
-.hero-emblem .hero-logo {
-  width: 118%;
-}
-
-/* Critical V8 fix: force the actual logo image to desktop focal-point height only */
-.hero-emblem .hero-logo {
-  width: auto;
-  height: clamp(280px, 32vh, 350px);
-  max-width: none;
-  transform: translateY(36px);
-}
 .hero-emblem {
   margin-bottom: clamp(-56px, -4vh, -32px);
 }
@@ -1255,12 +1219,6 @@ textarea {
 .hero-emblem {
   margin: clamp(10px, 2vh, 24px) auto clamp(-30px, -2vh, -14px);
 }
-.hero-emblem .hero-logo {
-  width: 480px;
-  max-width: 42vw;
-  height: auto;
-  transform: translateY(28px);
-}
 .hero-wordmark {
   margin: 0 0 2px;
   color: #fff7df;
@@ -1280,10 +1238,6 @@ textarea {
   max-width: 72vw;
 }
 @media (max-width: 640px) {
-  .hero-emblem .hero-logo {
-    width: min(380px, 78vw);
-    max-width: 78vw;
-  }
   .hero-wordmark {
     font-size: clamp(1.25rem, 7vw, 2rem);
   }
@@ -1786,13 +1740,6 @@ textarea {
   height: min(560px, 46vh);
   margin: clamp(8px, 1.2vh, 18px) auto clamp(-18px, -1vh, -8px);
 }
-.hero-emblem .hero-logo {
-  width: clamp(620px, 62vw, 920px);
-  max-width: 92%;
-  transform: translateY(18px);
-  filter: drop-shadow(0 0 52px rgba(215, 173, 75, 0.48))
-    drop-shadow(0 0 32px rgba(255, 246, 216, 0.14));
-}
 .hero .hero-glow {
   width: 72%;
   height: 72%;
@@ -1892,10 +1839,6 @@ textarea {
     height: 38vh;
     margin-top: 0;
   }
-  .hero-emblem .hero-logo {
-    width: min(720px, 118vw);
-    max-width: 118vw;
-  }
   .hero h1 {
     font-size: clamp(2.25rem, 11vw, 4.4rem);
     letter-spacing: 0.04em;
@@ -1938,13 +1881,6 @@ textarea {
   width: min(760px, 60vw);
   height: min(330px, 30vh);
   margin: 0 auto clamp(2px, 0.8vh, 10px);
-}
-.hero-emblem .hero-logo {
-  width: min(760px, 60vw);
-  max-width: 100%;
-  max-height: min(330px, 30vh);
-  object-fit: contain;
-  transform: translateY(6px);
 }
 .hero h1 {
   max-width: min(980px, 60vw);
@@ -2001,11 +1937,6 @@ textarea {
   .hero .hero-emblem {
     width: 92vw;
     height: min(260px, 28vh);
-  }
-  .hero-emblem .hero-logo {
-    width: 92vw;
-    max-height: min(260px, 28vh);
-    max-width: 92vw;
   }
   .hero h1 {
     max-width: 92vw;
@@ -2284,16 +2215,6 @@ html[lang="en"] .hero h1 {
   height: min(360px, 30vh);
   margin: 0 auto 10px;
 }
-.hero-emblem .hero-logo {
-  width: clamp(580px, 58vw, 880px);
-  max-width: 100%;
-  max-height: min(340px, 29vh);
-  object-fit: contain;
-  transform: translateY(0);
-  filter: drop-shadow(0 0 56px rgba(215, 173, 75, 0.52))
-    drop-shadow(0 0 34px rgba(255, 246, 216, 0.16));
-  animation: logoPremiumGlow 5.8s ease-in-out infinite;
-}
 .hero .hero-glow {
   width: 82%;
   height: 82%;
@@ -2439,11 +2360,6 @@ html[lang="en"] .hero h1 {
     height: min(260px, 28vh);
     margin-bottom: 4px;
   }
-  .hero-emblem .hero-logo {
-    width: min(720px, 110vw);
-    max-width: 110vw;
-    max-height: min(250px, 27vh);
-  }
   .hero-kicker {
     font-size: 0.68rem;
     line-height: 1.55;
@@ -2497,11 +2413,6 @@ html[lang="en"] .hero h1 {
   width: min(1120px, 88vw);
   height: min(430px, 34vh);
   margin: 0 auto 6px;
-}
-.hero-emblem .hero-logo {
-  width: clamp(760px, 72vw, 1120px);
-  max-height: min(410px, 33vh);
-  animation: logoPremiumGlow 5.8s ease-in-out infinite;
 }
 .hero .hero-glow {
   width: 88%;
@@ -2637,11 +2548,6 @@ html[lang="en"] .hero h1 {
     width: 98vw;
     height: min(280px, 30vh);
   }
-  .hero-emblem .hero-logo {
-    width: min(820px, 122vw);
-    max-width: 122vw;
-    max-height: min(270px, 29vh);
-  }
   .hero h1,
   html[lang="en"] .hero h1 {
     max-width: 92vw;
@@ -2668,11 +2574,6 @@ html[lang="en"] .hero h1 {
   width: min(1280px, 94vw);
   height: min(500px, 37vh);
   margin-bottom: 4px;
-}
-.hero-emblem .hero-logo {
-  width: clamp(920px, 82vw, 1480px);
-  max-width: 112%;
-  max-height: min(480px, 36vh);
 }
 .hero h1 {
   max-width: min(860px, 78vw);
@@ -2771,11 +2672,6 @@ html[lang="en"] .hero h1 {
     width: 100vw;
     height: min(300px, 31vh);
   }
-  .hero-emblem .hero-logo {
-    width: min(920px, 132vw);
-    max-width: 132vw;
-    max-height: min(290px, 30vh);
-  }
   .hero h1,
   html[lang="en"] .hero h1 {
     font-size: clamp(2rem, 8.2vw, 3.25rem);
@@ -2838,14 +2734,6 @@ html[lang="en"] .hero h1 {
   height: min(520px, 40vh);
   margin: 0 auto 8px;
   isolation: isolate;
-}
-.hero-emblem .hero-logo {
-  width: clamp(980px, 84vw, 1540px);
-  max-width: 116%;
-  max-height: min(500px, 39vh);
-  position: relative;
-  z-index: 4;
-  animation: logoPremiumGlow 7.5s ease-in-out infinite;
 }
 .hero .hero-glow {
   width: 76%;
@@ -2975,11 +2863,6 @@ html[lang="en"] .hero h1 {
     width: 104vw;
     height: min(340px, 35vh);
   }
-  .hero-emblem .hero-logo {
-    width: min(980px, 138vw);
-    max-width: 138vw;
-    max-height: min(330px, 34vh);
-  }
   .logo-particles {
     inset: 6% 0;
   }
@@ -2994,12 +2877,6 @@ html[lang="en"] .hero h1 {
   width: min(720px, 72vw);
   height: min(360px, 38vh);
   margin: 0 auto 16px;
-}
-.hero-emblem .hero-logo {
-  width: clamp(560px, 44vw, 650px);
-  max-width: 100%;
-  max-height: min(340px, 37vh);
-  transform: none;
 }
 .hero .hero-glow {
   width: 82%;
@@ -3037,11 +2914,6 @@ html[lang="en"] .hero h1 {
     width: 85vw;
     height: min(300px, 35vh);
   }
-  .hero-emblem .hero-logo {
-    width: 82vw;
-    max-width: 85vw;
-    max-height: min(290px, 34vh);
-  }
   .hero h1,
   html[lang="en"] .hero h1 {
     font-size: clamp(1.95rem, 7.8vw, 3.2rem);
@@ -3067,16 +2939,6 @@ html[lang="en"] .hero h1 {
   max-width: 780px;
   height: min(430px, 42vh);
   margin: 0 auto 80px;
-}
-.hero-emblem .hero-logo {
-  width: min(780px, 54vw);
-  max-width: 780px;
-  max-height: min(390px, 40vh);
-  object-fit: contain;
-  transform: none;
-  filter: drop-shadow(0 0 48px rgba(215, 173, 75, 0.56))
-    drop-shadow(0 0 92px rgba(215, 173, 75, 0.22))
-    drop-shadow(0 0 70px rgba(0, 0, 0, 0.88));
 }
 .hero .hero-glow {
   width: 94%;
@@ -3133,11 +2995,6 @@ html[lang="en"] .hero h1 {
     max-width: 520px;
     height: min(320px, 35vh);
     margin: 0 auto 52px;
-  }
-  .hero-emblem .hero-logo {
-    width: 88vw;
-    max-width: 520px;
-    max-height: min(300px, 34vh);
   }
   .hero h1,
   html[lang="en"] .hero h1 {
@@ -3258,23 +3115,12 @@ html[lang="en"] .hero h1 {
   height: min(500px, 45vh);
   margin-bottom: 56px;
 }
-.hero-emblem .hero-logo {
-  width: min(900px, 55vw);
-  max-width: 900px;
-  max-height: min(455px, 44vh);
-  object-fit: contain;
-}
 @media (max-width: 1024px) and (min-width: 641px) {
   .hero .hero-emblem {
     width: min(765px, 72vw);
     max-width: 765px;
     height: min(420px, 40vh);
     margin-bottom: 52px;
-  }
-  .hero-emblem .hero-logo {
-    width: min(765px, 72vw);
-    max-width: 765px;
-    max-height: min(385px, 38vh);
   }
 }
 @media (max-width: 640px) {
@@ -3284,9 +3130,27 @@ html[lang="en"] .hero h1 {
     height: min(330px, 36vh);
     margin-bottom: 46px;
   }
+}
+
+
+/* Canonical homepage Hero logo sizing */
+.hero-emblem .hero-logo {
+  width: clamp(560px, 48vw, 760px);
+  max-width: 92vw;
+  height: auto;
+  transform: translateY(22px);
+  object-fit: contain;
+}
+@media (max-width: 1050px) {
   .hero-emblem .hero-logo {
-    width: 92vw;
-    max-width: 560px;
-    max-height: min(310px, 35vh);
+    width: min(560px, 88vw);
+    max-width: 88vw;
+  }
+}
+@media (max-width: 640px) {
+  .hero-emblem .hero-logo {
+    width: min(430px, 92vw);
+    max-width: 92vw;
+    transform: translateY(18px);
   }
 }
