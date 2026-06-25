@@ -1724,13 +1724,6 @@ textarea {
     top: 55%;
   }
 }
-
-/* Homepage Hero V2: logo-centered global integration hub */
-.hero .hero-emblem {
-  width: min(980px, 78vw);
-  height: min(560px, 46vh);
-  margin: clamp(8px, 1.2vh, 18px) auto clamp(-18px, -1vh, -8px);
-}
 .hero .hero-glow {
   width: 72%;
   height: 72%;
@@ -1825,11 +1818,6 @@ textarea {
   transform: rotate(-4deg);
 }
 @media (max-width: 780px) {
-  .hero .hero-emblem {
-    width: 96vw;
-    height: 38vh;
-    margin-top: 0;
-  }
   .hero h1 {
     font-size: clamp(2.25rem, 11vw, 4.4rem);
     letter-spacing: 0.04em;
@@ -1862,16 +1850,6 @@ textarea {
     left: 58%;
     top: 60%;
   }
-}
-
-/* Homepage Hero V3 typography hierarchy: logo first, title second */
-.hero .hero-content {
-  transform: translateY(-2.5vh);
-}
-.hero .hero-emblem {
-  width: min(760px, 60vw);
-  height: min(330px, 30vh);
-  margin: 0 auto clamp(2px, 0.8vh, 10px);
 }
 .hero h1 {
   max-width: min(980px, 60vw);
@@ -1922,13 +1900,6 @@ textarea {
   transform: translate(-50%, -50%);
 }
 @media (max-width: 780px) {
-  .hero .hero-content {
-    transform: translateY(-1vh);
-  }
-  .hero .hero-emblem {
-    width: 92vw;
-    height: min(260px, 28vh);
-  }
   .hero h1 {
     max-width: 92vw;
     font-size: clamp(2rem, 8.8vw, 3.35rem);
@@ -1955,17 +1926,6 @@ textarea {
   align-items: center;
   overflow: hidden;
 }
-.hero .hero-content {
-  width: min(1180px, 92vw);
-  margin: 0 auto;
-  padding: 132px 0 88px;
-  text-align: left;
-  align-items: flex-start;
-  transform: translateY(-1vh);
-}
-.hero .hero-emblem {
-  display: none;
-}
 .hero-kicker {
   color: var(--gold);
   margin-bottom: 20px;
@@ -1979,9 +1939,6 @@ textarea {
   letter-spacing: -0.035em;
   text-align: left;
   text-transform: none;
-}
-html[lang="en"] .hero h1 {
-  max-width: min(780px, 56vw);
 }
 .hero-subtitle {
   max-width: 620px;
@@ -2145,15 +2102,6 @@ html[lang="en"] .hero h1 {
   .hero {
     min-height: 100vh;
   }
-  .hero .hero-content {
-    padding: 112px 0 64px;
-    text-align: left;
-  }
-  .hero h1,
-  html[lang="en"] .hero h1 {
-    max-width: 92vw;
-    font-size: clamp(2.55rem, 11vw, 4.5rem);
-  }
   .hero-subtitle {
     max-width: 88vw;
     font-size: 1rem;
@@ -2189,23 +2137,6 @@ html[lang="en"] .hero h1 {
     padding: 8px 11px 8px 28px;
   }
 }
-
-/* Homepage Hero V5: centered Dinglian logo with Taiwan-led network */
-.hero .hero-content {
-  width: min(1120px, 92vw);
-  padding: 112px 0 76px;
-  text-align: center;
-  align-items: center;
-  transform: translateY(-1.8vh);
-  z-index: 4;
-}
-.hero .hero-emblem {
-  display: block;
-  position: relative;
-  width: min(900px, 76vw);
-  height: min(360px, 30vh);
-  margin: 0 auto 10px;
-}
 .hero .hero-glow {
   width: 82%;
   height: 82%;
@@ -2236,9 +2167,6 @@ html[lang="en"] .hero h1 {
   font-weight: 740;
   letter-spacing: -0.025em;
   text-align: center;
-}
-html[lang="en"] .hero h1 {
-  max-width: min(880px, 74vw);
 }
 .hero-subtitle {
   max-width: 760px;
@@ -2340,26 +2268,9 @@ html[lang="en"] .hero h1 {
   }
 }
 @media (max-width: 900px) {
-  .hero .hero-content {
-    padding: 104px 0 58px;
-    text-align: center;
-    align-items: center;
-  }
-  .hero .hero-emblem {
-    display: block;
-    width: 96vw;
-    height: min(260px, 28vh);
-    margin-bottom: 4px;
-  }
   .hero-kicker {
     font-size: 0.68rem;
     line-height: 1.55;
-  }
-  .hero h1,
-  html[lang="en"] .hero h1 {
-    max-width: 92vw;
-    font-size: clamp(2.25rem, 9.4vw, 3.7rem);
-    text-align: center;
   }
   .hero-subtitle {
     max-width: 88vw;
@@ -2395,15 +2306,6 @@ html[lang="en"] .hero h1 {
 /* Homepage Hero V6: minimal logo-first supply-chain network, no map image */
 .hero-world-map {
   display: none;
-}
-.hero .hero-content {
-  padding: 104px 0 70px;
-  transform: translateY(-1.2vh);
-}
-.hero .hero-emblem {
-  width: min(1120px, 88vw);
-  height: min(430px, 34vh);
-  margin: 0 auto 6px;
 }
 .hero .hero-glow {
   width: 88%;
@@ -2535,15 +2437,6 @@ html[lang="en"] .hero h1 {
   }
 }
 @media (max-width: 900px) {
-  .hero .hero-emblem {
-    width: 98vw;
-    height: min(280px, 30vh);
-  }
-  .hero h1,
-  html[lang="en"] .hero h1 {
-    max-width: 92vw;
-    font-size: clamp(2.15rem, 8.8vw, 3.55rem);
-  }
   .hero-subtitle strong {
     font-size: clamp(1.12rem, 5vw, 1.55rem);
   }
@@ -2554,17 +2447,6 @@ html[lang="en"] .hero h1 {
   .hub-node {
     top: 24%;
   }
-}
-
-/* Homepage Hero V7: final logo-dominant Taiwan quality platform */
-.hero .hero-content {
-  padding: 96px 0 62px;
-  transform: translateY(-1.4vh);
-}
-.hero .hero-emblem {
-  width: min(1280px, 94vw);
-  height: min(500px, 37vh);
-  margin-bottom: 4px;
 }
 .hero h1 {
   max-width: min(860px, 78vw);
@@ -2656,18 +2538,6 @@ html[lang="en"] .hero h1 {
   top: 17%;
 }
 @media (max-width: 900px) {
-  .hero .hero-content {
-    padding: 96px 0 50px;
-  }
-  .hero .hero-emblem {
-    width: 100vw;
-    height: min(300px, 31vh);
-  }
-  .hero h1,
-  html[lang="en"] .hero h1 {
-    font-size: clamp(2rem, 8.2vw, 3.25rem);
-    max-width: 92vw;
-  }
   .hero-subtitle {
     font-size: 0.92rem;
     line-height: 1.58;
@@ -2713,18 +2583,6 @@ html[lang="en"] .hero h1 {
 .hero-world-map,
 .global-nodes {
   display: none !important;
-}
-.hero .hero-content {
-  min-height: 100vh;
-  justify-content: center;
-  padding: 88px 0 58px;
-  transform: translateY(-2vh);
-}
-.hero .hero-emblem {
-  width: min(1320px, 94vw);
-  height: min(520px, 40vh);
-  margin: 0 auto 8px;
-  isolation: isolate;
 }
 .hero .hero-glow {
   width: 76%;
@@ -2846,28 +2704,9 @@ html[lang="en"] .hero h1 {
   }
 }
 @media (max-width: 900px) {
-  .hero .hero-content {
-    padding: 84px 0 48px;
-    transform: translateY(-1vh);
-  }
-  .hero .hero-emblem {
-    width: 104vw;
-    height: min(340px, 35vh);
-  }
   .logo-particles {
     inset: 6% 0;
   }
-}
-
-/* Homepage Hero V9 final layout: centered logo, reduced crossing lines, no badge/features */
-.hero .hero-content {
-  transform: none;
-  padding: 98px 0 64px;
-}
-.hero .hero-emblem {
-  width: min(720px, 72vw);
-  height: min(360px, 38vh);
-  margin: 0 auto 16px;
 }
 .hero .hero-glow {
   width: 82%;
@@ -2901,15 +2740,6 @@ html[lang="en"] .hero h1 {
   animation-duration: 9.5s;
 }
 @media (max-width: 900px) {
-  .hero .hero-emblem {
-    width: 85vw;
-    height: min(300px, 35vh);
-  }
-  .hero h1,
-  html[lang="en"] .hero h1 {
-    font-size: clamp(1.95rem, 7.8vw, 3.2rem);
-    max-width: 92vw;
-  }
   .hero-subtitle {
     max-width: 88vw;
   }
@@ -2918,18 +2748,6 @@ html[lang="en"] .hero h1 {
 /* Homepage Hero V10 final refinement: logo-dominant, centered, clutter-free */
 .hero {
   min-height: 100vh;
-}
-.hero .hero-content {
-  align-items: center;
-  justify-content: center;
-  padding: clamp(72px, 8vh, 104px) 0 clamp(56px, 7vh, 86px);
-  transform: translateY(-8vh);
-}
-.hero .hero-emblem {
-  width: min(780px, 54vw);
-  max-width: 780px;
-  height: min(430px, 42vh);
-  margin: 0 auto 80px;
 }
 .hero .hero-glow {
   width: 94%;
@@ -2977,23 +2795,6 @@ html[lang="en"] .hero h1 {
   justify-content: center;
 }
 @media (max-width: 900px) {
-  .hero .hero-content {
-    padding: 76px 0 48px;
-    transform: translateY(-3vh);
-  }
-  .hero .hero-emblem {
-    width: 88vw;
-    max-width: 520px;
-    height: min(320px, 35vh);
-    margin: 0 auto 52px;
-  }
-  .hero h1,
-  html[lang="en"] .hero h1 {
-    font-size: clamp(32px, 8vw, 46px);
-    line-height: 1.1;
-    max-width: 92vw;
-    margin-bottom: 28px;
-  }
   .hero-subtitle {
     max-width: 88vw;
     margin-bottom: 30px;
@@ -3096,247 +2897,5 @@ html[lang="en"] .hero h1 {
   }
   .capability-card {
     min-height: 220px;
-  }
-}
-
-/* ================================
-   FINAL HERO TEMPLATE - IMAGE 2 STYLE
-   ================================ */
-
-.hero {
-  min-height: 100vh;
-  padding: 92px clamp(20px, 5vw, 80px) 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-  isolation: isolate;
-}
-
-.hero-centered,
-.hero .hero-content.hero-centered {
-  width: min(1180px, 94vw);
-  margin: 0 auto;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transform: none;
-}
-
-/* Logo animation area */
-.hero-emblem,
-.hero .hero-emblem {
-  width: clamp(560px, 46vw, 760px);
-  max-width: 92vw;
-  aspect-ratio: 1;
-  margin: -8px auto -78px;
-  position: relative;
-  display: grid;
-  place-items: center;
-  z-index: 4;
-}
-
-/* Actual logo image - must be bigger than headline */
-.hero-emblem .hero-logo {
-  width: clamp(520px, 42vw, 700px);
-  max-width: 90vw;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  object-position: center;
-  margin: 0 auto;
-  position: relative;
-  z-index: 6;
-  transform: translateY(0);
-  filter:
-    drop-shadow(0 0 38px rgba(215, 173, 75, 0.48))
-    drop-shadow(0 0 70px rgba(0, 0, 0, 0.88));
-}
-
-/* Keep orbit behind logo */
-.hero-glow,
-.orbit-ring,
-.hero-node,
-.logo-particles {
-  pointer-events: none;
-}
-
-.hero-glow {
-  z-index: 1;
-}
-
-.orbit-ring {
-  z-index: 2;
-}
-
-.hero-node,
-.logo-particles {
-  z-index: 3;
-}
-
-/* Headline: smaller than logo, premium and centered */
-.hero h1,
-html[lang="en"] .hero h1 {
-  max-width: 1050px;
-  margin: 0 auto 20px;
-  font-size: clamp(2.7rem, 4.15vw, 5.15rem);
-  line-height: 1.02;
-  text-align: center;
-  letter-spacing: -0.035em;
-  background: linear-gradient(90deg, #fff, var(--gold2), #8b8f96);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-/* Subtitle under headline */
-.hero-subtitle {
-  max-width: 760px;
-  margin: 0 auto 30px;
-  text-align: center;
-  font-size: clamp(1rem, 1.2vw, 1.25rem);
-  line-height: 1.65;
-  color: rgba(247, 243, 232, 0.76);
-}
-
-.hero-actions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-top: 6px;
-}
-
-/* Make background lines centered, not pulling visual weight to one side */
-.network-lines {
-  inset: 6% 4%;
-  opacity: 0.82;
-}
-
-.orb-one {
-  width: 62vh;
-  height: 62vh;
-  left: 50%;
-  right: auto;
-  top: 45%;
-  transform: translate(-50%, -50%);
-}
-
-.orb-two {
-  width: 86vh;
-  height: 86vh;
-  left: 50%;
-  top: 45%;
-  bottom: auto;
-  transform: translate(-50%, -50%);
-  border-color: rgba(215, 173, 75, 0.12);
-}
-
-/* Tablet */
-@media (max-width: 1050px) {
-  .hero {
-    min-height: 100vh;
-    padding: 88px 22px 52px;
-  }
-
-  .hero-centered,
-  .hero .hero-content.hero-centered {
-    width: min(920px, 94vw);
-  }
-
-  .hero-emblem,
-  .hero .hero-emblem {
-    width: min(560px, 88vw);
-    margin: -4px auto -54px;
-  }
-
-  .hero-emblem .hero-logo {
-    width: min(520px, 86vw);
-    max-width: 86vw;
-  }
-
-  .hero h1,
-  html[lang="en"] .hero h1 {
-    max-width: 860px;
-    font-size: clamp(2.45rem, 6.4vw, 4.25rem);
-    line-height: 1.03;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-    max-width: 680px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 640px) {
-  .hero {
-    min-height: 100svh;
-    padding: 82px 16px 44px;
-    align-items: center;
-  }
-
-  .hero-centered,
-  .hero .hero-content.hero-centered {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .hero-emblem,
-  .hero .hero-emblem {
-    width: min(390px, 96vw);
-    max-width: 96vw;
-    margin: -8px auto -34px;
-  }
-
-  .hero-emblem .hero-logo {
-    width: min(370px, 94vw);
-    max-width: 94vw;
-    transform: translateY(0);
-  }
-
-  .hero h1,
-  html[lang="en"] .hero h1 {
-    max-width: 100%;
-    margin: 0 auto 16px;
-    font-size: clamp(2.05rem, 9.4vw, 3.15rem);
-    line-height: 1.06;
-    letter-spacing: -0.04em;
-  }
-
-  .hero-subtitle {
-    max-width: 92vw;
-    margin-bottom: 24px;
-    font-size: 0.96rem;
-    line-height: 1.6;
-  }
-
-  .hero-actions {
-    gap: 12px;
-  }
-
-  .hero-actions .btn {
-    width: min(280px, 88vw);
-  }
-
-  .network-lines {
-    inset: 10% -12% 6%;
-    opacity: 0.52;
-  }
-
-  .orb-one {
-    width: 54vh;
-    height: 54vh;
-    top: 38%;
-  }
-
-  .orb-two {
-    width: 70vh;
-    height: 70vh;
-    top: 38%;
   }
 }
