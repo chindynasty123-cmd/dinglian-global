@@ -47,10 +47,10 @@
         </button>
         <div class="nav-panel" id="navPanel">
           <a href="#home" data-i18n="nav.home">首頁</a>
-          <a href="#story" data-i18n="nav.story">品牌故事</a>
-          <a href="#industries" data-i18n="nav.industries">服務產業</a>
-          <a href="#solutions" data-i18n="nav.solutions">整合方案</a>
+          <a href="#capabilities" data-i18n="nav.solutions">製造整合能力</a>
+          <a href="#industries" data-i18n="nav.industries">案例展示</a>
           <a href="#quality" data-i18n="nav.quality">品質管理</a>
+          <a href="#story" data-i18n="nav.story">品牌故事</a>
           <a href="#jintat-foundation" data-i18n="nav.jintat">瑨達基地</a>
           <a href="#contact" data-i18n="nav.contact">聯絡我們</a>
           <a class="quote-link" href="#contact" data-i18n="nav.quote"
@@ -108,12 +108,50 @@
             >
             <a
               class="btn btn-secondary"
-              href="#solutions"
+              href="#capabilities"
               data-i18n="hero.explore"
               >了解方案</a
             >
           </div>
         </div>
+      </section>
+
+      <section class="section capabilities" id="capabilities">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="label.solutions">製造整合能力</p>
+          <h2 data-i18n="solutions.title">製造整合能力</h2>
+          <p class="section-subtitle" data-i18n="solutions.copy">
+            從打樣到量產，提供一站式製造整合服務。
+          </p>
+        </div>
+        <div class="solution-grid capability-grid" id="solutionGrid"></div>
+      </section>
+
+      <section class="section" id="industries">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="label.industries">案例展示</p>
+          <h2 data-i18n="industries.title">
+            探索鼎鏈科技於先進產業的實際製造案例
+          </h2>
+          <p class="section-subtitle" data-i18n="industries.copy">
+            點擊下方產業分類，查看實際零件案例、加工能力與製造經驗。
+          </p>
+        </div>
+        <div class="card-grid industries-grid" id="industriesGrid"></div>
+      </section>
+
+      <section class="section quality" id="quality">
+        <div class="quality-copy reveal">
+          <p class="eyebrow" data-i18n="label.quality">品質管理</p>
+          <h2 data-i18n-html="quality.title">
+            品質不是檢驗出來的，<br />而是融入每一道製程之中。
+          </h2>
+          <p data-i18n="quality.copy">
+            從加工、量測到文件管理， 我們將品質融入每一道製程，
+            確保每一個零件都符合客戶要求。
+          </p>
+        </div>
+        <div class="quality-list reveal" id="qualityList"></div>
       </section>
 
       <section class="section story" id="story">
@@ -146,52 +184,6 @@
             </p>
           </article>
         </div>
-      </section>
-
-      <section class="section trust" id="trust">
-        <div class="section-heading reveal">
-          <p class="eyebrow" data-i18n="label.trust">信任基礎</p>
-          <h2 data-i18n="trust.title">值得信賴的製造基礎</h2>
-          <p class="section-subtitle" data-i18n="trust.subtitle">
-            建立於二十年以上精密製造經驗，並由成熟產能與品質系統支援。
-          </p>
-        </div>
-        <div class="trust-grid" id="trustGrid"></div>
-      </section>
-      <section class="section" id="industries">
-        <div class="section-heading reveal">
-          <p class="eyebrow" data-i18n="label.industries">案例展示</p>
-          <h2 data-i18n="industries.title">
-            探索鼎鏈科技於先進產業的實際製造案例
-          </h2>
-          <p class="section-subtitle" data-i18n="industries.copy">
-            點擊下方產業分類，查看實際零件案例、加工能力與製造經驗。
-          </p>
-        </div>
-        <div class="card-grid industries-grid" id="industriesGrid"></div>
-      </section>
-      <section class="section split" id="solutions">
-        <div class="section-heading reveal">
-          <p class="eyebrow" data-i18n="label.solutions">整合方案</p>
-          <h2 data-i18n="solutions.title">製造整合流程</h2>
-          <p class="section-subtitle" data-i18n="solutions.copy">
-            我們整合加工、製作、表面處理與製造資源，提供完整生產解決方案。
-          </p>
-        </div>
-        <div class="solution-grid" id="solutionGrid"></div>
-      </section>
-      <section class="section quality" id="quality">
-        <div class="quality-copy reveal">
-          <p class="eyebrow" data-i18n="label.quality">品質管理</p>
-          <h2 data-i18n-html="quality.title">
-            品質不是檢驗出來的，<br />而是融入每一道製程之中。
-          </h2>
-          <p data-i18n="quality.copy">
-            從加工、量測到文件管理， 我們將品質融入每一道製程，
-            確保每一個零件都符合客戶要求。
-          </p>
-        </div>
-        <div class="quality-list reveal" id="qualityList"></div>
       </section>
 
       <section class="section base" id="jintat-foundation">
@@ -285,10 +277,11 @@
         <p data-i18n="footer.message">全球製造整合平台</p>
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="#story" data-i18n="nav.story">品牌故事</a
-        ><a href="#industries" data-i18n="nav.industries">服務產業</a
-        ><a href="#solutions" data-i18n="nav.solutions">整合方案</a
+        <a href="#capabilities" data-i18n="nav.solutions">製造整合能力</a
+        ><a href="#industries" data-i18n="nav.industries">案例展示</a
         ><a href="#quality" data-i18n="nav.quality">品質管理</a
+        ><a href="#story" data-i18n="nav.story">品牌故事</a
+        ><a href="#jintat-foundation" data-i18n="nav.jintat">瑨達基地</a
         ><a href="#contact" data-i18n="nav.contact">聯絡我們</a>
       </nav>
       <p class="footer-industries" data-i18n="footer.industries">

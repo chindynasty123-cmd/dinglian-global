@@ -3,7 +3,7 @@ const translations = {
     "nav.home": "首頁",
     "nav.story": "品牌故事",
     "nav.industries": "案例展示",
-    "nav.solutions": "整合方案",
+    "nav.solutions": "製造整合能力",
     "nav.quality": "品質管理",
     "nav.jintat": "瑨達基地",
     "nav.contact": "聯絡我們",
@@ -28,7 +28,7 @@ const translations = {
     "label.story": "品牌故事",
     "label.trust": "信任基礎",
     "label.industries": "案例展示",
-    "label.solutions": "整合方案",
+    "label.solutions": "製造整合能力",
     "label.quality": "品質管理",
     "label.contact": "聯絡我們",
     "trust.title": "值得信賴的製造基礎",
@@ -37,9 +37,9 @@ const translations = {
     "industries.title": "探索鼎鏈科技於先進產業的實際製造案例",
     "industries.copy":
       "點擊下方產業分類，查看實際零件案例、加工能力與製造經驗。",
-    "solutions.title": "製造整合流程",
+    "solutions.title": "製造整合能力",
     "solutions.copy":
-      "我們整合加工、製作、表面處理與製造資源，提供完整生產解決方案。",
+      "從打樣到量產，提供一站式製造整合服務。",
     "quality.title": "品質不是檢驗出來的，<br>而是融入每一道製程之中。",
     "quality.copy":
       "從加工、量測到文件管理，我們將品質融入每一道製程，確保每一個零件都符合客戶要求。",
@@ -79,14 +79,14 @@ const translations = {
     "form.thanks": "謝謝您，鼎鏈科技將盡快與您聯繫。",
   },
   en: {
-    "nav.home": "HOME",
-    "nav.story": "OUR STORY",
-    "nav.industries": "CASE STUDIES",
-    "nav.solutions": "SOLUTIONS",
-    "nav.quality": "QUALITY",
-    "nav.jintat": "JINTAT FOUNDATION",
-    "nav.contact": "CONTACT",
-    "nav.quote": "GET A QUOTE",
+    "nav.home": "Home",
+    "nav.story": "About",
+    "nav.industries": "Industries",
+    "nav.solutions": "Manufacturing Capabilities",
+    "nav.quality": "Quality Management",
+    "nav.jintat": "Jintat Base",
+    "nav.contact": "Contact",
+    "nav.quote": "Get A Quote",
     "brand.name": "DINGLIAN",
     "brand.subname": "TECHNOLOGY",
     "brand.position": "",
@@ -106,11 +106,11 @@ const translations = {
     "story.card3":
       "An integration platform connecting demand, supplier resources and quality delivery for global customers.",
     "story.card3Title": "Dinglian Technology",
-    "label.story": "OUR STORY",
+    "label.story": "ABOUT",
     "label.trust": "TRUST",
     "label.industries": "CASE STUDIES",
-    "label.solutions": "SOLUTIONS",
-    "label.quality": "QUALITY",
+    "label.solutions": "MANUFACTURING CAPABILITIES",
+    "label.quality": "QUALITY MANAGEMENT",
     "label.contact": "CONTACT",
     "trust.title": "Trusted Manufacturing Foundation",
     "trust.subtitle":
@@ -119,9 +119,9 @@ const translations = {
       "Explore Real Manufacturing Projects Across Advanced Industries",
     "industries.copy":
       "Click an industry below to discover component examples, manufacturing capabilities, and project experience.",
-    "solutions.title": "Manufacturing Integration Process",
+    "solutions.title": "Manufacturing Capabilities",
     "solutions.copy":
-      "We integrate machining, fabrication, surface treatment and manufacturing resources to deliver complete production solutions.",
+      "From Prototype to Production, We Provide One-Stop Manufacturing Solutions.",
     "quality.title":
       "Quality is not inspected into a product.<br>It is built into every process.",
     "quality.copy":
@@ -219,12 +219,12 @@ const localizedData = {
       },
     ],
     solutions: [
-      "需求評估",
-      "供應鏈匹配",
-      "製程規劃",
-      "生產管理",
-      "品質驗證",
-      "表面處理整合",
+      { icon: "gear", title: "CNC 精密加工", desc: "車削、銑削、車銑複合加工" },
+      { icon: "hammer", title: "鍛造製造", desc: "各類金屬鍛造件整合製造" },
+      { icon: "press", title: "沖壓製造", desc: "精密沖壓零件與量產製造" },
+      { icon: "sheet", title: "鈑金製造", desc: "雷射切割、折床成型、焊接組裝" },
+      { icon: "molecule", title: "表面處理", desc: "陽極、電鍍、鈍化、熱處理等後製程" },
+      { icon: "blocks", title: "組裝整合", desc: "機械組裝與成品整合" },
     ],
     quality: [
       "ISO 9001",
@@ -290,12 +290,12 @@ const localizedData = {
       },
     ],
     solutions: [
-      "Requirement Review",
-      "Supplier Matching",
-      "Manufacturing Planning",
-      "Production Management",
-      "Quality Assurance",
-      "Surface Treatment Integration",
+      { icon: "gear", title: "CNC Machining", desc: "Turning, Milling & Mill-Turn Services" },
+      { icon: "hammer", title: "Forging", desc: "Custom Metal Forging Solutions" },
+      { icon: "press", title: "Stamping", desc: "Precision Stamping & Mass Production" },
+      { icon: "sheet", title: "Sheet Metal", desc: "Laser Cutting, Bending & Welding" },
+      { icon: "molecule", title: "Surface Treatment", desc: "Anodizing, Plating, Passivation & Heat Treatment" },
+      { icon: "blocks", title: "Assembly Integration", desc: "Mechanical & Product Assembly Services" },
     ],
     quality: [
       "ISO 9001",
@@ -308,15 +308,30 @@ const localizedData = {
     base: ["ISO9001", "Mitutoyo CMM", "KEYENCE Inspection", "24/7 Production"],
   },
 };
+
+function capabilityIcon(type) {
+  const icons = {
+    gear: '<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="7"></circle><path d="M24 5v7M24 36v7M5 24h7M36 24h7M10.6 10.6l5 5M32.4 32.4l5 5M37.4 10.6l-5 5M15.6 32.4l-5 5"></path><circle cx="24" cy="24" r="15"></circle></svg>',
+    hammer: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M17 8l14 14M28 5l15 15-6 6L22 11zM19 24L7 36a4 4 0 0 0 5 5l12-12"></path></svg>',
+    press: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M9 8h30M13 8v11h22V8M18 25h12M24 19v13M11 40h26M15 32h18v8H15z"></path></svg>',
+    sheet: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 9h18l6 6v24H12zM30 9v7h7M16 25h16M16 31h16"></path></svg>',
+    molecule: '<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="15" cy="18" r="5"></circle><circle cx="33" cy="14" r="4"></circle><circle cx="31" cy="34" r="6"></circle><path d="M20 17l9-2M18 22l9 8"></path></svg>',
+    blocks: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 10h14v14H8zM26 10h14v14H26zM17 28h14v14H17z"></path></svg>',
+  };
+  return icons[type] || icons.gear;
+}
 function render(lang) {
   const data = localizedData[lang];
   storyTags.innerHTML = data.storyTags.map((t) => `<span>${t}</span>`).join("");
-  trustGrid.innerHTML = data.trust
-    .map(
-      (t) =>
-        `<article class="trust-card reveal"><strong>${t[0]}</strong><span>${t[1]}</span></article>`,
-    )
-    .join("");
+  const trustGridEl = document.getElementById("trustGrid");
+  if (trustGridEl && data.trust) {
+    trustGridEl.innerHTML = data.trust
+      .map(
+        (t) =>
+          `<article class="trust-card reveal"><strong>${t[0]}</strong><span>${t[1]}</span></article>`,
+      )
+      .join("");
+  }
   const industryLinks = {
     0: "industries/aerospace/",
     1: "industries/semiconductor/",
@@ -336,7 +351,7 @@ function render(lang) {
   solutionGrid.innerHTML = data.solutions
     .map(
       (s, i) =>
-        `<article class="solution-card reveal"><div class="icon">${String(i + 1).padStart(2, "0")}</div><h3>${s}</h3></article>`,
+        `<article class="solution-card capability-card reveal" style="transition-delay: ${i * 100}ms"><div class="capability-icon">${capabilityIcon(s.icon)}</div><span class="capability-number">${String(i + 1).padStart(2, "0")}</span><h3>${s.title}</h3><p>${s.desc}</p></article>`,
     )
     .join("");
   qualityList.innerHTML = data.quality
