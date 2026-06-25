@@ -3250,3 +3250,43 @@ html[lang="en"] .hero h1 {
     min-height: 220px;
   }
 }
+
+/* Homepage Hero logo scale refinement */
+.hero .hero-emblem {
+  width: min(900px, 55vw);
+  max-width: 900px;
+  height: min(500px, 45vh);
+  margin-bottom: 56px;
+}
+.hero-emblem .hero-logo {
+  width: min(900px, 55vw);
+  max-width: 900px;
+  max-height: min(455px, 44vh);
+  object-fit: contain;
+}
+@media (max-width: 1024px) and (min-width: 641px) {
+  .hero .hero-emblem {
+    width: min(765px, 72vw);
+    max-width: 765px;
+    height: min(420px, 40vh);
+    margin-bottom: 52px;
+  }
+  .hero-emblem .hero-logo {
+    width: min(765px, 72vw);
+    max-width: 765px;
+    max-height: min(385px, 38vh);
+  }
+}
+@media (max-width: 640px) {
+  .hero .hero-emblem {
+    width: 92vw;
+    max-width: 560px;
+    height: min(330px, 36vh);
+    margin-bottom: 46px;
+  }
+  .hero-emblem .hero-logo {
+    width: 92vw;
+    max-width: 560px;
+    max-height: min(310px, 35vh);
+  }
+}
