@@ -33,6 +33,12 @@ const translations = {
     "label.contact": "聯絡我們",
     "homeWhy.kicker": "鼎鏈優勢",
     "homeWhy.title": "為什麼選擇鼎鏈",
+    "workflow.kicker": "製造流程",
+    "workflow.title": "合作流程",
+    "workflow.copy": "從圖面提供到生產交付，建立清楚且可追蹤的製造流程。",
+    "typical.kicker": "典型零組件",
+    "typical.title": "我們製造的典型零組件",
+    "typical.copy": "支援機器人、自動化、半導體設備、航太與醫療產業常見精密零組件。",
     "trust.title": "值得信賴的製造基礎",
     "trust.subtitle":
       "建立於二十年以上精密製造經驗，並由成熟產能與品質系統支援。",
@@ -61,9 +67,9 @@ const translations = {
     "base.cmm": "Mitutoyo CMM",
     "base.keyence": "KEYENCE Inspection",
     "base.support": "24/7 Production",
-    "contact.title": "啟動全球製造整合專案",
+    "contact.title": "提供圖面，啟動製造評估",
     "contact.copy":
-      "鼎鏈科技是全球製造整合平台，以瑨達工業二十年製造基礎為後盾。",
+      "歡迎提供圖面、材料、數量與交期需求，鼎鏈將協助評估製造可行性並盡快回覆報價。",
     "contact.submit": "送出需求",
     "contact.website": "官方網站",
     "footer.brand": "鼎鏈科技",
@@ -116,6 +122,12 @@ const translations = {
     "label.contact": "CONTACT",
     "homeWhy.kicker": "WHY DINGLIAN",
     "homeWhy.title": "Why Dinglian",
+    "workflow.kicker": "MANUFACTURING WORKFLOW",
+    "workflow.title": "How We Work",
+    "workflow.copy": "A simple RFQ-to-delivery process for prototype and low-volume manufacturing projects.",
+    "typical.kicker": "TYPICAL COMPONENTS",
+    "typical.title": "Typical Components We Manufacture",
+    "typical.copy": "Component examples for robotics, automation, semiconductor equipment, aerospace and medical industries.",
     "trust.title": "Trusted Manufacturing Foundation",
     "trust.subtitle":
       "Built on more than twenty years of precision manufacturing experience, supported by proven production capability and quality systems.",
@@ -147,9 +159,9 @@ const translations = {
     "base.cmm": "Mitutoyo CMM",
     "base.keyence": "KEYENCE Inspection",
     "base.support": "24/7 Production",
-    "contact.title": "Start a Global Manufacturing Program",
+    "contact.title": "Send Your Drawing for RFQ Review",
     "contact.copy":
-      "Dinglian Technology is a global manufacturing integration platform, supported by the 20-year manufacturing foundation of Jintat Industrial.",
+      "Send us your drawings, material, quantity and delivery requirements. Dinglian will review your RFQ and provide manufacturing feedback as soon as possible.",
     "contact.submit": "Submit Request",
     "contact.website": "Website",
     "footer.brand": "DINGLIAN TECHNOLOGY",
@@ -240,6 +252,22 @@ const localizedData = {
         desc: "快速協助檢視圖面、公差、材料與製造可行性。",
       },
     ],
+    workflow: [
+      "圖面提供",
+      "工程評估",
+      "正式報價",
+      "樣品製作",
+      "品質檢驗",
+      "生產製造",
+      "出貨交付",
+    ],
+    typicalComponents: [
+      { icon: "⚙", title: "機器人", items: ["關節外殼", "軸承座", "伺服法蘭", "減速機外殼", "鎖固環"] },
+      { icon: "▣", title: "半導體設備", items: ["真空塊", "冷卻板", "精密板件", "平台零件", "吸盤零件"] },
+      { icon: "◧", title: "自動化設備", items: ["治具", "支架", "底板", "外殼", "支撐板"] },
+      { icon: "✈", title: "航太", items: ["結構件", "安裝支架", "法蘭", "軸件", "轉接件"] },
+      { icon: "✚", title: "醫療", items: ["醫療外殼", "精密間隔件", "夾具", "治具", "客製化零件"] },
+    ],
     solutions: [
       { icon: "gear", title: "精密加工零組件", desc: "支援先進產業所需之 CNC 車削、銑削與車銑複合零件。" },
       { icon: "blocks", title: "多製程製造整合", desc: "透過單一窗口整合 CNC、鍛造、沖壓、鈑金與相關製程。" },
@@ -329,6 +357,22 @@ const localizedData = {
         desc: "Quick review of drawings, tolerances, materials and manufacturing feasibility.",
       },
     ],
+    workflow: [
+      "Send Drawing",
+      "Engineering Review",
+      "Quotation",
+      "Prototype",
+      "Inspection",
+      "Production",
+      "Delivery",
+    ],
+    typicalComponents: [
+      { icon: "⚙", title: "Robotics", items: ["Joint Housing", "Bearing Seat", "Servo Flange", "Gear Reducer Housing", "Lock Ring"] },
+      { icon: "▣", title: "Semiconductor", items: ["Vacuum Block", "Cooling Plate", "Precision Plate", "Stage Component", "Chuck Component"] },
+      { icon: "◧", title: "Automation", items: ["Fixture", "Bracket", "Base Plate", "Housing", "Support Plate"] },
+      { icon: "✈", title: "Aerospace", items: ["Structural Parts", "Mounting Bracket", "Flange", "Shaft", "Adapter"] },
+      { icon: "✚", title: "Medical", items: ["Medical Housing", "Precision Spacer", "Clamp", "Fixture", "Custom Components"] },
+    ],
     solutions: [
       { icon: "gear", title: "Precision Machined Components", desc: "CNC turning, milling and mill-turn components for advanced industries." },
       { icon: "blocks", title: "Multi-Process Manufacturing", desc: "Machining, forging, stamping and sheet metal support through one project window." },
@@ -403,6 +447,24 @@ function render(lang) {
         `<article class="solution-card capability-card reveal" style="transition-delay: ${i * 100}ms"><div class="capability-icon">${capabilityIcon(s.icon)}</div><span class="capability-number">${String(i + 1).padStart(2, "0")}</span><h3>${s.title}</h3><p>${s.desc}</p></article>`,
     )
     .join("");
+  const workflowGridEl = document.getElementById("workflowGrid");
+  if (workflowGridEl && data.workflow) {
+    workflowGridEl.innerHTML = data.workflow
+      .map(
+        (step, i) =>
+          `<article class="workflow-card reveal" style="transition-delay: ${i * 80}ms"><span>${String(i + 1).padStart(2, "0")}</span><h3>${step}</h3></article>`,
+      )
+      .join("");
+  }
+  const typicalGridEl = document.getElementById("typicalComponentsGrid");
+  if (typicalGridEl && data.typicalComponents) {
+    typicalGridEl.innerHTML = data.typicalComponents
+      .map(
+        (group) =>
+          `<article class="typical-card reveal"><div class="icon">${group.icon}</div><h3>${group.title}</h3><ul>${group.items.map((item) => `<li>${item}</li>`).join("")}</ul></article>`,
+      )
+      .join("");
+  }
   qualityList.innerHTML = data.quality
     .map((q) => `<div class="quality-item">${q}</div>`)
     .join("");

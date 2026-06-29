@@ -2947,3 +2947,114 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
+
+/* V2.0 pre-launch homepage workflow and component examples */
+.workflow,
+.typical-components {
+  background: #050505;
+}
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 14px;
+}
+.workflow-card,
+.typical-card {
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 80% 12%, rgba(212, 175, 55, 0.12), transparent 34%),
+    rgba(255, 255, 255, 0.03);
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+.workflow-card {
+  min-height: 150px;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+.workflow-card span {
+  color: var(--gold);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  font-weight: 800;
+}
+.workflow-card h3,
+.typical-card h3 {
+  margin: 0;
+  color: #fff7df;
+}
+.workflow-card h3 {
+  font-size: clamp(1rem, 1.05vw, 1.18rem);
+}
+.workflow-card:hover,
+.typical-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(212, 175, 55, 0.62);
+  box-shadow: 0 26px 76px rgba(0, 0, 0, 0.42), 0 0 28px rgba(212, 175, 55, 0.12);
+}
+.typical-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+.typical-card {
+  min-height: 300px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.typical-card .icon {
+  color: var(--gold);
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.06);
+}
+.typical-card ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+}
+.typical-card li {
+  position: relative;
+  padding-left: 16px;
+}
+.typical-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+}
+@media (max-width: 1050px) {
+  .workflow-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .typical-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .workflow-grid,
+  .typical-grid {
+    grid-template-columns: 1fr;
+  }
+  .workflow-card,
+  .typical-card {
+    min-height: auto;
+  }
+}
