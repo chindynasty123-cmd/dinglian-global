@@ -486,6 +486,11 @@
         color: #f6edd7;
         font-size: 1.08rem;
       }
+      .info-card p {
+        margin: 10px 0 0;
+        color: rgba(235, 230, 216, 0.72);
+        line-height: 1.65;
+      }
       .cta {
         text-align: center;
         background:
@@ -675,8 +680,8 @@
           <a href="../../index.html#industries" data-i18n="nav.industries"
             >INDUSTRIES</a
           >
-          <a href="../../index.html#solutions" data-i18n="nav.solutions"
-            >SOLUTIONS</a
+          <a href="../../index.html#capabilities" data-i18n="nav.solutions"
+            >Manufacturing Capabilities</a
           >
           <a href="../../index.html#quality" data-i18n="nav.quality">QUALITY</a>
           <a href="../../index.html#jintat-foundation" data-i18n="nav.jintat"
@@ -777,6 +782,14 @@
         </article>
       </section>
 
+      <section class="aero-section robotics-modules">
+        <div class="aero-heading">
+          <p class="eyebrow" data-i18n="modules.kicker">ROBOTIC MODULES</p>
+          <h2 data-i18n="modules.title">Robotic Modules We Support</h2>
+        </div>
+        <div class="capability-grid" id="modulesGrid"></div>
+      </section>
+
       <section class="aero-section">
         <div class="aero-heading">
           <p class="eyebrow" data-i18n="gallery.kicker">SAMPLE PROJECTS</p>
@@ -826,7 +839,7 @@
           "nav.home": "HOME",
           "nav.story": "OUR STORY",
           "nav.industries": "INDUSTRIES",
-          "nav.solutions": "SOLUTIONS",
+          "nav.solutions": "Manufacturing Capabilities",
           "nav.quality": "QUALITY",
           "nav.jintat": "JINTAT FOUNDATION",
           "nav.contact": "CONTACT",
@@ -842,6 +855,8 @@
           "slide.processLabel": "Process:",
           "slide.inspectionLabel": "Inspection:",
           "slide.applicationLabel": "Application:",
+          "modules.kicker": "ROBOTIC MODULES",
+          "modules.title": "Robotic Modules We Support",
           "gallery.kicker": "SAMPLE PROJECTS",
           "gallery.title": "Robotics Sample Projects",
           "applications.kicker": "APPLICATIONS",
@@ -860,7 +875,7 @@
           "nav.home": "首頁",
           "nav.story": "品牌故事",
           "nav.industries": "服務產業",
-          "nav.solutions": "整合方案",
+          "nav.solutions": "製造整合能力",
           "nav.quality": "品質管理",
           "nav.jintat": "瑨達基地",
           "nav.contact": "聯絡我們",
@@ -876,6 +891,8 @@
           "slide.processLabel": "製程：",
           "slide.inspectionLabel": "檢驗：",
           "slide.applicationLabel": "應用：",
+          "modules.kicker": "機器人模組",
+          "modules.title": "我們支援的機器人模組",
           "gallery.kicker": "加工案例",
           "gallery.title": "機器人零件案例",
           "applications.kicker": "應用領域",
@@ -970,6 +987,32 @@
               "../../images/robotics/05-robotics-gear-reducer-flange.png",
             ],
           ],
+          modules: [
+            {
+              title: "Robot Joint Modules",
+              desc: "Joint housing, bearing seats, output flanges, spacers and covers.",
+            },
+            {
+              title: "Gear Reducer Components",
+              desc: "Reducer housings, lock rings, adapter plates and precision flanges.",
+            },
+            {
+              title: "Servo Motor Components",
+              desc: "Motor mounts, front covers, encoder plates and shaft-related components.",
+            },
+            {
+              title: "End Effector / Gripper Parts",
+              desc: "Gripper fingers, tool plates, adapter brackets and EOAT components.",
+            },
+            {
+              title: "Linear Motion Components",
+              desc: "End plates, sliders, motor mounts, support plates and sensor brackets.",
+            },
+            {
+              title: "AMR / Mobile Robot Structures",
+              desc: "Wheel hubs, sensor mounts, battery trays, covers and structural brackets.",
+            },
+          ],
           applications: [
             "Robot Joint Components",
             "Servo Motor Components",
@@ -987,12 +1030,30 @@
             "Traceability Management",
           ],
           why: [
-            "Complex Machining Capability",
-            "Multi-Axis Manufacturing",
-            "Prototype to Production",
-            "Fast Engineering Response",
-            "Supply Chain Integration",
-            "Global Manufacturing Support",
+            {
+              title: "Flexible MOQ for Prototype Projects",
+              desc: "Suitable for small batches, engineering samples and design iterations.",
+            },
+            {
+              title: "Precision for Motion Components",
+              desc: "Support for bearing seats, flanges, housings and alignment-critical parts.",
+            },
+            {
+              title: "One Contact for Multiple Processes",
+              desc: "Machining, treatment, inspection and assembly coordination through one partner.",
+            },
+            {
+              title: "Fast Response for Engineering Teams",
+              desc: "Clear communication for drawings, tolerances, materials and RFQ requirements.",
+            },
+            {
+              title: "Taiwan Quality Foundation",
+              desc: "Backed by 20+ years of precision manufacturing experience through Jintat Industrial.",
+            },
+            {
+              title: "Inspection & Documentation Support",
+              desc: "CMM, Keyence, material certificates and inspection reports available upon request.",
+            },
           ],
         },
         zh: {
@@ -1075,6 +1136,32 @@
               "../../images/robotics/05-robotics-gear-reducer-flange.png",
             ],
           ],
+          modules: [
+            {
+              title: "機器人關節模組",
+              desc: "關節外殼、軸承座、輸出法蘭、間隔環與外蓋。",
+            },
+            {
+              title: "減速機零組件",
+              desc: "減速機外殼、鎖固環、轉接板與精密法蘭。",
+            },
+            {
+              title: "伺服馬達零件",
+              desc: "馬達座、前蓋、編碼器板與軸類相關零件。",
+            },
+            {
+              title: "末端執行器 / 夾爪零件",
+              desc: "夾爪手指、工具板、轉接支架與 EOAT 零組件。",
+            },
+            {
+              title: "線性運動零件",
+              desc: "端板、滑台、馬達座、支撐板與感測器支架。",
+            },
+            {
+              title: "AMR / 移動機器人結構件",
+              desc: "輪轂、感測器座、電池托盤、外蓋與結構支架。",
+            },
+          ],
           applications: [
             "機器人關節零件",
             "伺服馬達零件",
@@ -1092,12 +1179,30 @@
             "追溯管理",
           ],
           why: [
-            "複雜加工能力",
-            "多軸製造能力",
-            "樣品到量產支援",
-            "快速工程回應",
-            "供應鏈整合",
-            "全球製造支援",
+            {
+              title: "適合打樣專案的彈性數量",
+              desc: "支援小批量、工程樣品與設計迭代需求。",
+            },
+            {
+              title: "運動零件所需的精密加工",
+              desc: "支援軸承座、法蘭、外殼與高對位要求零件。",
+            },
+            {
+              title: "多製程單一窗口",
+              desc: "加工、表面處理、檢驗與組裝協調由單一窗口整合。",
+            },
+            {
+              title: "快速回應工程團隊",
+              desc: "針對圖面、公差、材料與 RFQ 需求提供清楚溝通。",
+            },
+            {
+              title: "台灣製造品質基礎",
+              desc: "以瑨達工業 20 年以上精密製造經驗作為後盾。",
+            },
+            {
+              title: "檢驗與文件支援",
+              desc: "可依需求提供 CMM、Keyence、材質證明與檢驗報告。",
+            },
           ],
         },
       };
@@ -1159,6 +1264,12 @@
               `<article class="project-card"><div class="image-wrap"><img src="${src}" alt="${title}" /></div><h3>${title}</h3></article>`,
           )
           .join("");
+        modulesGrid.innerHTML = page.modules
+          .map(
+            (item) =>
+              `<article class="info-card"><div class="icon">✦</div><h3>${item.title}</h3><p>${item.desc}</p></article>`,
+          )
+          .join("");
         applicationsGrid.innerHTML = page.applications
           .map(
             (item) =>
@@ -1172,10 +1283,11 @@
           )
           .join("");
         whyGrid.innerHTML = page.why
-          .map(
-            (item) =>
-              `<article class="info-card"><div class="icon">◇</div><h3>${item}</h3></article>`,
-          )
+          .map((item) => {
+            const title = typeof item === "string" ? item : item.title;
+            const desc = typeof item === "string" ? "" : `<p>${item.desc}</p>`;
+            return `<article class="info-card"><div class="icon">◇</div><h3>${title}</h3>${desc}</article>`;
+          })
           .join("");
         localStorage.setItem("dinglianLang", lang);
       }

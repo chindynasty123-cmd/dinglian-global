@@ -11,11 +11,11 @@ const translations = {
     "brand.name": "鼎鏈科技",
     "brand.subname": "全球製造整合",
     "brand.position": "",
-    "hero.title": "整合亞洲供應鏈<br>輸出 MIT 品質與成本優勢",
+    "hero.title": "從打樣到小量生產，<br>一個來自台灣的製造整合夥伴。",
     "hero.subtitle":
-      "以台灣品質管理為核心，<br>整合亞洲製造資源，<br>協助客戶在非紅供應鏈架構下，<br>兼顧成本、品質與穩定交付能力。",
+      "專注於機器人、自動化、半導體設備、航太與醫療產業的精密加工與整合製造支援。",
     "hero.quote": "立即詢價",
-    "hero.explore": "了解方案",
+    "hero.explore": "了解能力",
     "story.title": "二十年的製造底蘊，<br>成就全新的全球視野",
     "story.subtitle":
       "從精密加工起步，<br>一路累積跨產業製造經驗，<br>最終成立鼎鏈科技，<br>成為串聯全球需求與台灣製造資源的整合平台。",
@@ -31,6 +31,8 @@ const translations = {
     "label.solutions": "製造整合能力",
     "label.quality": "品質管理",
     "label.contact": "聯絡我們",
+    "homeWhy.kicker": "鼎鏈優勢",
+    "homeWhy.title": "為什麼選擇鼎鏈",
     "trust.title": "值得信賴的製造基礎",
     "trust.subtitle":
       "建立於二十年以上精密製造經驗，並由成熟產能與品質系統支援。",
@@ -39,7 +41,7 @@ const translations = {
       "點擊下方產業分類，查看實際零件案例、加工能力與製造經驗。",
     "solutions.title": "製造整合能力",
     "solutions.copy":
-      "從打樣到量產，提供一站式製造整合服務。",
+      "從打樣到小量生產，提供精密零組件與多製程製造整合支援。",
     "quality.title": "品質不是檢驗出來的，<br>而是融入每一道製程之中。",
     "quality.copy":
       "從加工、量測到文件管理，我們將品質融入每一道製程，確保每一個零件都符合客戶要求。",
@@ -90,11 +92,11 @@ const translations = {
     "brand.name": "DINGLIAN",
     "brand.subname": "TECHNOLOGY",
     "brand.position": "",
-    "hero.title": "Integrating Asia's Supply Chain.<br>Delivering Taiwan Quality Worldwide.",
+    "hero.title": "From Prototype to Low-Volume Production.<br>One Taiwan Manufacturing Partner.",
     "hero.subtitle":
-      "Taiwan-managed quality control.<br>Asia-wide manufacturing integration.<br>Cost optimization under non-red supply chain requirements.",
+      "Precision CNC machining and integrated manufacturing support for robotics, automation, semiconductor equipment, aerospace and medical industries.",
     "hero.quote": "Get A Quote",
-    "hero.explore": "Explore Solutions",
+    "hero.explore": "Explore Capabilities",
     "story.title":
       "20 Years of Manufacturing Foundation,<br>A New Global Vision",
     "story.subtitle":
@@ -112,6 +114,8 @@ const translations = {
     "label.solutions": "MANUFACTURING CAPABILITIES",
     "label.quality": "QUALITY MANAGEMENT",
     "label.contact": "CONTACT",
+    "homeWhy.kicker": "WHY DINGLIAN",
+    "homeWhy.title": "Why Dinglian",
     "trust.title": "Trusted Manufacturing Foundation",
     "trust.subtitle":
       "Built on more than twenty years of precision manufacturing experience, supported by proven production capability and quality systems.",
@@ -121,7 +125,7 @@ const translations = {
       "Click an industry below to discover component examples, manufacturing capabilities, and project experience.",
     "solutions.title": "Manufacturing Capabilities",
     "solutions.copy":
-      "From Prototype to Production, We Provide One-Stop Manufacturing Solutions.",
+      "From prototype to low-volume production, we provide precision component and multi-process manufacturing support.",
     "quality.title":
       "Quality is not inspected into a product.<br>It is built into every process.",
     "quality.copy":
@@ -218,13 +222,31 @@ const localizedData = {
         cta: "查看案例 →",
       },
     ],
+    homeWhy: [
+      {
+        title: "可靠的第二供應來源",
+        desc: "協助客戶降低單一供應商風險，建立更穩定的台灣製造支援。",
+      },
+      {
+        title: "打樣與小量生產支援",
+        desc: "支援樣品、少量多樣與高混合精密零件需求。",
+      },
+      {
+        title: "單一製造窗口",
+        desc: "整合 CNC、表面處理、熱處理與組裝，減少客戶管理多家供應商的成本。",
+      },
+      {
+        title: "快速工程回應",
+        desc: "快速協助檢視圖面、公差、材料與製造可行性。",
+      },
+    ],
     solutions: [
-      { icon: "gear", title: "CNC 精密加工", desc: "車削、銑削、車銑複合加工" },
-      { icon: "hammer", title: "鍛造製造", desc: "各類金屬鍛造件整合製造" },
-      { icon: "press", title: "沖壓製造", desc: "精密沖壓零件與量產製造" },
-      { icon: "sheet", title: "鈑金製造", desc: "雷射切割、折床成型、焊接組裝" },
-      { icon: "molecule", title: "表面處理", desc: "陽極、電鍍、鈍化、熱處理等後製程" },
-      { icon: "blocks", title: "組裝整合", desc: "機械組裝與成品整合" },
+      { icon: "gear", title: "精密加工零組件", desc: "支援先進產業所需之 CNC 車削、銑削與車銑複合零件。" },
+      { icon: "blocks", title: "多製程製造整合", desc: "透過單一窗口整合 CNC、鍛造、沖壓、鈑金與相關製程。" },
+      { icon: "molecule", title: "表面處理整合", desc: "協助整合陽極、電鍍、鈍化、熱處理與後製程管理。" },
+      { icon: "sheet", title: "機械組裝支援", desc: "支援小型機械組件、半成品與專案型組裝整合。" },
+      { icon: "press", title: "從打樣到生產", desc: "支援早期樣品、小量試產與後續生產專案。" },
+      { icon: "hammer", title: "品質文件支援", desc: "提供材質證明、檢驗報告、CMM 與 Keyence 量測支援。" },
     ],
     quality: [
       "ISO 9001",
@@ -289,13 +311,31 @@ const localizedData = {
         cta: "View Case Study →",
       },
     ],
+    homeWhy: [
+      {
+        title: "Reliable Second Source",
+        desc: "Reduce supply chain risk with a flexible Taiwan manufacturing partner.",
+      },
+      {
+        title: "Prototype & Low-Volume Support",
+        desc: "Support for prototypes, small batches and high-mix precision components.",
+      },
+      {
+        title: "One Manufacturing Partner",
+        desc: "CNC machining, surface treatment, heat treatment and assembly through one contact.",
+      },
+      {
+        title: "Fast Engineering Response",
+        desc: "Quick review of drawings, tolerances, materials and manufacturing feasibility.",
+      },
+    ],
     solutions: [
-      { icon: "gear", title: "CNC Machining", desc: "Turning, Milling & Mill-Turn Services" },
-      { icon: "hammer", title: "Forging", desc: "Custom Metal Forging Solutions" },
-      { icon: "press", title: "Stamping", desc: "Precision Stamping & Mass Production" },
-      { icon: "sheet", title: "Sheet Metal", desc: "Laser Cutting, Bending & Welding" },
-      { icon: "molecule", title: "Surface Treatment", desc: "Anodizing, Plating, Passivation & Heat Treatment" },
-      { icon: "blocks", title: "Assembly Integration", desc: "Mechanical & Product Assembly Services" },
+      { icon: "gear", title: "Precision Machined Components", desc: "CNC turning, milling and mill-turn components for advanced industries." },
+      { icon: "blocks", title: "Multi-Process Manufacturing", desc: "Machining, forging, stamping and sheet metal support through one project window." },
+      { icon: "molecule", title: "Surface Treatment Integration", desc: "Anodizing, plating, passivation, heat treatment and post-process coordination." },
+      { icon: "sheet", title: "Mechanical Assembly Support", desc: "Small mechanical assemblies, sub-components and project-based integration." },
+      { icon: "press", title: "Prototype to Production", desc: "Support from early-stage samples to low-volume and production programs." },
+      { icon: "hammer", title: "Quality Documentation", desc: "Material certificates, inspection reports, CMM and Keyence measurement support." },
     ],
     quality: [
       "ISO 9001",
@@ -339,6 +379,15 @@ function render(lang) {
     3: "industries/automation/",
     4: "industries/medical/",
   };
+  const homeWhyGridEl = document.getElementById("homeWhyGrid");
+  if (homeWhyGridEl && data.homeWhy) {
+    homeWhyGridEl.innerHTML = data.homeWhy
+      .map(
+        (item) =>
+          `<article class="why-card reveal"><div class="icon">✦</div><h3>${item.title}</h3><p>${item.desc}</p></article>`,
+      )
+      .join("");
+  }
   industriesGrid.innerHTML = data.industries
     .map((industry, index) => {
       const englishLabel = industry.english ? `<span class="case-en">${industry.english}</span>` : "";
