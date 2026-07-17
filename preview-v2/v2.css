@@ -16,3 +16,15 @@
   html[lang="en"] .nav-cta{min-height:42px;padding:11px 16px;letter-spacing:.11em;background:rgba(201,164,90,.06)}
   html[lang="en"] .language{min-width:45px;height:34px;padding:0 10px;border:1px solid rgba(201,164,90,.38);border-radius:999px;font-size:.66rem;letter-spacing:.06em}
 }
+
+
+/* Keep hero headlines on intentional semantic lines */
+.hero-title span{display:block;white-space:nowrap}
+@media (min-width:641px) and (max-width:1050px){
+  .hero-copy{width:100%;max-width:920px;margin-inline:auto}
+  .hero h1.hero-title{font-size:clamp(2.8rem,6.5vw,4.25rem);line-height:1.12;letter-spacing:-.045em;max-width:none}
+}
+@media (max-width:640px){
+  .hero h1.hero-title{font-size:clamp(1.82rem,8.2vw,2.35rem);line-height:1.16;letter-spacing:-.035em}
+  html[lang="en"] .hero-title span{white-space:normal;text-wrap:balance}
+}
