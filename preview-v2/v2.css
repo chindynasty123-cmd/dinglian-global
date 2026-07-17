@@ -28,3 +28,19 @@
   .hero h1.hero-title{font-size:clamp(1.82rem,8.2vw,2.35rem);line-height:1.16;letter-spacing:-.035em}
   html[lang="en"] .hero-title span{white-space:normal;text-wrap:balance}
 }
+
+
+/* Mobile hero: brand mark first, then the message */
+@media (max-width:640px){
+  .hero{padding-top:82px}
+  .hero-inner{display:flex;flex-direction:column;gap:8px;text-align:center}
+  .hero-mark{order:1;width:100%;min-height:250px;margin:0 auto 4px}
+  .hero-copy{order:2;width:100%;padding-top:0}
+  .hero-mark img{width:min(320px,82vw)}
+  .hero-mark .o1{width:245px;height:245px}
+  .hero-mark .o2{width:320px;height:155px}
+  .hero h1.hero-title{font-size:clamp(1.58rem,7.3vw,1.95rem);line-height:1.17;letter-spacing:-.04em}
+  .hero-title span{white-space:nowrap}
+  .hero-copy .eyebrow{margin-bottom:14px}
+  .hero-copy .lead{margin-top:20px}
+}
