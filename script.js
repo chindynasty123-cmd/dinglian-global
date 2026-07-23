@@ -52,17 +52,17 @@ const translations = {
     "quality.copy":
       "從加工、量測到文件管理，我們將品質融入每一道製程，確保每一個零件都符合客戶要求。",
     "base.label": "核心製造基地",
-    "base.name": "瑨達工業",
-    "base.subtitle": "核心製造夥伴",
+    "base.name": "瑨達工業股份有限公司",
+    "base.subtitle": "2005年成立的核心製造基地",
     "base.statement":
-      "20年以上精密加工經驗，支援樣品開發、小量生產與生產專案。",
+      "瑨達工業成立於2005年，專注於精密 CNC 車削、銑削、加工、檢驗與完整製造支援。<br>作為鼎鏈科技背後的製造基地，瑨達提供可靠品質、穩定交期，以及從打樣到量產的彈性生產能力。",
     "base.button": "前往瑨達官網 →",
     "base.panel": "鼎鏈科技核心製造夥伴，支援樣品開發、小量生產與量產交付。",
     "base.panelKicker": "核心製造基地",
     "base.since": "精密加工經驗",
     "base.est": "核心夥伴",
     "base.country": "台灣製造",
-    "base.panelTitle": "瑨達工業",
+    "base.panelTitle": "瑨達工業股份有限公司",
     "base.iso": "ISO9001",
     "base.cmm": "Mitutoyo CMM",
     "base.keyence": "KEYENCE Inspection",
@@ -135,7 +135,7 @@ const translations = {
       "Explore Real Manufacturing Projects Across Advanced Industries",
     "industries.copy":
       "Click an industry below to discover component examples, manufacturing capabilities, and project experience.",
-    "solutions.title": "Manufacturing Capabilities",
+    "solutions.title": "Capabilities",
     "solutions.copy":
       "From prototype to low-volume production, we provide precision component and multi-process manufacturing support.",
     "quality.title":
@@ -144,12 +144,12 @@ const translations = {
       "From machining and inspection to documentation control, quality is integrated into every process to ensure every component meets customer requirements.",
     "base.label": "Core Manufacturing Base",
     "base.name": "Jintat Industrial Co., Ltd.",
-    "base.subtitle": "Core Manufacturing Partner",
+    "base.subtitle": "Manufacturing Base Since 2005",
     "base.statement":
-      "Over 20 years of precision machining experience supporting prototype development, low-volume production and production programs.",
+      "Founded in 2005, Jintat Industrial specializes in precision CNC turning, milling, machining, inspection, and complete manufacturing support.<br>As the manufacturing base behind Dinglian Technology, Jintat provides reliable quality, stable lead times, and flexible production from prototype to mass production.",
     "base.button": "Visit Jintat Website",
     "base.panel":
-      "Core manufacturing partner supporting prototype development, low-volume production and mass manufacturing.",
+      "Manufacturing base specializing in precision CNC turning, milling, machining, inspection, and complete manufacturing support.",
     "base.panelKicker": "Core Manufacturing Base",
     "base.since": "Precision Manufacturing",
     "base.est": "Core Partner",

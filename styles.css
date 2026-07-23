@@ -654,7 +654,7 @@ textarea {
   }
   .nav-panel {
     position: absolute;
-    top: 82px;
+    top: 80px;
     left: 0;
     right: 0;
     background: #050505;
@@ -2808,7 +2808,7 @@ textarea {
   }
 }
 
-/* Manufacturing Capabilities section */
+/* Capabilities section */
 .capabilities {
   background: #050505;
 }
@@ -3061,35 +3061,39 @@ textarea {
 
 /* Final premium header/navigation refinement */
 .site-header {
-  background: linear-gradient(180deg, rgba(3, 3, 3, 0.86), rgba(3, 3, 3, 0.54));
-  border-bottom: 1px solid rgba(215, 173, 75, 0.08);
-  backdrop-filter: blur(14px);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(215, 173, 75, 0.1), transparent 34%),
+    #000;
+  border-bottom: 1px solid rgba(215, 173, 75, 0.06);
+  backdrop-filter: blur(10px);
 }
 .site-header.scrolled {
-  background: rgba(3, 3, 3, 0.94);
-  border-bottom-color: rgba(215, 173, 75, 0.18);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(215, 173, 75, 0.08), transparent 32%),
+    #000;
+  border-bottom-color: rgba(215, 173, 75, 0.1);
 }
 .navbar {
-  height: 82px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: clamp(22px, 3vw, 42px);
-  padding: 0 clamp(24px, 4vw, 72px);
+  gap: clamp(28px, 3.4vw, 54px);
+  padding: 0 clamp(28px, 4vw, 76px);
 }
 .brand {
-  flex: 0 0 clamp(210px, 20vw, 292px);
-  min-width: 210px;
+  flex: 0 0 260px;
+  min-width: 260px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
   letter-spacing: 0.12em;
   white-space: nowrap;
 }
 .brand img,
 .brand img.hero-logo {
   width: auto;
-  height: 52px;
+  height: 60px;
   max-width: none;
   flex: 0 0 auto;
   object-fit: contain;
@@ -3119,10 +3123,10 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 28px;
+  gap: 30px;
   font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
 .nav-panel a,
 .language-switcher,
@@ -3131,8 +3135,8 @@ textarea {
 }
 .nav-panel > a:not(.quote-link) {
   position: relative;
-  color: rgba(247, 243, 232, 0.78);
-  padding: 30px 0 27px;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 29px 0 28px;
   line-height: 1;
   transition: color 0.22s ease;
 }
@@ -3141,7 +3145,7 @@ textarea {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 22px;
+  bottom: 23px;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
   transform: scaleX(0);
@@ -3161,8 +3165,8 @@ textarea {
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(215, 173, 75, 0.78);
-  border-radius: 999px;
-  padding: 0 22px;
+  border-radius: 4px;
+  padding: 0 24px;
   color: var(--gold) !important;
   line-height: 1;
   transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
@@ -3186,7 +3190,7 @@ textarea {
   padding: 0;
   border: 0;
   background: transparent;
-  color: rgba(247, 243, 232, 0.62);
+  color: rgba(255, 255, 255, 0.9);
   font: inherit;
   cursor: pointer;
   transition: color 0.2s ease;
@@ -3201,8 +3205,8 @@ textarea {
     padding-inline: clamp(20px, 2.4vw, 34px);
   }
   .brand {
-    flex-basis: 238px;
-    min-width: 238px;
+    flex-basis: 248px;
+    min-width: 248px;
   }
   .nav-panel {
     gap: 18px;
@@ -3212,7 +3216,7 @@ textarea {
     padding-inline: 18px;
   }
 }
-@media (max-width: 1120px) {
+@media (max-width: 1150px) {
   .nav-toggle {
     display: inline-flex;
     align-items: center;
@@ -3227,7 +3231,7 @@ textarea {
   }
   .nav-panel {
     position: fixed;
-    top: 82px;
+    top: 80px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -3269,7 +3273,7 @@ textarea {
   }
   .brand img,
   .brand img.hero-logo {
-    height: 48px;
+    height: 52px;
   }
   .brand span {
     display: none;
@@ -3278,7 +3282,7 @@ textarea {
     top: 76px;
   }
 }
-@media (max-width: 1120px) {
+@media (max-width: 1150px) {
   .aero-page .nav-toggle {
     display: inline-flex !important;
     align-items: center;
@@ -3286,7 +3290,7 @@ textarea {
   }
   .aero-page .nav-panel {
     position: fixed !important;
-    top: 82px !important;
+    top: 80px !important;
     left: 0 !important;
     right: 0 !important;
     bottom: 0 !important;
